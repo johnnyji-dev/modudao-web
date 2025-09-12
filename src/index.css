@@ -24,10 +24,6 @@ body {
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 #desktop-blocker { display: none; }
-@media (min-width: 769px) {
-  #desktop-blocker { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--text); z-index: 1000; padding: 24px; text-align: center; }
-  #root { display: none; }
-}
 
 .app { max-width: 440px; margin: 0 auto; padding: 16px 16px 40px; }
 .header { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
