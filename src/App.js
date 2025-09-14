@@ -10,6 +10,60 @@ function Footer() {
 }
 
 export default function App() {
+  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+
+  // public/photos 폴더의 이미지들
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 001.jpeg",
+      alt: "모임 사진 1"
+    },
+    {
+      id: 2,
+      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 002.jpeg",
+      alt: "모임 사진 2"
+    },
+    {
+      id: 3,
+      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 003.jpeg",
+      alt: "모임 사진 3"
+    },
+    {
+      id: 4,
+      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 004.jpeg",
+      alt: "모임 사진 4"
+    },
+    {
+      id: 5,
+      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-24 005.jpeg",
+      alt: "모임 사진 5"
+    }
+  ];
+
+  // 자동 슬라이더 효과
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => 
+        prev === galleryImages.length - 1 ? 0 : prev + 1
+      );
+    }, 3000); // 3초마다 자동 전환
+
+    return () => clearInterval(interval);
+  }, [galleryImages.length]);
+
+  // 수동 네비게이션 함수
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  };
 
   return (
     <main id="app" className="app">
@@ -146,8 +200,32 @@ export default function App() {
       {/* Gallery */}
       <section className="gallery">
         <h2 className="section-title">활동 사진</h2>
-        <div className="img-card">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop" alt="모임 사진" />
+        <div className="gallery-slider">
+          <div className="slider-container">
+            <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
+              ‹
+            </button>
+            <div className="slider-image-container">
+              <img 
+                src={galleryImages[currentImageIndex]?.src} 
+                alt={galleryImages[currentImageIndex]?.alt || "모임 사진"} 
+                className="slider-image"
+              />
+            </div>
+            <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
+              ›
+            </button>
+          </div>
+          <div className="slider-dots">
+            {galleryImages.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                onClick={() => setCurrentImageIndex(index)}
+                aria-label={`사진 ${index + 1}로 이동`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
