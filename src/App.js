@@ -1,17 +1,5 @@
 import React from 'react';
 
-const CONSENT_KEY = 'cookie_consent_v1';
-function readConsent() { try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || 'null'); } catch { return null; } }
-function writeConsent(value) { localStorage.setItem(CONSENT_KEY, JSON.stringify(value)); }
-
-function useConsent() {
-  const [consent, setConsent] = React.useState(() => readConsent());
-  React.useEffect(() => { if (consent) writeConsent(consent); }, [consent]);
-  const accept = () => setConsent({ necessary: true, performance: true, ts: Date.now() });
-  const reject = () => setConsent({ necessary: true, performance: false, ts: Date.now() });
-  return { consent, setConsent, accept, reject };
-}
-
 function Footer() {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
@@ -22,8 +10,6 @@ function Footer() {
 }
 
 export default function App() {
-  const { consent, setConsent, accept, reject } = useConsent();
-  const [prefsOpen, setPrefsOpen] = React.useState(false);
 
   return (
     <main id="app" className="app">
@@ -32,7 +18,6 @@ export default function App() {
           <div className="logo" aria-hidden="true" />
           <span className="brand-name">ModuDAO</span>
         </div>
-        <button className="ghost-btn" onClick={() => setPrefsOpen(true)} aria-haspopup="dialog">쿠키 설정</button>
       </header>
 
       {/* Hero / Logo + Title */}
@@ -53,12 +38,20 @@ export default function App() {
 
       {/* Feature grid */}
       <section className="features-block">
-        <h2 className="section-title">주요 활동</h2>
+        <h2 className="section-title">우리의 주요 활동</h2>
+        <p className="section-description">
+          ModuDAO는 모임, 블록체인 교육, 투자 연구, 인터뷰, 에어드랍 및 트렌드 공유를 제공합니다. 
+          오늘 활발한 커뮤니티에 가입하세요!
+        </p>
         <div className="grid2">
-          <div className="feature-card"><div className="ficon">👥</div><div className="fname">블록체인 밋업</div></div>
-          <div className="feature-card"><div className="ficon">📈</div><div className="fname">재테크 방법 공유</div></div>
-          <div className="feature-card"><div className="ficon">📚</div><div className="fname">블록체인 스터디</div></div>
-          <div className="feature-card"><div className="ficon">📅</div><div className="fname">정기 모임 (격주)</div></div>
+          <div className="feature-card"><div className="ficon">🎓</div><div className="fname">블록체인 교육 행사</div></div>
+          <div className="feature-card"><div className="ficon">👥</div><div className="fname">Crypto Meetups 참석</div></div>
+          <div className="feature-card"><div className="ficon">🎁</div><div className="fname">에어드랍에 참여</div></div>
+          <div className="feature-card"><div className="ficon">📊</div><div className="fname">블록체인 투자 연구</div></div>
+          <div className="feature-card"><div className="ficon">🎤</div><div className="fname">재단 인터뷰 액세스</div></div>
+          <div className="feature-card"><div className="ficon">📈</div><div className="fname">트렌드 인사이트 공유</div></div>
+          <div className="feature-card"><div className="ficon">💬</div><div className="fname">Yapping 세션 참여</div></div>
+          <div className="feature-card"><div className="ficon">📱</div><div className="fname">텔레그램 채널 실행</div></div>
         </div>
       </section>
 
@@ -68,7 +61,7 @@ export default function App() {
         <ul className="list">
           <li><span className="tick">✔</span> 블록체인을 처음 접하는 분</li>
           <li><span className="tick">✔</span> 밋업이 궁금하신 분</li>
-          <li><span className="tick">✔</span> 새로운 재테크를 배우고 싶은 분</li>
+          <li><span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분</li>
           <li><span className="tick">✔</span> 코인을 배우고 싶은 코린이</li>
         </ul>
       </section>
@@ -126,35 +119,6 @@ export default function App() {
       </section>
 
       <Footer />
-
-      {!consent && (
-        <div className="cookie-banner" role="dialog" aria-live="polite" style={{ display: 'flex' }}>
-          <div className="cookie-banner__content">이 웹사이트는 사용자 경험 향상을 위해 쿠키를 사용합니다.</div>
-          <div className="cookie-banner__actions">
-            <button className="ghost-btn" onClick={reject}>거부</button>
-            <button className="primary-btn" onClick={accept}>허용</button>
-          </div>
-        </div>
-      )}
-
-      {prefsOpen && (
-        <div role="dialog" aria-label="쿠키 설정" className="cookie-banner" style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}>
-          <div className="cookie-card">
-            <div className="cookie-header"><h2>쿠키 설정</h2></div>
-            <div className="cookie-body">
-              <p>우리는 필수 쿠키와 성능 분석 쿠키를 사용합니다.</p>
-              <label className="toggle">
-                <input type="checkbox" checked={Boolean(consent?.performance)} onChange={e => setConsent({ necessary: true, performance: e.target.checked, ts: Date.now() })} />
-                <span>성능/분석 쿠키 허용</span>
-              </label>
-            </div>
-            <div className="cookie-actions">
-              <button className="ghost-btn" onClick={() => setPrefsOpen(false)}>취소</button>
-              <button className="primary-btn" onClick={() => setPrefsOpen(false)}>저장</button>
-            </div>
-          </div>
-        </div>
-      )}
     </main>
   );
 }
