@@ -11,6 +11,7 @@ function Footer() {
 
 export default function App() {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
 
   // public/photos 폴더의 이미지들
   const galleryImages = [
@@ -41,6 +42,45 @@ export default function App() {
     }
   ];
 
+  // 유튜브 영상들
+  const youtubeVideos = [
+    {
+      id: 1,
+      embedId: "slhWBXh3dys?si=64mNhsk3xRvkYJOD",
+      title: "ModuDAO 활동 영상 1"
+    },
+    {
+      id: 2,
+      embedId: "5pxYQYHhWC4?si=MjKqQou4ZHs0zisr",
+      title: "ModuDAO 활동 영상 2"
+    },
+    {
+      id: 3,
+      embedId: "G3I6l_6OHXY?si=eoGG4uT5D6zYSfb0",
+      title: "ModuDAO 활동 영상 3"
+    },
+    {
+      id: 4,
+      embedId: "G3I6l_6OHXY?si=ysuBVvoNY1n-araI",
+      title: "ModuDAO 활동 영상 4"
+    },
+    {
+      id: 5,
+      embedId: "2LDndYqdoCs?si=YFdEZZctUsxYmUZn",
+      title: "ModuDAO 활동 영상 5"
+    },
+    {
+      id: 6,
+      embedId: "LNSZlKrqZeg?si=7JcTWuR5AjVBFXRj",
+      title: "ModuDAO 활동 영상 6"
+    },
+    {
+      id: 7,
+      embedId: "fy43pQ_6RYs?si=GCBK1yDaS2_JPh2g",
+      title: "ModuDAO 활동 영상 7"
+    }
+  ];
+
   // 자동 슬라이더 효과
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -52,6 +92,17 @@ export default function App() {
     return () => clearInterval(interval);
   }, [galleryImages.length]);
 
+  // 자동 슬라이더 효과 (유튜브 영상)
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideoIndex((prev) => 
+        prev === youtubeVideos.length - 1 ? 0 : prev + 1
+      );
+    }, 5000); // 영상은 5초마다 변경
+
+    return () => clearInterval(interval);
+  }, [youtubeVideos.length]);
+
   // 수동 네비게이션 함수
   const nextImage = () => {
     setCurrentImageIndex((prev) => 
@@ -62,6 +113,19 @@ export default function App() {
   const prevImage = () => {
     setCurrentImageIndex((prev) => 
       prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  };
+
+  // 유튜브 영상 네비게이션 함수
+  const nextVideo = () => {
+    setCurrentVideoIndex((prev) => 
+      prev === youtubeVideos.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevVideo = () => {
+    setCurrentVideoIndex((prev) => 
+      prev === 0 ? youtubeVideos.length - 1 : prev - 1
     );
   };
 
@@ -229,20 +293,40 @@ export default function App() {
         </div>
       </section>
 
-      {/* YouTube Video */}
+      {/* YouTube Video Slider */}
       <section className="youtube-section">
         <h2 className="section-title">활동 영상</h2>
-        <div className="youtube-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/slhWBXh3dys?si=64mNhsk3xRvkYJOD"
-            title="ModuDAO 활동 영상"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="youtube-embed"
-          ></iframe>
+        <div className="youtube-slider">
+          <div className="youtube-slider-container">
+            <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
+              ‹
+            </button>
+            <div className="youtube-container">
+              <iframe
+                width="560"
+                height="315"
+                src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
+                title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="youtube-embed"
+              ></iframe>
+            </div>
+            <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
+              ›
+            </button>
+          </div>
+          <div className="youtube-slider-dots">
+            {youtubeVideos.map((_, index) => (
+              <button
+                key={index}
+                className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
+                onClick={() => setCurrentVideoIndex(index)}
+                aria-label={`영상 ${index + 1}로 이동`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
