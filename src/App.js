@@ -131,7 +131,7 @@ export default function App() {
           <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
             <div className="channel-icon">🎒</div>
             <div className="channel-name">크립토 하이스쿨</div>
-            <div className="channel-desc">친구들과 함께 크립토에 대해 공부하고 투자등 다양한 활동을 통해 경제적 졸업을 목표로 하는 크하스입니다.</div>
+            <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
           </a>
         </div>
       </section>
