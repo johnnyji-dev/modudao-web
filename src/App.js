@@ -40,18 +40,22 @@ export default function App() {
       <section className="features-block">
         <h2 className="section-title">우리의 주요 활동</h2>
         <p className="section-description">
-          ModuDAO는 모임, 블록체인 교육, 투자 연구, 인터뷰, 에어드랍 및 트렌드 공유를 제공합니다. 
+          ModuDAO는 아래와 같은 활동을 진행합니다.
+        </p>
+        <p className="section-description">
           오늘 활발한 커뮤니티에 가입하세요!
         </p>
         <div className="grid2">
-          <div className="feature-card"><div className="ficon">🎓</div><div className="fname">블록체인 교육 행사</div></div>
+          <div className="feature-card"><div className="ficon">📅</div><div className="fname">정기 모임</div></div>
           <div className="feature-card"><div className="ficon">👥</div><div className="fname">Crypto Meetups 참석</div></div>
           <div className="feature-card"><div className="ficon">🎁</div><div className="fname">에어드랍에 참여</div></div>
           <div className="feature-card"><div className="ficon">📊</div><div className="fname">블록체인 투자 연구</div></div>
+          <div className="feature-card"><div className="ficon">🎓</div><div className="fname">블록체인 교육</div></div>
           <div className="feature-card"><div className="ficon">🎤</div><div className="fname">재단 인터뷰 액세스</div></div>
           <div className="feature-card"><div className="ficon">📈</div><div className="fname">트렌드 인사이트 공유</div></div>
           <div className="feature-card"><div className="ficon">💬</div><div className="fname">Yapping 세션 참여</div></div>
           <div className="feature-card"><div className="ficon">📱</div><div className="fname">텔레그램 채널 실행</div></div>
+          <div className="feature-card"><div className="ficon">💡</div><div className="fname">운영하고 싶은 활동</div></div>
         </div>
       </section>
 
