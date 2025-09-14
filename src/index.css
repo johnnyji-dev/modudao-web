@@ -114,6 +114,9 @@ body {
 
 .telegram-channels { margin-top: 28px; }
 .channel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px; }
+@media (min-width: 769px) {
+  .channel-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
 @media (max-width: 768px) {
   .channel-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
