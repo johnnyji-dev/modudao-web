@@ -77,11 +77,62 @@ export default function App() {
           <div className="pill">
             <strong>템피 대표</strong>
             <small>8년차 블록체인 에이전시</small>
+            <br/>
+            <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" className="contact-link">
+              📱 텔레그램으로 연락하기
+            </a>
           </div>
           <div className="pill">
             <strong>DAO 멤버들</strong>
-            <small>각 텔레그램 채널 운영진</small>
+            <small>각 텔레그램 채널 운영</small>            
           </div>
+        </div>
+      </section>
+
+      {/* Telegram Channels */}
+      <section className="telegram-channels">
+        <h2 className="section-title">텔레그램 채널</h2>
+        <div className="channel-grid">
+          <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🏛️</div>
+            <div className="channel-name">ModuDAO : 모두다오</div>
+            <div className="channel-desc">공식 텔레그램</div>
+          </a>
+          <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🎓</div>
+            <div className="channel-name">원대감의 성균관</div>
+            <div className="channel-desc">설명 필요</div>
+          </a>
+          <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">⚓️</div>
+            <div className="channel-name">Crypto Dock</div>
+            <div className="channel-desc">설명 필요</div>
+          </a>
+          <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🍩</div>
+            <div className="channel-name">김도넛의 돈복사실</div>
+            <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
+          </a>
+          <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">⛏️</div>
+            <div className="channel-name">우쥰의 코인채굴작전</div>
+            <div className="channel-desc">설명 필요</div>
+          </a>
+          <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">📰</div>
+            <div className="channel-name">사대감의 크립통</div>
+            <div className="channel-desc">육대감의 크립토 소식통</div>
+          </a>
+          <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">💬</div>
+            <div className="channel-name">DORDCI</div>
+            <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
+          </a>
+          <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🎒</div>
+            <div className="channel-name">크립토 하이스쿨</div>
+            <div className="channel-desc">친구들과 함께 크립토에 대해 공부하고 투자등 다양한 활동을 통해 경제적 졸업을 목표로 하는 크하스입니다.</div>
+          </a>
         </div>
       </section>
 
