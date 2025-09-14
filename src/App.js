@@ -229,6 +229,23 @@ export default function App() {
         </div>
       </section>
 
+      {/* YouTube Video */}
+      <section className="youtube-section">
+        <h2 className="section-title">활동 영상</h2>
+        <div className="youtube-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/slhWBXh3dys?si=64mNhsk3xRvkYJOD"
+            title="ModuDAO 활동 영상"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="youtube-embed"
+          ></iframe>
+        </div>
+      </section>
+
       {/* Notice */}
       <section className="notice">
         <div className="notice-card">
