@@ -151,16 +151,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Join CTA */}
-      <section className="join">
-        <h2 className="section-title">참여하기</h2>
-        <div className="join-stack">
-          <button type="button" className="join-btn primary" onClick={()=>{}}>📨 공식 텔레그램</button>
-          <button type="button" className="join-btn" onClick={()=>{}}>🐦 공식 트위터</button>
-          <button type="button" className="join-btn" onClick={()=>{}}>👥 DAO 멤버 텔레그램</button>
-        </div>
-      </section>
-
       {/* Notice */}
       <section className="notice">
         <div className="notice-card">
