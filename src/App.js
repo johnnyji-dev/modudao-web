@@ -164,7 +164,15 @@ export default function App() {
           지금, 활발하게 성장하는 커뮤니티에 합류하세요!
         </p>
         <div className="grid2">
-          <div className="feature-card"><div className="ficon">📅</div><div className="fname">정기 모임</div></div>
+          <div className="feature-card">
+            <div className="ficon">📅</div>
+            <div className="fname">정기 모임</div>
+            <small>
+              <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                일정 보기
+              </a>
+            </small>
+          </div>
           <div className="feature-card"><div className="ficon">👥</div><div className="fname">Crypto Meetups 참석 및 주체</div></div>
           <div className="feature-card"><div className="ficon">🎁</div><div className="fname">에어드랍</div></div>
           <div className="feature-card"><div className="ficon">📊</div><div className="fname">블록체인 리서치</div></div>
