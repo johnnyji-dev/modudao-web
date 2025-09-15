@@ -139,24 +139,24 @@ export default function App() {
       </header>
 
       {/* Hero / Identity Section */}
-      <section className="hero" style={{ 
-        paddingTop: '2rem', 
+      <section className="hero" style={{
+        paddingTop: '2rem',
         paddingBottom: '20rem',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}>
         {/* Intro */}
-        <div style={{ 
+        <div style={{
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto',
           padding: '2rem 1.5rem',
           textAlign: 'center'
         }}>
-          <h2 className="intro-head" style={{ 
+          <h2 className="intro-head" style={{
             fontSize: '2.8rem',
             fontWeight: '900',
             lineHeight: '1.2',
@@ -166,7 +166,7 @@ export default function App() {
             블록체인 디젠<br />모두가 모여 만든<br />집단 지성체
           </h2>
           <br />
-          <p className="intro-sub" style={{ 
+          <p className="intro-sub" style={{
             fontSize: '1.4rem',
             fontWeight: '500',
             lineHeight: '1.5',
@@ -180,14 +180,32 @@ export default function App() {
       </section>
 
       {/* Feature grid */}
-      <section className="features-block">
-        <h2 className="section-title">우리의 주요 활동</h2>
-        <p className="section-description">
-          ModuDAO의 주요 활동은 다음과 같습니다.
-        </p>
-        <p className="section-description">
+      <section className="features-block" style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'var(--bg2)'
+      }}>
+        <h2 className="section-title" style={{
+          fontSize: '1.4rem',
+          fontWeight: '1500',
+          lineHeight: '1.5',
+          margin: '0',
+          color: '#e7e7ea'
+        }}>우리의 주요 활동</h2>
+        <p className="section-description" style={{
+          fontSize: '1rem',
+          fontWeight: '500',
+          lineHeight: '1.5',
+          margin: '0',
+          color: '#e7e7ea'
+        }}>
+          ModuDAO의 주요 활동은 다음과 같습니다. <br />
           지금, 활발하게 성장하는 커뮤니티에 합류하세요!
         </p>
+        <br />
         <div className="grid2">
           <div className="feature-card">
             <div className="ficon">📅</div>
@@ -284,8 +302,6 @@ export default function App() {
           </div>
         </div>
       </section>
-
-
 
       {/* Goal */}
       <section className="goal">

@@ -1,5 +1,6 @@
 :root {
   --bg: #0b0b0c;
+  --bg2: #101010;
   --text: #e7e7ea;
   --muted: #a6a6ad;
   --card: #151518;
@@ -84,7 +85,7 @@ body {
 .intro-head { margin: 4px 0 8px; font-size: 20px; line-height: 1.5; text-align: center; }
 .intro-sub { margin: 0; color: var(--muted); text-align: center; }
 
-.features-block { margin-top: 28px; }
+.features-block { margin-top: 5px; }
 .section-title { text-align: center; margin: 10px 0 16px; font-size: 18px; font-weight: 800; }
 .section-description { text-align: center; margin: 8px 0; color: var(--muted); }
 .activity-list { list-style: none; margin: 16px 0; padding: 0; text-align: center; }
