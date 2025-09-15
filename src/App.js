@@ -212,7 +212,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -257,7 +257,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -289,7 +289,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -321,7 +321,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -341,7 +341,7 @@ export default function App() {
                   left: '2px',
                   right: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -349,7 +349,7 @@ export default function App() {
                   left: '2px',
                   right: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -357,7 +357,7 @@ export default function App() {
                   left: '2px',
                   right: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
               </div>
             </div>
@@ -367,7 +367,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -399,7 +399,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -431,7 +431,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -451,7 +451,7 @@ export default function App() {
                   left: '1px',
                   width: '2px',
                   height: '6px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -459,7 +459,7 @@ export default function App() {
                   left: '4px',
                   width: '2px',
                   height: '5px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -467,7 +467,7 @@ export default function App() {
                   left: '7px',
                   width: '2px',
                   height: '4px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -475,7 +475,7 @@ export default function App() {
                   left: '10px',
                   width: '2px',
                   height: '3px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
               </div>
             </div>
@@ -485,7 +485,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -505,7 +505,7 @@ export default function App() {
                   left: '2px',
                   width: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{ 
@@ -514,7 +514,7 @@ export default function App() {
                   left: '5px',
                   width: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{ 
@@ -523,7 +523,7 @@ export default function App() {
                   left: '8px',
                   width: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
               </div>
@@ -534,7 +534,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -555,7 +555,7 @@ export default function App() {
                   transform: 'translateX(-50%)',
                   width: '6px',
                   height: '1px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -564,7 +564,7 @@ export default function App() {
                   transform: 'translateX(-50%)',
                   width: '6px',
                   height: '1px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -573,7 +573,7 @@ export default function App() {
                   transform: 'translateX(-50%)',
                   width: '6px',
                   height: '1px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
               </div>
             </div>
@@ -583,7 +583,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -603,7 +603,7 @@ export default function App() {
                   left: '2px',
                   width: '6px',
                   height: '6px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{ 
