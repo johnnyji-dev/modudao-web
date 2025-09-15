@@ -4,7 +4,7 @@ function Footer() {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
     <footer className="footer">
-      <small>© <span>{year}</span> ModuDAO</small>
+      <small>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
     </footer>
   );
 }
@@ -84,7 +84,7 @@ export default function App() {
   // 자동 슬라이더 효과
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => 
+      setCurrentImageIndex((prev) =>
         prev === galleryImages.length - 1 ? 0 : prev + 1
       );
     }, 3000); // 3초마다 자동 전환
@@ -95,7 +95,7 @@ export default function App() {
   // 자동 슬라이더 효과 (유튜브 영상)
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentVideoIndex((prev) => 
+      setCurrentVideoIndex((prev) =>
         prev === youtubeVideos.length - 1 ? 0 : prev + 1
       );
     }, 5000); // 영상은 5초마다 변경
@@ -105,26 +105,26 @@ export default function App() {
 
   // 수동 네비게이션 함수
   const nextImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === galleryImages.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
 
   // 유튜브 영상 네비게이션 함수
   const nextVideo = () => {
-    setCurrentVideoIndex((prev) => 
+    setCurrentVideoIndex((prev) =>
       prev === youtubeVideos.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevVideo = () => {
-    setCurrentVideoIndex((prev) => 
+    setCurrentVideoIndex((prev) =>
       prev === 0 ? youtubeVideos.length - 1 : prev - 1
     );
   };
@@ -141,15 +141,15 @@ export default function App() {
       {/* Hero / Logo + Title */}
       <section className="hero" style={{ paddingTop: 8 }}>
         <div className="center">
-          <div className="hero-logo"><img src="/modu.png" alt="Modu logo" /></div>
-          <img className="site-wordmark" src="/text_modudao.png" alt="MODUDAO" />
+          <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" /></div>
+          <img className="site-wordmark" src="/text_modudao-removebg-preview.png" alt="MODUDAO" />
         </div>
         {/* Intro Card */}
         <div className="intro-card">
-          <h2 className="intro-head">블록체인 디젠 모두가 모여 만든<br/>집단 지성체</h2>
+          <h2 className="intro-head">블록체인 디젠 모두가 모여 만든<br />집단 지성체</h2>
           <p className="intro-sub">
-            ModuDAO는 특정 전문가나 소수가 아닌,<br/>
-            누구나 참여하고 함께 운영하는 탈중앙화 조직입니다.
+            ModuDAO는 디젠들의 집단 지성으로 움직이는 탈중앙 자율 조직.<br />
+            소수의 엘리트가 아닌, 모든 참여자가 곧 운영자입니다.
           </p>
         </div>
       </section>
@@ -158,22 +158,22 @@ export default function App() {
       <section className="features-block">
         <h2 className="section-title">우리의 주요 활동</h2>
         <p className="section-description">
-          ModuDAO는 아래와 같은 활동을 진행합니다.
+          ModuDAO의 주요 활동은 다음과 같습니다.
         </p>
         <p className="section-description">
-          오늘 활발한 커뮤니티에 가입하세요!
+          지금, 활발하게 성장하는 커뮤니티에 합류하세요!
         </p>
         <div className="grid2">
           <div className="feature-card"><div className="ficon">📅</div><div className="fname">정기 모임</div></div>
-          <div className="feature-card"><div className="ficon">👥</div><div className="fname">Crypto Meetups 참석</div></div>
-          <div className="feature-card"><div className="ficon">🎁</div><div className="fname">에어드랍에 참여</div></div>
-          <div className="feature-card"><div className="ficon">📊</div><div className="fname">블록체인 투자 연구</div></div>
+          <div className="feature-card"><div className="ficon">👥</div><div className="fname">Crypto Meetups 참석 및 주체</div></div>
+          <div className="feature-card"><div className="ficon">🎁</div><div className="fname">에어드랍</div></div>
+          <div className="feature-card"><div className="ficon">📊</div><div className="fname">블록체인 리서치</div></div>
           <div className="feature-card"><div className="ficon">🎓</div><div className="fname">블록체인 교육</div></div>
-          <div className="feature-card"><div className="ficon">🎤</div><div className="fname">재단 인터뷰 액세스</div></div>
+          <div className="feature-card"><div className="ficon">🎤</div><div className="fname">인터뷰</div></div>
           <div className="feature-card"><div className="ficon">📈</div><div className="fname">트렌드 인사이트 공유</div></div>
-          <div className="feature-card"><div className="ficon">💬</div><div className="fname">Yapping 세션 참여</div></div>
-          <div className="feature-card"><div className="ficon">📱</div><div className="fname">텔레그램 채널 실행</div></div>
-          <div className="feature-card"><div className="ficon">💡</div><div className="fname">운영하고 싶은 활동</div></div>
+          <div className="feature-card"><div className="ficon">💬</div><div className="fname">Yapping</div></div>
+          <div className="feature-card"><div className="ficon">📱</div><div className="fname">텔레그램 채널 운영 및 구축</div></div>
+          <div className="feature-card"><div className="ficon">💡</div><div className="fname">IPO 참여</div></div>
         </div>
       </section>
 
@@ -185,6 +185,7 @@ export default function App() {
           <li><span className="tick">✔</span> 밋업이 궁금하신 분</li>
           <li><span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분</li>
           <li><span className="tick">✔</span> 코인을 배우고 싶은 코린이</li>
+          <li><span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분</li>
         </ul>
       </section>
 
@@ -193,72 +194,71 @@ export default function App() {
         <h2 className="section-title">함께하는 멤버</h2>
         <div className="stack">
           <div className="pill">
-            <strong>템피 대표</strong>
-            <small>8년차 블록체인 에이전시</small>
-            <br/>
+            <strong> TEMPi</strong>
+            <small>9년차 블록체인 전문 에이전시</small>
+            <br />
             <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" className="contact-link">
               📱 텔레그램으로 연락하기
             </a>
           </div>
           <div className="pill">
-            <strong>DAO 멤버들</strong>
-            <small>각 텔레그램 채널 운영</small>            
+            <strong> DAO 멤버 및 채널소개</strong>
+            {/* Telegram Channels */}
+            <section className="telegram-channels">
+              <div className="channel-grid">
+                <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🏛️</div>
+                  <div className="channel-name">ModuDAO : 모두다오</div>
+                  <div className="channel-desc">공식 텔레그램</div>
+                </a>
+                <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🎓</div>
+                  <div className="channel-name">원대감의 성균관</div>
+                  <div className="channel-desc">설명 필요</div>
+                </a>
+                <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">⚓️</div>
+                  <div className="channel-name">Crypto Dock</div>
+                  <div className="channel-desc">설명 필요</div>
+                </a>
+                <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🍩</div>
+                  <div className="channel-name">김도넛의 돈복사실</div>
+                  <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
+                </a>
+                <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">⛏️</div>
+                  <div className="channel-name">우쥰의 코인채굴작전</div>
+                  <div className="channel-desc">설명 필요</div>
+                </a>
+                <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">📰</div>
+                  <div className="channel-name">사대감의 크립통</div>
+                  <div className="channel-desc">육대감의 크립토 소식통</div>
+                </a>
+                <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">💬</div>
+                  <div className="channel-name">DORDCI</div>
+                  <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
+                </a>
+                <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🎒</div>
+                  <div className="channel-name">크립토 하이스쿨</div>
+                  <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
+                </a>
+              </div>
+            </section>
           </div>
         </div>
       </section>
 
-      {/* Telegram Channels */}
-      <section className="telegram-channels">
-        <h2 className="section-title">텔레그램 채널</h2>
-        <div className="channel-grid">
-          <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🏛️</div>
-            <div className="channel-name">ModuDAO : 모두다오</div>
-            <div className="channel-desc">공식 텔레그램</div>
-          </a>
-          <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🎓</div>
-            <div className="channel-name">원대감의 성균관</div>
-            <div className="channel-desc">설명 필요</div>
-          </a>
-          <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">⚓️</div>
-            <div className="channel-name">Crypto Dock</div>
-            <div className="channel-desc">설명 필요</div>
-          </a>
-          <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🍩</div>
-            <div className="channel-name">김도넛의 돈복사실</div>
-            <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
-          </a>
-          <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">⛏️</div>
-            <div className="channel-name">우쥰의 코인채굴작전</div>
-            <div className="channel-desc">설명 필요</div>
-          </a>
-          <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">📰</div>
-            <div className="channel-name">사대감의 크립통</div>
-            <div className="channel-desc">육대감의 크립토 소식통</div>
-          </a>
-          <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">💬</div>
-            <div className="channel-name">DORDCI</div>
-            <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
-          </a>
-          <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🎒</div>
-            <div className="channel-name">크립토 하이스쿨</div>
-            <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
-          </a>
-        </div>
-      </section>
+
 
       {/* Goal */}
       <section className="goal">
         <div className="goal-icon">🚀</div>
         <h2 className="section-title">우리의 목표</h2>
-        <p className="muted center">제2의 머니파이프라인을<br/>만들기 위한 모임입니다.</p>
+        <p className="muted center">제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
       </section>
 
       {/* Gallery */}
@@ -270,9 +270,9 @@ export default function App() {
               ‹
             </button>
             <div className="slider-image-container">
-              <img 
-                src={galleryImages[currentImageIndex]?.src} 
-                alt={galleryImages[currentImageIndex]?.alt || "모임 사진"} 
+              <img
+                src={galleryImages[currentImageIndex]?.src}
+                alt={galleryImages[currentImageIndex]?.alt || "모임 사진"}
                 className="slider-image"
               />
             </div>
@@ -337,7 +337,7 @@ export default function App() {
           <div>
             <h3 className="notice-title">유의사항</h3>
             <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-            저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
+              저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
           </div>
         </div>
       </section>
