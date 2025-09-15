@@ -207,8 +207,8 @@ export default function App() {
         </p>
         <br />
         <br />
-        <div className="grid2">
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+        <div className="grid2" style={{ gap: '16px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -246,14 +246,14 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>정기 모임</div>
-            <small style={{ fontSize: '10px' }}>
+            <div className="fname" style={{ fontSize: '14px' }}>정기 모임</div>
+            <small style={{ fontSize: '12px' }}>
               <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                 일정 보기
               </a>
             </small>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -283,9 +283,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>Crypto Meetups</div>
+            <div className="fname" style={{ fontSize: '14px' }}>Crypto Meetups</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -315,9 +315,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>에어드랍</div>
+            <div className="fname" style={{ fontSize: '14px' }}>에어드랍</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -361,9 +361,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>블록체인 리서치</div>
+            <div className="fname" style={{ fontSize: '14px' }}>블록체인 리서치</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -393,9 +393,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>블록체인 교육</div>
+            <div className="fname" style={{ fontSize: '14px' }}>블록체인 교육</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -425,9 +425,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>인터뷰</div>
+            <div className="fname" style={{ fontSize: '14px' }}>인터뷰</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -479,9 +479,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>트렌드 인사이트</div>
+            <div className="fname" style={{ fontSize: '14px' }}>트렌드 인사이트</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -528,9 +528,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>Yapping</div>
+            <div className="fname" style={{ fontSize: '14px' }}>Yapping</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -577,9 +577,9 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>텔레그램 채널</div>
+            <div className="fname" style={{ fontSize: '14px' }}>텔레그램 채널</div>
           </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
+          <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
@@ -617,7 +617,7 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '12px' }}>IPO 참여</div>
+            <div className="fname" style={{ fontSize: '14px' }}>IPO 참여</div>
           </div>
         </div>
       </section>
