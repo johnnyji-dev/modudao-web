@@ -133,17 +133,13 @@ export default function App() {
     <main id="app" className="app">
       <header className="header">
         <div className="brand">
-          <div className="logo" aria-hidden="true" />
+          <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
           <span className="brand-name">ModuDAO</span>
         </div>
       </header>
 
       {/* Hero / Logo + Title */}
       <section className="hero" style={{ paddingTop: 8 }}>
-        <div className="center">
-          <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" /></div>
-          <img className="site-wordmark" src="/text_modudao-removebg-preview.png" alt="MODUDAO" />
-        </div>
         {/* Intro Card */}
         <div className="intro-card">
           <h2 className="intro-head">블록체인 디젠 모두가 모여 만든<br />집단 지성체</h2>
