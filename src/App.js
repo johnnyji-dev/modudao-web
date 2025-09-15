@@ -138,14 +138,43 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero / Logo + Title */}
-      <section className="hero" style={{ paddingTop: 8 }}>
-        {/* Intro Card */}
-        <div className="intro-card">
-          <h2 className="intro-head">블록체인 디젠 모두가 모여 만든<br />집단 지성체</h2>
-          <p className="intro-sub">
-            ModuDAO는 디젠들의 집단 지성으로 움직이는 탈중앙 자율 조직.<br />
-            소수의 엘리트가 아닌, 모든 참여자가 곧 운영자입니다.
+      {/* Hero / Identity Section */}
+      <section className="hero" style={{ 
+        paddingTop: '2rem', 
+        paddingBottom: '20rem',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        {/* Intro */}
+        <div style={{ 
+          width: '100%',
+          maxWidth: '400px',
+          margin: '0 auto',
+          padding: '2rem 1.5rem',
+          textAlign: 'center'
+        }}>
+          <h2 className="intro-head" style={{ 
+            fontSize: '2.8rem',
+            fontWeight: '900',
+            lineHeight: '1.2',
+            margin: '0 0 1.5rem 0',
+            color: '#ffffff'
+          }}>
+            블록체인 디젠<br />모두가 모여 만든<br />집단 지성체
+          </h2>
+          <br />
+          <p className="intro-sub" style={{ 
+            fontSize: '1.4rem',
+            fontWeight: '500',
+            lineHeight: '1.5',
+            margin: '0',
+            color: '#e7e7ea'
+          }}>
+            ModuDAO는 디젠들의 집단 지성으로<br /> 움직이는 탈중앙 자율 조직.<br />
+            소수의 엘리트가 아닌,<br /> 모든 참여자가 곧 운영자입니다.
           </p>
         </div>
       </section>
