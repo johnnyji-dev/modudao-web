@@ -186,7 +186,7 @@ export default function App() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg2)'
+        backgroundColor: 'var(--bg1)'
       }}>
         <h2 className="section-title" style={{
           fontSize: '1.4rem',
@@ -622,20 +622,69 @@ export default function App() {
         </div>
       </section>
 
-      {/* Checklist */}
-      <section className="checklist">
-        <h2 className="section-title">이런 분들을 기다립니다!</h2>
-        <ul className="list">
-          <li><span className="tick">✔</span> 블록체인을 처음 접하는 분</li>
-          <li><span className="tick">✔</span> 밋업이 궁금하신 분</li>
-          <li><span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분</li>
-          <li><span className="tick">✔</span> 코인을 배우고 싶은 코린이</li>
-          <li><span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분</li>
-        </ul>
+      {/* Checklist & Goal Combined */}
+      <section className="checklist" style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '2rem 0',
+        backgroundColor: 'var(--bg2)'
+      }}>
+        <div style={{ width: '100%', maxWidth: '400px' }}>
+          <h2 className="section-title" style={{ 
+            fontSize: '1.8rem',
+            fontWeight: '800',
+            marginBottom: '2rem',
+            textAlign: 'center',
+            color: '#ffffff'
+          }}>이런 분들을 기다립니다!</h2>
+          <ul className="list" style={{ marginBottom: '3rem' }}>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 블록체인을 처음 접하는 분
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 밋업이 궁금하신 분
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 코인을 배우고 싶은 코린이
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
+            </li>
+          </ul>
+          
+          <div style={{ textAlign: 'center' }}>
+            <div className="goal-icon" style={{ fontSize: '2rem', marginBottom: '1rem' }}>🚀</div>
+            <h2 className="section-title" style={{ 
+              fontSize: '1.6rem',
+              fontWeight: '700',
+              marginBottom: '1rem',
+              color: '#ffffff'
+            }}>우리의 목표</h2>
+            <p className="muted center" style={{ 
+              fontSize: '1.2rem',
+              lineHeight: '1.5',
+              color: '#e7e7ea'
+            }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
+          </div>
+        </div>
       </section>
 
       {/* Members */}
-      <section className="members">
+      <section className="members" style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '2rem 0',
+        backgroundColor: 'var(--bg3)'
+      }}>
         <h2 className="section-title">함께하는 멤버</h2>
         <div className="stack">
           <div className="pill">
@@ -695,13 +744,6 @@ export default function App() {
             </section>
           </div>
         </div>
-      </section>
-
-      {/* Goal */}
-      <section className="goal">
-        <div className="goal-icon">🚀</div>
-        <h2 className="section-title">우리의 목표</h2>
-        <p className="muted center">제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
       </section>
 
       {/* Gallery */}
