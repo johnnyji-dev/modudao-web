@@ -186,7 +186,7 @@ export default function App() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg2)'
+        backgroundColor: 'var(--bg1)'
       }}>
         <h2 className="section-title" style={{
           fontSize: '1.4rem',
@@ -212,7 +212,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -257,7 +257,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -289,7 +289,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -321,7 +321,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -341,7 +341,7 @@ export default function App() {
                   left: '2px',
                   right: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -349,7 +349,7 @@ export default function App() {
                   left: '2px',
                   right: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -357,7 +357,7 @@ export default function App() {
                   left: '2px',
                   right: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
               </div>
             </div>
@@ -367,7 +367,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -399,7 +399,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -431,7 +431,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -451,7 +451,7 @@ export default function App() {
                   left: '1px',
                   width: '2px',
                   height: '6px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -459,7 +459,7 @@ export default function App() {
                   left: '4px',
                   width: '2px',
                   height: '5px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -467,7 +467,7 @@ export default function App() {
                   left: '7px',
                   width: '2px',
                   height: '4px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -475,7 +475,7 @@ export default function App() {
                   left: '10px',
                   width: '2px',
                   height: '3px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
               </div>
             </div>
@@ -485,7 +485,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -505,7 +505,7 @@ export default function App() {
                   left: '2px',
                   width: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{ 
@@ -514,7 +514,7 @@ export default function App() {
                   left: '5px',
                   width: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{ 
@@ -523,7 +523,7 @@ export default function App() {
                   left: '8px',
                   width: '2px',
                   height: '2px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
               </div>
@@ -534,7 +534,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -555,7 +555,7 @@ export default function App() {
                   transform: 'translateX(-50%)',
                   width: '6px',
                   height: '1px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -564,7 +564,7 @@ export default function App() {
                   transform: 'translateX(-50%)',
                   width: '6px',
                   height: '1px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
                 <div style={{ 
                   position: 'absolute',
@@ -573,7 +573,7 @@ export default function App() {
                   transform: 'translateX(-50%)',
                   width: '6px',
                   height: '1px',
-                  backgroundColor: '#7b5cff'
+                  backgroundColor: '#2a2a2a'
                 }}></div>
               </div>
             </div>
@@ -583,7 +583,7 @@ export default function App() {
             <div className="ficon" style={{ 
               width: '28px', 
               height: '28px', 
-              backgroundColor: '#7b5cff', 
+              backgroundColor: '#2a2a2a', 
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -603,7 +603,7 @@ export default function App() {
                   left: '2px',
                   width: '6px',
                   height: '6px',
-                  backgroundColor: '#7b5cff',
+                  backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
                 <div style={{ 
@@ -622,30 +622,116 @@ export default function App() {
         </div>
       </section>
 
-      {/* Checklist */}
-      <section className="checklist">
-        <h2 className="section-title">이런 분들을 기다립니다!</h2>
-        <ul className="list">
-          <li><span className="tick">✔</span> 블록체인을 처음 접하는 분</li>
-          <li><span className="tick">✔</span> 밋업이 궁금하신 분</li>
-          <li><span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분</li>
-          <li><span className="tick">✔</span> 코인을 배우고 싶은 코린이</li>
-          <li><span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분</li>
-        </ul>
+      {/* Checklist & Goal Combined */}
+      <section className="checklist" style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '2rem 0',
+        backgroundColor: 'var(--bg2)'
+      }}>
+        <div style={{ width: '100%', maxWidth: '400px' }}>
+          <h2 className="section-title" style={{ 
+            fontSize: '1.8rem',
+            fontWeight: '800',
+            marginBottom: '2rem',
+            textAlign: 'center',
+            color: '#ffffff'
+          }}>이런 분들을 기다립니다!</h2>
+          <ul className="list" style={{ marginBottom: '3rem' }}>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 블록체인을 처음 접하는 분
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 밋업이 궁금하신 분
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 코인을 배우고 싶은 코린이
+            </li>
+            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+              <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
+            </li>
+          </ul>
+          
+          <div style={{ textAlign: 'center' }}>
+            <div className="goal-icon" style={{ fontSize: '2rem', marginBottom: '1rem' }}>🚀</div>
+            <h2 className="section-title" style={{ 
+              fontSize: '1.6rem',
+              fontWeight: '700',
+              marginBottom: '1rem',
+              color: '#ffffff'
+            }}>우리의 목표</h2>
+            <p className="muted center" style={{ 
+              fontSize: '1.2rem',
+              lineHeight: '1.5',
+              color: '#e7e7ea'
+            }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
+          </div>
+        </div>
       </section>
 
       {/* Members */}
-      <section className="members">
+      <section className="members" style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '2rem 0',
+        backgroundColor: 'var(--bg3)'
+      }}>
         <h2 className="section-title">함께하는 멤버</h2>
         <div className="stack">
-          <div className="pill">
-            <strong> TEMPi</strong>
-            <small>9년차 블록체인 전문 에이전시</small>
-            <br />
-            <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" className="contact-link">
-              📱 텔레그램으로 연락하기
-            </a>
-          </div>
+          <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
+              <strong> TEMPi</strong>
+              <small>9년차 블록체인 전문 에이전시</small>
+              <br />
+              <div style={{ 
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '32px',
+                height: '32px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '8px',
+                marginTop: '8px'
+              }}>
+                <div style={{ 
+                  width: '20px', 
+                  height: '20px', 
+                  position: 'relative'
+                }}>
+                  {/* 텔레그램 종이비행기 아이콘 */}
+                  <div style={{ 
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '16px',
+                    height: '16px',
+                    backgroundColor: '#0088cc',
+                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                  }}></div>
+                  <div style={{ 
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '12px',
+                    height: '12px',
+                    backgroundColor: '#ffffff',
+                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                  }}></div>
+                </div>
+              </div>
+            </div>
+          </a>
           <div className="pill">
             <strong> DAO 멤버 및 채널소개</strong>
             {/* Telegram Channels */}
@@ -695,13 +781,6 @@ export default function App() {
             </section>
           </div>
         </div>
-      </section>
-
-      {/* Goal */}
-      <section className="goal">
-        <div className="goal-icon">🚀</div>
-        <h2 className="section-title">우리의 목표</h2>
-        <p className="muted center">제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
       </section>
 
       {/* Gallery */}
