@@ -750,7 +750,7 @@ export default function App() {
                 <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">⚓️</div>
                   <div className="channel-name">Crypto Dock</div>
-                  <div className="channel-desc">설명 필요</div>
+                  <div className="channel-desc">온체인 분석 | 디파이 매매 등 관심있는 것 모두 합니다.</div>
                 </a>
                 <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🍩</div>
@@ -776,6 +776,16 @@ export default function App() {
                   <div className="channel-icon">🎒</div>
                   <div className="channel-name">크립토 하이스쿨</div>
                   <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
+                </a>
+                <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🎒</div>
+                  <div className="channel-name">코인타운</div>
+                  <div className="channel-desc">세상에 모든 돈되는 정보</div>
+                </a>
+                <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🎒</div>
+                  <div className="channel-name">코파카</div>
+                  <div className="channel-desc">설명 필요</div>
                 </a>
               </div>
             </section>
