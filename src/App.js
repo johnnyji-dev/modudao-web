@@ -804,7 +804,7 @@ export default function App() {
         alignItems: 'center',
         backgroundColor: 'var(--bg1)'
       }}>
-        <section className="gallery" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="gallery" style={{ height: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 사진
           </h2>
@@ -839,7 +839,7 @@ export default function App() {
 
         <br />
 
-        <section className="youtube-section" style={{ theight: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="youtube-section" style={{ theight: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 영상
           </h2>
@@ -848,7 +848,7 @@ export default function App() {
               <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
                 ‹
               </button>
-              <div className="youtube-container" style={{ width: '100%', maxWidth: '400px', height: '250px' }}>
+              <div className="youtube-container" style={{ width: '380px', maxWidth: '400px', height: '250px' }}>
                 <iframe
                   width="100%"
                   height="100%"
