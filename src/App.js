@@ -802,10 +802,9 @@ export default function App() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '2rem 0',
         backgroundColor: 'var(--bg1)'
       }}>
-        <section className="gallery">
+        <section className="gallery" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 사진
           </h2>
@@ -838,7 +837,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="youtube-section">
+        <section className="youtube-section" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 영상
           </h2>
@@ -849,7 +848,7 @@ export default function App() {
               </button>
               <div className="youtube-container">
                 <iframe
-                  width="560"
+                  width="700"
                   height="315"
                   src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
                   title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
@@ -876,18 +875,16 @@ export default function App() {
           </div>
         </section>
 
-        <section className="notice">
+        <section className="notice" style={{ height: '15vh' }}>
           <div className="notice-card">
-            <div className="notice-icon">⚠️</div>
             <div>
-              <h3 className="notice-title">유의사항</h3>
+              <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
               <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
                 저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
             </div>
           </div>
         </section>
       </section>
-
 
       <Footer />
     </main>
