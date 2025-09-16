@@ -1,10 +1,11 @@
 :root {
   --bg: #0b0b0c;
+  --bg2: #101010;
   --text: #e7e7ea;
   --muted: #a6a6ad;
   --card: #151518;
-  --primary: #7b5cff;
-  --primary-2: #00e5ff;
+  --primary: #0b0b0c;
+  --primary-2: #0b0b0c;
   --border: #26262b;
 }
 
@@ -14,9 +15,7 @@ body {
   margin: 0;
   font-family: 'Pretendard', system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Noto Sans KR, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
-  background: radial-gradient(1200px 800px at 50% -200px, rgba(123,92,255,0.18), transparent 60%),
-              radial-gradient(1000px 700px at 80% 0%, rgba(0,229,255,0.14), transparent 60%),
-              var(--bg);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,6 +29,10 @@ body {
 .brand { display: flex; align-items: center; gap: 10px; }
 .logo { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); box-shadow: 0 8px 24px rgba(123,92,255,0.35); }
 .brand-name { font-weight: 700; letter-spacing: 0.2px; }
+
+/* Header hero-logo and site-wordmark with same size as logo and brand-name */
+.header .hero-logo { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); box-shadow: 0 8px 24px rgba(123,92,255,0.35); }
+.header .site-wordmark { font-weight: 700; letter-spacing: 0.2px; }
 
 .ghost-btn { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 8px 12px; border-radius: 10px; font-weight: 500; }
 .ghost-btn:active { transform: translateY(1px); }
@@ -82,7 +85,7 @@ body {
 .intro-head { margin: 4px 0 8px; font-size: 20px; line-height: 1.5; text-align: center; }
 .intro-sub { margin: 0; color: var(--muted); text-align: center; }
 
-.features-block { margin-top: 28px; }
+.features-block { margin-top: 5px; }
 .section-title { text-align: center; margin: 10px 0 16px; font-size: 18px; font-weight: 800; }
 .section-description { text-align: center; margin: 8px 0; color: var(--muted); }
 .activity-list { list-style: none; margin: 16px 0; padding: 0; text-align: center; }
