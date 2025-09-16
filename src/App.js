@@ -131,7 +131,7 @@ export default function App() {
 
   return (
     <main id="app" className="app">
-      <header className="header">
+      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw' }}>
         <div className="brand">
           <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
           <span className="brand-name">ModuDAO</span>
