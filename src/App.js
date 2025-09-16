@@ -687,14 +687,51 @@ export default function App() {
       }}>
         <h2 className="section-title">함께하는 멤버</h2>
         <div className="stack">
-          <div className="pill">
-            <strong> TEMPi</strong>
-            <small>9년차 블록체인 전문 에이전시</small>
-            <br />
-            <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" className="contact-link">
-              📱 텔레그램으로 연락하기
-            </a>
-          </div>
+          <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
+              <strong> TEMPi</strong>
+              <small>9년차 블록체인 전문 에이전시</small>
+              <br />
+              <div style={{ 
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '32px',
+                height: '32px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '8px',
+                marginTop: '8px'
+              }}>
+                <div style={{ 
+                  width: '20px', 
+                  height: '20px', 
+                  position: 'relative'
+                }}>
+                  {/* 텔레그램 종이비행기 아이콘 */}
+                  <div style={{ 
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '16px',
+                    height: '16px',
+                    backgroundColor: '#0088cc',
+                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                  }}></div>
+                  <div style={{ 
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '12px',
+                    height: '12px',
+                    backgroundColor: '#ffffff',
+                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                  }}></div>
+                </div>
+              </div>
+            </div>
+          </a>
           <div className="pill">
             <strong> DAO 멤버 및 채널소개</strong>
             {/* Telegram Channels */}
