@@ -189,12 +189,13 @@ export default function App() {
         backgroundColor: 'var(--bg1)'
       }}>
         <h2 className="section-title" style={{
-          fontSize: '1.4rem',
+          fontSize: '1.6rem',
           fontWeight: '1500',
           lineHeight: '1.5',
           margin: '0',
           color: '#e7e7ea'
         }}>우리의 주요 활동</h2>
+        <br />
         <p className="section-description" style={{
           fontSize: '1rem',
           fontWeight: '500',
@@ -634,32 +635,31 @@ export default function App() {
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{ 
-            fontSize: '1.8rem',
+            fontSize: '1.6rem',
             fontWeight: '800',
-            marginBottom: '2rem',
+            marginBottom: '1rem',
             textAlign: 'center',
             color: '#ffffff'
           }}>이런 분들을 기다립니다!</h2>
           <ul className="list" style={{ marginBottom: '3rem' }}>
-            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 블록체인을 처음 접하는 분
             </li>
-            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 밋업이 궁금하신 분
             </li>
-            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분
             </li>
-            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 코인을 배우고 싶은 코린이
             </li>
-            <li style={{ padding: '8px 12px', marginBottom: '4px' }}>
+            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
             </li>
           </ul>
           
           <div style={{ textAlign: 'center' }}>
-            <div className="goal-icon" style={{ fontSize: '2rem', marginBottom: '1rem' }}>🚀</div>
             <h2 className="section-title" style={{ 
               fontSize: '1.6rem',
               fontWeight: '700',
@@ -667,7 +667,7 @@ export default function App() {
               color: '#ffffff'
             }}>우리의 목표</h2>
             <p className="muted center" style={{ 
-              fontSize: '1.2rem',
+              fontSize: '1rem',
               lineHeight: '1.5',
               color: '#e7e7ea'
             }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
@@ -685,7 +685,9 @@ export default function App() {
         padding: '2rem 0',
         backgroundColor: 'var(--bg3)'
       }}>
-        <h2 className="section-title">함께하는 멤버</h2>
+        <h2 className="section-title" style={{
+          fontSize: '1.6rem'
+        }}>함께하는 멤버</h2>
         <div className="stack">
           <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
@@ -793,86 +795,99 @@ export default function App() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="gallery">
-        <h2 className="section-title">활동 사진</h2>
-        <div className="gallery-slider">
-          <div className="slider-container">
-            <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
-              ‹
-            </button>
-            <div className="slider-image-container">
-              <img
-                src={galleryImages[currentImageIndex]?.src}
-                alt={galleryImages[currentImageIndex]?.alt || "모임 사진"}
-                className="slider-image"
-              />
+      {/* Gallery & YouTube Video * Notice */}
+      <section style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '2rem 0',
+        backgroundColor: 'var(--bg1)'
+      }}>
+        <section className="gallery">
+          <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
+            활동 사진
+          </h2>
+          <div className="gallery-slider">
+            <div className="slider-container">
+              <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
+                ‹
+              </button>
+              <div className="slider-image-container">
+                <img
+                  src={galleryImages[currentImageIndex]?.src}
+                  alt={galleryImages[currentImageIndex]?.alt || "모임 사진"}
+                  className="slider-image"
+                />
+              </div>
+              <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
+                ›
+              </button>
             </div>
-            <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
-              ›
-            </button>
+            <div className="slider-dots">
+              {galleryImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentImageIndex(index)}
+                  aria-label={`사진 ${index + 1}로 이동`}
+                />
+              ))}
+            </div>
           </div>
-          <div className="slider-dots">
-            {galleryImages.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                onClick={() => setCurrentImageIndex(index)}
-                aria-label={`사진 ${index + 1}로 이동`}
-              />
-            ))}
+        </section>
+
+        <section className="youtube-section">
+          <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
+            활동 영상
+          </h2>
+          <div className="youtube-slider">
+            <div className="youtube-slider-container">
+              <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
+                ‹
+              </button>
+              <div className="youtube-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
+                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="youtube-embed"
+                ></iframe>
+              </div>
+              <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
+                ›
+              </button>
+            </div>
+            <div className="youtube-slider-dots">
+              {youtubeVideos.map((_, index) => (
+                <button
+                  key={index}
+                  className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentVideoIndex(index)}
+                  aria-label={`영상 ${index + 1}로 이동`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section className="notice">
+          <div className="notice-card">
+            <div className="notice-icon">⚠️</div>
+            <div>
+              <h3 className="notice-title">유의사항</h3>
+              <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
+                저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
+            </div>
+          </div>
+        </section>
       </section>
 
-      {/* YouTube Video Slider */}
-      <section className="youtube-section">
-        <h2 className="section-title">활동 영상</h2>
-        <div className="youtube-slider">
-          <div className="youtube-slider-container">
-            <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
-              ‹
-            </button>
-            <div className="youtube-container">
-              <iframe
-                width="560"
-                height="315"
-                src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
-                title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="youtube-embed"
-              ></iframe>
-            </div>
-            <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
-              ›
-            </button>
-          </div>
-          <div className="youtube-slider-dots">
-            {youtubeVideos.map((_, index) => (
-              <button
-                key={index}
-                className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
-                onClick={() => setCurrentVideoIndex(index)}
-                aria-label={`영상 ${index + 1}로 이동`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Notice */}
-      <section className="notice">
-        <div className="notice-card">
-          <div className="notice-icon">⚠️</div>
-          <div>
-            <h3 className="notice-title">유의사항</h3>
-            <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-              저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>
