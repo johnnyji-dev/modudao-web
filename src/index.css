@@ -161,14 +161,14 @@ body {
 .join-btn { display: block; text-align: center; padding: 14px; border-radius: 16px; border: 1px solid var(--border); color: var(--text); text-decoration: none; background: #141416; font-weight: 700; }
 .join-btn.primary { background: #7b5cff; color: #0b0b0c; border-color: #7b5cff; }
 
-.notice { margin: 28px 0; }
-.notice-card { display: flex; gap: 12px; align-items: center; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; }
-.notice-icon { font-size: 18px; }
-.notice-title { margin: 0 0 4px; }
-.muted { color: var(--muted); }
+.notice { margin: 10px 0; }
+.notice-card { display: flex; gap: 12px; align-items: center; padding: 6px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; margin: 10px }
+.notice-icon { font-size: 14px; }
+.notice-title { margin: 15px; }
+.muted { color: var(--muted); font-size: 10px; margin: 15px;}
 
 /* YouTube Video Section */
-.youtube-section { margin: 28px 0; }
+.youtube-section { margin-top: 30px; }
 .youtube-slider { position: relative; }
 .youtube-slider-container { 
   position: relative; 

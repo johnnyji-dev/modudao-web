@@ -837,7 +837,9 @@ export default function App() {
           </div>
         </section>
 
-        <section className="youtube-section" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <br />
+
+        <section className="youtube-section" style={{ theight: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 영상
           </h2>
@@ -846,10 +848,10 @@ export default function App() {
               <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
                 ‹
               </button>
-              <div className="youtube-container">
+              <div className="youtube-container" style={{ width: '100%', maxWidth: '400px', height: '250px' }}>
                 <iframe
-                  width="700"
-                  height="315"
+                  width="100%"
+                  height="100%"
                   src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
                   title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
                   frameBorder="0"
@@ -875,7 +877,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="notice" style={{ height: '15vh' }}>
+        <section className="notice" style={{ height: '10vh' }}>
           <div className="notice-card">
             <div>
               <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
