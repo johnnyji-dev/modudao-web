@@ -133,15 +133,22 @@ export default function App() {
 
   return (
     <main id="app" className="app">
-      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw' }}>
-        <div className="brand">
+      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '28vw', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 1rem' }}>
+        <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
           <span className="brand-name">ModuDAO</span>
         </div>
+        <nav style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', flexShrink: 1 }}>
+          <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>소개</a>
+          <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>활동</a>
+          <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>목표</a>
+          <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>멤버</a>
+          <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>영상&사진</a>
+        </nav>
       </header>
 
       {/* Hero / Identity Section */}
-      <section className="hero" style={{
+      <section id="hero" className="hero" style={{
         paddingTop: '2rem',
         paddingBottom: '20rem',
         minHeight: '100vh',
@@ -182,7 +189,7 @@ export default function App() {
       </section>
 
       {/* Feature grid */}
-      <section className="features-block" style={{
+      <section id="features" className="features-block" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -626,7 +633,7 @@ export default function App() {
       </section>
 
       {/* Checklist & Goal Combined */}
-      <section className="checklist" style={{ 
+      <section id="goal" className="checklist" style={{ 
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -635,6 +642,21 @@ export default function App() {
         padding: '2rem 0',
         backgroundColor: 'var(--bg2)'
       }}>
+        <div style={{ textAlign: 'center' }}>
+          <h2 className="section-title" style={{ 
+            fontSize: '1.8rem',
+            fontWeight: '800',
+            marginBottom: '1rem',
+            color: '#ffffff'
+          }}>우리의 목표</h2>
+          <p className="muted center" style={{ 
+            fontSize: '1rem',
+            lineHeight: '1.5',
+            color: '#e7e7ea',
+            marginBottom: '4rem',
+          }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
+        </div>
+
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{ 
             fontSize: '1.6rem',
@@ -661,24 +683,12 @@ export default function App() {
             </li>
           </ul>
           
-          <div style={{ textAlign: 'center' }}>
-            <h2 className="section-title" style={{ 
-              fontSize: '1.6rem',
-              fontWeight: '700',
-              marginBottom: '1rem',
-              color: '#ffffff'
-            }}>우리의 목표</h2>
-            <p className="muted center" style={{ 
-              fontSize: '1rem',
-              lineHeight: '1.5',
-              color: '#e7e7ea'
-            }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
-          </div>
+
         </div>
       </section>
 
       {/* Members */}
-      <section className="members" style={{ 
+      <section id="members" className="members" style={{ 
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -798,7 +808,7 @@ export default function App() {
       </section>
 
       {/* Gallery & YouTube Video * Notice */}
-      <section style={{ 
+      <section id="gallery" style={{ 
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
