@@ -3,8 +3,10 @@ import React from 'react';
 function Footer() {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
-    <footer className="footer">
-      <small>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
+    <footer className="footer" style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 1000, background: 'var(--bg)', padding: '12px 0' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <small style={{ textAlign: 'center' }}>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
+      </div>
     </footer>
   );
 }

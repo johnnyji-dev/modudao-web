@@ -70,7 +70,7 @@ body {
 .feature .text h3 { margin: 0 0 4px; font-size: 16px; }
 .feature .text p { margin: 0; color: var(--muted); font-size: 14px; }
 
-.footer { margin-top: 18px; padding-top: 12px; color: var(--muted); text-align: center; font-size: 12px; }
+.footer { margin-top: 18px; padding-top: 12px; color: var(--muted); text-align: center; font-size: 12px; position: fixed; bottom: 0; z-index: 1000; background-color: var(--bg); width: 100vw; }
 
 .cookie-banner { position: fixed; left: 12px; right: 12px; bottom: 12px; background: rgba(21,21,24,0.9); border: 1px solid var(--border); border-radius: 14px; padding: 12px; display: none; gap: 12px; align-items: center; justify-content: space-between; backdrop-filter: blur(6px); }
 .cookie-banner__content { font-size: 13px; color: var(--text); }
