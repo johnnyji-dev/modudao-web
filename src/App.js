@@ -202,26 +202,30 @@ export default function App() {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg1)',
-        padding: '2rem 0'
+        padding: '2rem 0',
+        width: '100vw',
+        marginLeft: 'calc(-50vw + 50%)',
+        marginRight: 'calc(-50vw + 50%)'
       }}>
-        <h2 className="section-title" style={{
-          fontSize: '24px',
-          fontWeight: '1500',
-          lineHeight: '1.3',
-          margin: '0 0 1rem 0',
-          color: '#e7e7ea'
-        }}>우리의 주요 활동</h2>
-        <p className="section-description" style={{
-          fontSize: '13px',
-          fontWeight: '500',
-          lineHeight: '1.4',
-          margin: '0 0 1.5rem 0',
-          color: '#e7e7ea'
-        }}>
-          ModuDAO의 주요 활동은 다음과 같습니다. <br />
-          지금, 활발하게 성장하는 커뮤니티에 합류하세요!
-        </p>
-        <div className="grid2" style={{ gap: '12px', maxWidth: '400px', width: '100%' }}>
+        <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
+          <h2 className="section-title" style={{
+            fontSize: '24px',
+            fontWeight: '1500',
+            lineHeight: '1.3',
+            margin: '0 0 1rem 0',
+            color: '#e7e7ea'
+          }}>우리의 주요 활동</h2>
+          <p className="section-description" style={{
+            fontSize: '13px',
+            fontWeight: '500',
+            lineHeight: '1.4',
+            margin: '0 0 1.5rem 0',
+            color: '#e7e7ea'
+          }}>
+            ModuDAO의 주요 활동은 다음과 같습니다. <br />
+            지금, 활발하게 성장하는 커뮤니티에 합류하세요!
+          </p>
+          <div className="grid2" style={{ gap: '12px', maxWidth: '400px', width: '100%' }}>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{
               width: '28px',
@@ -632,6 +636,7 @@ export default function App() {
               </div>
             </div>
             <div className="fname" style={{ fontSize: '14px' }}>IPO 참여</div>
+          </div>
           </div>
         </div>
       </section>
