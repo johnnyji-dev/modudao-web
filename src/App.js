@@ -225,417 +225,417 @@ export default function App() {
             지금, 활발하게 성장하는 커뮤니티에 합류하세요!
           </p>
           <div className="grid2" style={{ gap: '8px', maxWidth: '400px', width: '100%' }}>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '16px',
-                border: '2px solid white',
-                borderRadius: '3px',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
                 <div style={{
-                  position: 'absolute',
-                  top: '3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '2px',
-                  height: '8px',
-                  backgroundColor: 'white'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '3px',
-                  left: '50%',
-                  transform: 'translateX(-50%) rotate(90deg)',
-                  width: '2px',
-                  height: '8px',
-                  backgroundColor: 'white'
-                }}></div>
+                  width: '16px',
+                  height: '16px',
+                  border: '2px solid white',
+                  borderRadius: '3px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '2px',
+                    height: '8px',
+                    backgroundColor: 'white'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '50%',
+                    transform: 'translateX(-50%) rotate(90deg)',
+                    width: '2px',
+                    height: '8px',
+                    backgroundColor: 'white'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>정기 모임</div>
+              <small style={{ fontSize: '10px' }}>
+                <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  일정 보기
+                </a>
+              </small>
             </div>
-            <div className="fname" style={{ fontSize: '11px' }}>정기 모임</div>
-            <small style={{ fontSize: '10px' }}>
-              <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-                일정 보기
-              </a>
-            </small>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '10px',
-                backgroundColor: 'white',
-                borderRadius: '8px 8px 0 0',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
                 <div style={{
-                  position: 'absolute',
-                  bottom: '-3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '10px',
-                  height: '5px',
+                  width: '16px',
+                  height: '10px',
                   backgroundColor: 'white',
-                  borderRadius: '0 0 5px 5px'
-                }}></div>
+                  borderRadius: '8px 8px 0 0',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '-3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '10px',
+                    height: '5px',
+                    backgroundColor: 'white',
+                    borderRadius: '0 0 5px 5px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>Crypto Meetups</div>
             </div>
-            <div className="fname" style={{ fontSize: '11px' }}>Crypto Meetups</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '14px',
-                height: '14px',
-                backgroundColor: 'white',
-                borderRadius: '50%',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
                 <div style={{
-                  position: 'absolute',
-                  top: '-3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '8px',
-                  height: '3px',
+                  width: '14px',
+                  height: '14px',
                   backgroundColor: 'white',
-                  borderRadius: '2px'
-                }}></div>
+                  borderRadius: '50%',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '8px',
+                    height: '3px',
+                    backgroundColor: 'white',
+                    borderRadius: '2px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>에어드랍</div>
             </div>
-            <div className="fname" style={{ fontSize: '11px' }}>에어드랍</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '10px',
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
                 <div style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  right: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '4px',
-                  left: '2px',
-                  right: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '6px',
-                  left: '2px',
-                  right: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '11px' }}>블록체인 리서치</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '12px',
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                position: 'relative'
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  top: '-2px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '8px',
-                  height: '2px',
+                  width: '16px',
+                  height: '10px',
                   backgroundColor: 'white',
-                  borderRadius: '1px'
-                }}></div>
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '2px',
+                    right: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '4px',
+                    left: '2px',
+                    right: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '6px',
+                    left: '2px',
+                    right: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>블록체인 리서치</div>
             </div>
-            <div className="fname" style={{ fontSize: '11px' }}>블록체인 교육</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '12px',
-                height: '12px',
-                backgroundColor: 'white',
-                borderRadius: '50%',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
                 <div style={{
-                  position: 'absolute',
-                  bottom: '-2px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '4px',
-                  height: '2px',
+                  width: '16px',
+                  height: '12px',
                   backgroundColor: 'white',
-                  borderRadius: '0 0 2px 2px'
-                }}></div>
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '-2px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '8px',
+                    height: '2px',
+                    backgroundColor: 'white',
+                    borderRadius: '1px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>블록체인 교육</div>
             </div>
-            <div className="fname" style={{ fontSize: '11px' }}>인터뷰</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '10px',
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
                 <div style={{
-                  position: 'absolute',
-                  top: '1px',
-                  left: '1px',
-                  width: '2px',
-                  height: '6px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '4px',
-                  width: '2px',
-                  height: '5px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '3px',
-                  left: '7px',
-                  width: '2px',
-                  height: '4px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '4px',
-                  left: '10px',
-                  width: '2px',
-                  height: '3px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '11px' }}>트렌드 인사이트</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '10px',
-                backgroundColor: 'white',
-                borderRadius: '6px',
-                position: 'relative'
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  width: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '5px',
-                  width: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '8px',
-                  width: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '11px' }}>Yapping</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '14px',
-                height: '16px',
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                position: 'relative'
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  top: '1px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '6px',
-                  height: '1px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '6px',
-                  height: '1px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '5px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '6px',
-                  height: '1px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '11px' }}>텔레그램 채널</div>
-          </div>
-          <div className="feature-card" style={{ padding: '12px 8px' }}>
-            <div className="ficon" style={{
-              width: '24px',
-              height: '24px',
-              backgroundColor: '#2a2a2a',
-              borderRadius: '5px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 6px'
-            }}>
-              <div style={{
-                width: '14px',
-                height: '14px',
-                backgroundColor: 'white',
-                borderRadius: '50%',
-                position: 'relative'
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  width: '6px',
-                  height: '6px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  top: '3px',
-                  left: '3px',
-                  width: '4px',
-                  height: '4px',
+                  width: '12px',
+                  height: '12px',
                   backgroundColor: 'white',
-                  borderRadius: '50%'
-                }}></div>
+                  borderRadius: '50%',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '-2px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '4px',
+                    height: '2px',
+                    backgroundColor: 'white',
+                    borderRadius: '0 0 2px 2px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>인터뷰</div>
             </div>
-            <div className="fname" style={{ fontSize: '11px' }}>IPO 참여</div>
-          </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '16px',
+                  height: '10px',
+                  backgroundColor: 'white',
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '1px',
+                    left: '1px',
+                    width: '2px',
+                    height: '6px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '4px',
+                    width: '2px',
+                    height: '5px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '7px',
+                    width: '2px',
+                    height: '4px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '4px',
+                    left: '10px',
+                    width: '2px',
+                    height: '3px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>트렌드 인사이트</div>
+            </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '16px',
+                  height: '10px',
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '2px',
+                    width: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '5px',
+                    width: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '8px',
+                    width: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>Yapping</div>
+            </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '14px',
+                  height: '16px',
+                  backgroundColor: 'white',
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '1px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '6px',
+                    height: '1px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '6px',
+                    height: '1px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '5px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '6px',
+                    height: '1px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>텔레그램 채널</div>
+            </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '14px',
+                  height: '14px',
+                  backgroundColor: 'white',
+                  borderRadius: '50%',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '2px',
+                    width: '6px',
+                    height: '6px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '3px',
+                    width: '4px',
+                    height: '4px',
+                    backgroundColor: 'white',
+                    borderRadius: '50%'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>IPO 참여</div>
+            </div>
           </div>
         </div>
       </section>
@@ -702,104 +702,104 @@ export default function App() {
             color: '#ffffff'
           }}>함께하는 멤버</h2>
           <div className="stack" style={{ gap: '1rem' }}>
-          <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
-              <strong> TEMPi</strong>
-              <small>9년차 블록체인 전문 에이전시</small>
-              <br />
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '32px',
-                height: '32px',
-                backgroundColor: '#2a2a2a',
-                borderRadius: '8px',
-                marginTop: '8px'
-              }}>
+            <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
+                <strong> TEMPi</strong>
+                <small>9년차 블록체인 전문 에이전시</small>
+                <br />
                 <div style={{
-                  width: '20px',
-                  height: '20px',
-                  position: 'relative'
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '32px',
+                  height: '32px',
+                  backgroundColor: '#2a2a2a',
+                  borderRadius: '8px',
+                  marginTop: '8px'
                 }}>
-                  {/* 텔레그램 종이비행기 아이콘 */}
                   <div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '16px',
-                    height: '16px',
-                    backgroundColor: '#0088cc',
-                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
-                  }}></div>
-                  <div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '12px',
-                    height: '12px',
-                    backgroundColor: '#ffffff',
-                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
-                  }}></div>
+                    width: '20px',
+                    height: '20px',
+                    position: 'relative'
+                  }}>
+                    {/* 텔레그램 종이비행기 아이콘 */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '16px',
+                      height: '16px',
+                      backgroundColor: '#0088cc',
+                      clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                    }}></div>
+                    <div style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '12px',
+                      height: '12px',
+                      backgroundColor: '#ffffff',
+                      clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                    }}></div>
+                  </div>
                 </div>
               </div>
+            </a>
+            <div className="pill">
+              <strong> DAO 멤버 및 채널소개</strong>
+              {/* Telegram Channels */}
+              <section className="telegram-channels">
+                <div className="channel-grid">
+                  <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🏛️</div>
+                    <div className="channel-name">ModuDAO모두다오</div>
+                    <div className="channel-desc">공식 텔레그램</div>
+                  </a>
+                  <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎓</div>
+                    <div className="channel-name">원대감의 성균관</div>
+                    <div className="channel-desc">크립토 핸섬가이</div>
+                  </a>
+                  <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">⚓️</div>
+                    <div className="channel-name">Crypto Dock</div>
+                    <div className="channel-desc">온체인 분석 | 디파이 매매</div>
+                  </a>
+                  <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🍩</div>
+                    <div className="channel-name">김도넛의 돈복사실</div>
+                    <div className="channel-desc">같이 경제적 자유를 위해</div>
+                  </a>
+                  <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">⛏️</div>
+                    <div className="channel-name">우쥰의 코인채굴작전</div>
+                    <div className="channel-desc">돈되는 채굴 방법</div>
+                  </a>
+                  <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">📰</div>
+                    <div className="channel-name">사대감의 크립통</div>
+                    <div className="channel-desc">육대감의 크립토 소식통</div>
+                  </a>
+                  <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎒</div>
+                    <div className="channel-name">크립토 하이스쿨</div>
+                    <div className="channel-desc">크립토에 문맹 탈출</div>
+                  </a>
+                  <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎒</div>
+                    <div className="channel-name">코인타운</div>
+                    <div className="channel-desc">세상에 모든 돈되는 정보</div>
+                  </a>
+                  <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎒</div>
+                    <div className="channel-name">코파카</div>
+                    <div className="channel-desc">코인 소개하는 알파카</div>
+                  </a>
+                </div>
+              </section>
             </div>
-          </a>
-          <div className="pill">
-            <strong> DAO 멤버 및 채널소개</strong>
-            {/* Telegram Channels */}
-            <section className="telegram-channels">
-              <div className="channel-grid">
-                <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🏛️</div>
-                  <div className="channel-name">ModuDAO모두다오</div>
-                  <div className="channel-desc">공식 텔레그램</div>
-                </a>
-                <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎓</div>
-                  <div className="channel-name">원대감의 성균관</div>
-                  <div className="channel-desc">크립토 핸섬가이</div>
-                </a>
-                <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">⚓️</div>
-                  <div className="channel-name">Crypto Dock</div>
-                  <div className="channel-desc">온체인 분석 | 디파이 매매</div>
-                </a>
-                <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🍩</div>
-                  <div className="channel-name">김도넛의 돈복사실</div>
-                  <div className="channel-desc">같이 경제적 자유를 위해</div>
-                </a>
-                <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">⛏️</div>
-                  <div className="channel-name">우쥰의 코인채굴작전</div>
-                  <div className="channel-desc">돈되는 채굴 방법</div>
-                </a>
-                <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">📰</div>
-                  <div className="channel-name">사대감의 크립통</div>
-                  <div className="channel-desc">육대감의 크립토 소식통</div>
-                </a>
-                <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">크립토 하이스쿨</div>
-                  <div className="channel-desc">크립토에 문맹 탈출</div>
-                </a>
-                <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">코인타운</div>
-                  <div className="channel-desc">세상에 모든 돈되는 정보</div>
-                </a>
-                <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">코파카</div>
-                  <div className="channel-desc">코인 소개하는 알파카</div>
-                </a>
-              </div>
-            </section>
-          </div>
           </div>
         </div>
       </section>
@@ -886,16 +886,16 @@ export default function App() {
             </div>
           </div>
         </section>
+      </section>
 
-        <section className="notice" style={{ height: '10vh' }}>
-          <div className="notice-card">
-            <div>
-              <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
-              <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-                저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
-            </div>
+      <section className="notice" style={{ height: '10vh' }}>
+        <div className="notice-card">
+          <div>
+            <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
+            <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
+              저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
           </div>
-        </section>
+        </div>
       </section>
 
       <Footer />
