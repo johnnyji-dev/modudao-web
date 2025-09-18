@@ -806,16 +806,17 @@ export default function App() {
 
       {/* Gallery & YouTube Video * Notice */}
       <section id="gallery" style={{
-        marginTop: '100px',
+        marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg)'
+        backgroundColor: 'var(--bg)',
+        padding: '1rem 0'
       }}>
-        <section className="gallery" style={{ height: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
+        <section className="gallery" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 사진
           </h2>
           <div className="gallery-slider">
@@ -848,9 +849,10 @@ export default function App() {
         </section>
 
         <br />
+        <br />
 
-        <section className="youtube-section" style={{ theight: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
+        <section className="youtube-section" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 영상
           </h2>
           <div className="youtube-slider">
@@ -858,7 +860,7 @@ export default function App() {
               <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
                 ‹
               </button>
-              <div className="youtube-container" style={{ width: '380px', maxWidth: '400px', height: '250px' }}>
+              <div className="youtube-container" style={{ width: '350px', maxWidth: '380px', height: '200px' }}>
                 <iframe
                   width="100%"
                   height="100%"
