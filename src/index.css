@@ -52,7 +52,11 @@ body {
 .pill small { color: var(--muted); font-size: 12px; }
 
 .telegram-channels { margin-top: 28px; }
-.channel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin-top: 12px; }
+.channel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+
+@media (max-width: 480px) {
+  .channel-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+}
 .channel-card { display: block; padding: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); transition: all 0.2s ease; }
 .channel-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); border-color: var(--primary); }
 .channel-icon { font-size: 16px; margin-bottom: 4px; }
@@ -171,7 +175,6 @@ body {
   .intro-head { font-size: 18px; }
   .intro-sub { font-size: 14px; }
   .section-description { font-size: 14px; }
-  .channel-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .youtube-section { margin: 20px 0; }
   .youtube-slider-btn {
     width: 35px;
@@ -180,8 +183,4 @@ body {
   }
   .youtube-slider-btn.prev { left: 5px; }
   .youtube-slider-btn.next { right: 5px; }
-}
-
-@media (min-width: 769px) {
-  .channel-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 }

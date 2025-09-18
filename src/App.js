@@ -751,10 +751,10 @@ export default function App() {
             <strong> DAO 멤버 및 채널소개</strong>
             {/* Telegram Channels */}
             <section className="telegram-channels">
-              <div className="channel-grid" style={{ gap: '8px', marginTop: '12px' }}>
+              <div className="channel-grid">
                 <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🏛️</div>
-                  <div className="channel-name">ModuDAO : 모두다오</div>
+                  <div className="channel-name">ModuDAO모두다오</div>
                   <div className="channel-desc">공식 텔레그램</div>
                 </a>
                 <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
