@@ -196,36 +196,32 @@ export default function App() {
       {/* Feature grid */}
       <section id="features" style={{
         marginTop: '50px',
-        minHeight: '70vh',
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg1)'
+        backgroundColor: 'var(--bg1)',
+        padding: '2rem 0'
       }}>
         <h2 className="section-title" style={{
-          fontSize: '28px',
-          // fontSize: '1.2rem',
+          fontSize: '24px',
           fontWeight: '1500',
-          lineHeight: '1.5',
-          margin: '0',
+          lineHeight: '1.3',
+          margin: '0 0 1rem 0',
           color: '#e7e7ea'
         }}>우리의 주요 활동</h2>
-        <br />
         <p className="section-description" style={{
-          fontSize: '14px',
-          // fontSize: '1rem',
+          fontSize: '13px',
           fontWeight: '500',
-          lineHeight: '1.5',
-          margin: '0',
+          lineHeight: '1.4',
+          margin: '0 0 1.5rem 0',
           color: '#e7e7ea'
         }}>
           ModuDAO의 주요 활동은 다음과 같습니다. <br />
           지금, 활발하게 성장하는 커뮤니티에 합류하세요!
         </p>
-        <br />
-        <br />
-        <div className="grid2" style={{ gap: '16px' }}>
+        <div className="grid2" style={{ gap: '12px', maxWidth: '400px', width: '100%' }}>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
             <div className="ficon" style={{
               width: '28px',
