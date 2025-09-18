@@ -202,14 +202,14 @@ export default function App() {
             transition: 'all 0.3s ease',
             marginTop: '0.5rem'
           }}>
-            활동 참여 바로가기
+            참여하기
           </a>
           <br />
           <img 
             src="/linking/modudao_wiki_tree.jpeg" 
             alt="ModuDAO Wiki Tree" 
             style={{
-              maxWidth: '150px',
+              maxWidth: '120px',
               height: 'auto',
               borderRadius: '6px',
               marginTop: '0.5rem'
