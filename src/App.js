@@ -676,20 +676,22 @@ export default function App() {
               <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
             </li>
           </ul>
-
-
         </div>
       </section>
 
       {/* Members */}
       <section id="members" className="members" style={{
+        marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'var(--bg1)',
         padding: '2rem 0',
-        backgroundColor: 'var(--bg1)'
+        width: '100vw',
+        marginLeft: 'calc(-50vw + 50%)',
+        marginRight: 'calc(-50vw + 50%)'
       }}>
         <h2 className="section-title" style={{
           fontSize: '1.6rem'
