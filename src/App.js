@@ -650,24 +650,10 @@ export default function App() {
         padding: '2rem 0',
         backgroundColor: 'var(--bg)'
       }}>
-        <div style={{ textAlign: 'center' }}>
-          <h2 className="section-title" style={{
-            fontSize: '1.8rem',
-            fontWeight: '800',
-            marginBottom: '1rem',
-            color: '#ffffff'
-          }}>우리의 목표</h2>
-          <p className="muted center" style={{
-            fontSize: '1rem',
-            lineHeight: '1.5',
-            color: '#e7e7ea',
-            marginBottom: '4rem',
-          }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
-        </div>
-
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{
-            fontSize: '1.6rem',
+            fontSize: '28px',
+            // fontSize: '1.6rem',
             fontWeight: '800',
             marginBottom: '1rem',
             textAlign: 'center',
