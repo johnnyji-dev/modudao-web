@@ -193,7 +193,7 @@ export default function App() {
           <a href="https://linktr.ee/Modudao" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-block',
             padding: '8px 16px',
-            backgroundColor: '#7b5cff',
+            backgroundColor: 'var(--button)',
             color: '#ffffff',
             textDecoration: 'none',
             borderRadius: '6px',
