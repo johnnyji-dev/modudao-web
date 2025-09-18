@@ -224,17 +224,17 @@ export default function App() {
             ModuDAO의 주요 활동은 다음과 같습니다. <br />
             지금, 활발하게 성장하는 커뮤니티에 합류하세요!
           </p>
-          <div className="grid2" style={{ gap: '12px', maxWidth: '400px', width: '100%' }}>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="grid2" style={{ gap: '8px', maxWidth: '400px', width: '100%' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '16px',
@@ -263,23 +263,23 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>정기 모임</div>
-            <small style={{ fontSize: '12px' }}>
+            <div className="fname" style={{ fontSize: '11px' }}>정기 모임</div>
+            <small style={{ fontSize: '10px' }}>
               <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                 일정 보기
               </a>
             </small>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '16px',
@@ -300,18 +300,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>Crypto Meetups</div>
+            <div className="fname" style={{ fontSize: '11px' }}>Crypto Meetups</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '14px',
@@ -332,18 +332,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>에어드랍</div>
+            <div className="fname" style={{ fontSize: '11px' }}>에어드랍</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '16px',
@@ -378,18 +378,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>블록체인 리서치</div>
+            <div className="fname" style={{ fontSize: '11px' }}>블록체인 리서치</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '16px',
@@ -410,18 +410,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>블록체인 교육</div>
+            <div className="fname" style={{ fontSize: '11px' }}>블록체인 교육</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '12px',
@@ -442,18 +442,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>인터뷰</div>
+            <div className="fname" style={{ fontSize: '11px' }}>인터뷰</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '16px',
@@ -496,18 +496,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>트렌드 인사이트</div>
+            <div className="fname" style={{ fontSize: '11px' }}>트렌드 인사이트</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '16px',
@@ -545,18 +545,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>Yapping</div>
+            <div className="fname" style={{ fontSize: '11px' }}>Yapping</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '14px',
@@ -594,18 +594,18 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>텔레그램 채널</div>
+            <div className="fname" style={{ fontSize: '11px' }}>텔레그램 채널</div>
           </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
+          <div className="feature-card" style={{ padding: '12px 8px' }}>
             <div className="ficon" style={{
-              width: '28px',
-              height: '28px',
+              width: '24px',
+              height: '24px',
               backgroundColor: '#2a2a2a',
-              borderRadius: '6px',
+              borderRadius: '5px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 8px'
+              margin: '0 auto 6px'
             }}>
               <div style={{
                 width: '14px',
@@ -634,7 +634,7 @@ export default function App() {
                 }}></div>
               </div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>IPO 참여</div>
+            <div className="fname" style={{ fontSize: '11px' }}>IPO 참여</div>
           </div>
           </div>
         </div>
@@ -688,17 +688,20 @@ export default function App() {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg1)',
-        padding: '2rem 0',
+        padding: '1rem 0',
         width: '100vw',
         marginLeft: 'calc(-50vw + 50%)',
         marginRight: 'calc(-50vw + 50%)'
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            // fontSize: '1.6rem'
-            fontSize: '28px'
+            fontSize: '24px',
+            fontWeight: '800',
+            marginBottom: '1rem',
+            textAlign: 'center',
+            color: '#ffffff'
           }}>함께하는 멤버</h2>
-          <div className="stack">
+          <div className="stack" style={{ gap: '1rem' }}>
           <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
               <strong> TEMPi</strong>
@@ -748,7 +751,7 @@ export default function App() {
             <strong> DAO 멤버 및 채널소개</strong>
             {/* Telegram Channels */}
             <section className="telegram-channels">
-              <div className="channel-grid">
+              <div className="channel-grid" style={{ gap: '8px', marginTop: '12px' }}>
                 <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🏛️</div>
                   <div className="channel-name">ModuDAO : 모두다오</div>
@@ -803,6 +806,7 @@ export default function App() {
 
       {/* Gallery & YouTube Video * Notice */}
       <section id="gallery" style={{
+        marginTop: '100px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
