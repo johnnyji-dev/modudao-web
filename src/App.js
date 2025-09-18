@@ -3,7 +3,8 @@ import React from 'react';
 function Footer() {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
-    <footer className="footer" style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 1000, background: 'var(--bg)', padding: '12px 0' }}>
+    // <footer className="footer" style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 1000, background: 'var(--bg)', padding: '12px 0' }}></footer>
+    <footer className="footer">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <small style={{ textAlign: 'center' }}>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
       </div>
@@ -86,7 +87,7 @@ export default function App() {
   // 자동 슬라이더 효과
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) =>
+      setCurrentImageIndex((prev) => 
         prev === galleryImages.length - 1 ? 0 : prev + 1
       );
     }, 3000); // 3초마다 자동 전환
@@ -97,7 +98,7 @@ export default function App() {
   // 자동 슬라이더 효과 (유튜브 영상)
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentVideoIndex((prev) =>
+      setCurrentVideoIndex((prev) => 
         prev === youtubeVideos.length - 1 ? 0 : prev + 1
       );
     }, 5000); // 영상은 5초마다 변경
@@ -107,43 +108,43 @@ export default function App() {
 
   // 수동 네비게이션 함수
   const nextImage = () => {
-    setCurrentImageIndex((prev) =>
+    setCurrentImageIndex((prev) => 
       prev === galleryImages.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) =>
+    setCurrentImageIndex((prev) => 
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
 
   // 유튜브 영상 네비게이션 함수
   const nextVideo = () => {
-    setCurrentVideoIndex((prev) =>
+    setCurrentVideoIndex((prev) => 
       prev === youtubeVideos.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevVideo = () => {
-    setCurrentVideoIndex((prev) =>
+    setCurrentVideoIndex((prev) => 
       prev === 0 ? youtubeVideos.length - 1 : prev - 1
     );
   };
 
   return (
     <main id="app" className="app">
-      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '28vw', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 1rem' }}>
+      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 0.5rem', minHeight: '56px' }}>
         <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
           <span className="brand-name">ModuDAO</span>
         </div>
-        <nav style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', flexShrink: 1 }}>
-          <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>소개</a>
-          <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>활동</a>
-          <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>목표</a>
-          <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>멤버</a>
-          <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>영상&사진</a>
+        <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch', flex: 1, justifyContent: 'center' }}>
+          <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
+          <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
+          <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>목표</a>
+          <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
+          <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>영상&사진</a>
         </nav>
       </header>
 
@@ -640,7 +641,7 @@ export default function App() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '2rem 0',
-        backgroundColor: 'var(--bg2)'
+        backgroundColor: 'var(--bg)'
       }}>
         <div style={{ textAlign: 'center' }}>
           <h2 className="section-title" style={{ 
@@ -681,7 +682,7 @@ export default function App() {
             <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
             </li>
-          </ul>
+        </ul>
           
 
         </div>
@@ -695,7 +696,7 @@ export default function App() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '2rem 0',
-        backgroundColor: 'var(--bg3)'
+        backgroundColor: 'var(--bg1)'
       }}>
         <h2 className="section-title" style={{
           fontSize: '1.6rem'
@@ -748,49 +749,49 @@ export default function App() {
           </a>
           <div className="pill">
             <strong> DAO 멤버 및 채널소개</strong>
-            {/* Telegram Channels */}
-            <section className="telegram-channels">
-              <div className="channel-grid">
-                <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🏛️</div>
-                  <div className="channel-name">ModuDAO : 모두다오</div>
-                  <div className="channel-desc">공식 텔레그램</div>
-                </a>
-                <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎓</div>
-                  <div className="channel-name">원대감의 성균관</div>
-                  <div className="channel-desc">설명 필요</div>
-                </a>
-                <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">⚓️</div>
-                  <div className="channel-name">Crypto Dock</div>
+      {/* Telegram Channels */}
+      <section className="telegram-channels">
+        <div className="channel-grid">
+          <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🏛️</div>
+            <div className="channel-name">ModuDAO : 모두다오</div>
+            <div className="channel-desc">공식 텔레그램</div>
+          </a>
+          <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🎓</div>
+            <div className="channel-name">원대감의 성균관</div>
+            <div className="channel-desc">설명 필요</div>
+          </a>
+          <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">⚓️</div>
+            <div className="channel-name">Crypto Dock</div>
                   <div className="channel-desc">온체인 분석 | 디파이 매매 등 관심있는 것 모두 합니다.</div>
-                </a>
-                <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🍩</div>
-                  <div className="channel-name">김도넛의 돈복사실</div>
-                  <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
-                </a>
-                <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">⛏️</div>
-                  <div className="channel-name">우쥰의 코인채굴작전</div>
-                  <div className="channel-desc">설명 필요</div>
-                </a>
-                <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">📰</div>
-                  <div className="channel-name">사대감의 크립통</div>
-                  <div className="channel-desc">육대감의 크립토 소식통</div>
-                </a>
-                <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">💬</div>
-                  <div className="channel-name">DORDCI</div>
-                  <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
-                </a>
-                <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">크립토 하이스쿨</div>
-                  <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
-                </a>
+          </a>
+          <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🍩</div>
+            <div className="channel-name">김도넛의 돈복사실</div>
+            <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
+          </a>
+          <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">⛏️</div>
+            <div className="channel-name">우쥰의 코인채굴작전</div>
+            <div className="channel-desc">설명 필요</div>
+          </a>
+          <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">📰</div>
+            <div className="channel-name">사대감의 크립통</div>
+            <div className="channel-desc">육대감의 크립토 소식통</div>
+          </a>
+          <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">💬</div>
+            <div className="channel-name">DORDCI</div>
+            <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
+          </a>
+          <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
+            <div className="channel-icon">🎒</div>
+            <div className="channel-name">크립토 하이스쿨</div>
+            <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
+          </a>
                 <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🎒</div>
                   <div className="channel-name">코인타운</div>
@@ -820,34 +821,34 @@ export default function App() {
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 사진
           </h2>
-          <div className="gallery-slider">
-            <div className="slider-container">
-              <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
-                ‹
-              </button>
-              <div className="slider-image-container">
-                <img
-                  src={galleryImages[currentImageIndex]?.src}
-                  alt={galleryImages[currentImageIndex]?.alt || "모임 사진"}
-                  className="slider-image"
-                />
-              </div>
-              <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
-                ›
-              </button>
+        <div className="gallery-slider">
+          <div className="slider-container">
+            <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
+              ‹
+            </button>
+            <div className="slider-image-container">
+              <img 
+                src={galleryImages[currentImageIndex]?.src} 
+                alt={galleryImages[currentImageIndex]?.alt || "모임 사진"} 
+                className="slider-image"
+              />
             </div>
-            <div className="slider-dots">
-              {galleryImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                  onClick={() => setCurrentImageIndex(index)}
-                  aria-label={`사진 ${index + 1}로 이동`}
-                />
-              ))}
-            </div>
+            <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
+              ›
+            </button>
           </div>
-        </section>
+          <div className="slider-dots">
+            {galleryImages.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                onClick={() => setCurrentImageIndex(index)}
+                aria-label={`사진 ${index + 1}로 이동`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
         <br />
 
@@ -855,48 +856,48 @@ export default function App() {
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 영상
           </h2>
-          <div className="youtube-slider">
-            <div className="youtube-slider-container">
-              <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
-                ‹
-              </button>
+        <div className="youtube-slider">
+          <div className="youtube-slider-container">
+            <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
+              ‹
+            </button>
               <div className="youtube-container" style={{ width: '380px', maxWidth: '400px', height: '250px' }}>
-                <iframe
+              <iframe
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
-                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="youtube-embed"
-                ></iframe>
-              </div>
-              <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
-                ›
-              </button>
+                src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
+                title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="youtube-embed"
+              ></iframe>
             </div>
-            <div className="youtube-slider-dots">
-              {youtubeVideos.map((_, index) => (
-                <button
-                  key={index}
-                  className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
-                  onClick={() => setCurrentVideoIndex(index)}
-                  aria-label={`영상 ${index + 1}로 이동`}
-                />
-              ))}
-            </div>
+            <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
+              ›
+            </button>
           </div>
-        </section>
+          <div className="youtube-slider-dots">
+            {youtubeVideos.map((_, index) => (
+              <button
+                key={index}
+                className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
+                onClick={() => setCurrentVideoIndex(index)}
+                aria-label={`영상 ${index + 1}로 이동`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
         <section className="notice" style={{ height: '10vh' }}>
-          <div className="notice-card">
-            <div>
+        <div className="notice-card">
+          <div>
               <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
-              <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-                저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
-            </div>
+            <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
+            저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
           </div>
+        </div>
         </section>
       </section>
 
