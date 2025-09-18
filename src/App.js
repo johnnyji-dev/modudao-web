@@ -164,7 +164,7 @@ export default function App() {
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto',
-          padding: '4rem 1.5rem',
+          padding: '2rem 1.5rem',
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
@@ -777,14 +777,14 @@ export default function App() {
                       <img src="/tg/2_cryptodock.jpeg" alt="cryptodock" style={{ width: '20px', height: '20px' }} />
                     </div>
                     <div className="channel-name">Crypto Dock</div>
-                    <div className="channel-desc">온체인 분석 | 디파이 매매</div>
+                    <div className="channel-desc">온체인 분석<br />디파이 매매</div>
                   </a>
                   <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon">
                       <img src="/tg/3_donut.jpeg" alt="donut" style={{ width: '20px', height: '20px' }} />
                     </div>
                     <div className="channel-name">김도넛의 돈복사실</div>
-                    <div className="channel-desc">같이 경제적 자유를 위해</div>
+                    <div className="channel-desc">경제적 자유를 위해</div>
                   </a>
                   <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon">
@@ -805,14 +805,14 @@ export default function App() {
                       <img src="/tg/6_chas.jpeg" alt="cryptohighschool" style={{ width: '20px', height: '20px' }} />  
                     </div>
                     <div className="channel-name">크립토 하이스쿨</div>
-                    <div className="channel-desc">크립토에 문맹 탈출</div>
+                    <div className="channel-desc">크립토 문맹 탈출</div>
                   </a>
                   <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon">
                       <img src="/tg/7_cointown.jpeg" alt="cointown" style={{ width: '20px', height: '20px' }} />
                     </div>
                     <div className="channel-name">코인타운</div>
-                    <div className="channel-desc">세상에 모든 돈되는 정보</div>
+                    <div className="channel-desc">세상에 모든<br />돈 되는 정보</div>
                   </a>
                   <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon">
