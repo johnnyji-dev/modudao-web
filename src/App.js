@@ -195,7 +195,7 @@ export default function App() {
 
       {/* Feature grid */}
       <section id="features" className="features-block" style={{
-        minHeight: '80vh',
+        minHeight: '70vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
