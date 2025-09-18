@@ -87,7 +87,7 @@ export default function App() {
   // 자동 슬라이더 효과
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => 
+      setCurrentImageIndex((prev) =>
         prev === galleryImages.length - 1 ? 0 : prev + 1
       );
     }, 3000); // 3초마다 자동 전환
@@ -98,7 +98,7 @@ export default function App() {
   // 자동 슬라이더 효과 (유튜브 영상)
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentVideoIndex((prev) => 
+      setCurrentVideoIndex((prev) =>
         prev === youtubeVideos.length - 1 ? 0 : prev + 1
       );
     }, 5000); // 영상은 5초마다 변경
@@ -108,26 +108,26 @@ export default function App() {
 
   // 수동 네비게이션 함수
   const nextImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === galleryImages.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
 
   // 유튜브 영상 네비게이션 함수
   const nextVideo = () => {
-    setCurrentVideoIndex((prev) => 
+    setCurrentVideoIndex((prev) =>
       prev === youtubeVideos.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevVideo = () => {
-    setCurrentVideoIndex((prev) => 
+    setCurrentVideoIndex((prev) =>
       prev === 0 ? youtubeVideos.length - 1 : prev - 1
     );
   };
@@ -138,14 +138,17 @@ export default function App() {
         <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
           <span className="brand-name">ModuDAO</span>
+          <span />
+          <span />
+          <span />
+          <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch', flex: 1, justifyContent: 'center' }}>
+            <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
+            <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
+            <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>목표</a>
+            <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
+            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>영상&사진</a>
+          </nav>
         </div>
-        <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch', flex: 1, justifyContent: 'center' }}>
-          <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
-          <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
-          <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>목표</a>
-          <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
-          <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>영상&사진</a>
-        </nav>
       </header>
 
       {/* Hero / Identity Section */}
@@ -220,24 +223,24 @@ export default function App() {
         <br />
         <div className="grid2" style={{ gap: '16px' }}>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '16px', 
-                height: '16px', 
-                border: '2px solid white', 
+              <div style={{
+                width: '16px',
+                height: '16px',
+                border: '2px solid white',
                 borderRadius: '3px',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '3px',
                   left: '50%',
@@ -246,7 +249,7 @@ export default function App() {
                   height: '8px',
                   backgroundColor: 'white'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '3px',
                   left: '50%',
@@ -265,24 +268,24 @@ export default function App() {
             </small>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '16px',
+                height: '10px',
+                backgroundColor: 'white',
                 borderRadius: '8px 8px 0 0',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   bottom: '-3px',
                   left: '50%',
@@ -297,24 +300,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>Crypto Meetups</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '14px', 
-                height: '14px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '14px',
+                height: '14px',
+                backgroundColor: 'white',
                 borderRadius: '50%',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '-3px',
                   left: '50%',
@@ -329,24 +332,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>에어드랍</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '16px',
+                height: '10px',
+                backgroundColor: 'white',
                 borderRadius: '2px',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '2px',
                   left: '2px',
@@ -354,7 +357,7 @@ export default function App() {
                   height: '2px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '4px',
                   left: '2px',
@@ -362,7 +365,7 @@ export default function App() {
                   height: '2px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '6px',
                   left: '2px',
@@ -375,24 +378,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>블록체인 리서치</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '16px', 
-                height: '12px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '16px',
+                height: '12px',
+                backgroundColor: 'white',
                 borderRadius: '2px',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '-2px',
                   left: '50%',
@@ -407,24 +410,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>블록체인 교육</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '12px', 
-                height: '12px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '12px',
+                height: '12px',
+                backgroundColor: 'white',
                 borderRadius: '50%',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   bottom: '-2px',
                   left: '50%',
@@ -439,24 +442,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>인터뷰</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '16px',
+                height: '10px',
+                backgroundColor: 'white',
                 borderRadius: '2px',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '1px',
                   left: '1px',
@@ -464,7 +467,7 @@ export default function App() {
                   height: '6px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '2px',
                   left: '4px',
@@ -472,7 +475,7 @@ export default function App() {
                   height: '5px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '3px',
                   left: '7px',
@@ -480,7 +483,7 @@ export default function App() {
                   height: '4px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '4px',
                   left: '10px',
@@ -493,24 +496,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>트렌드 인사이트</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '16px',
+                height: '10px',
+                backgroundColor: 'white',
                 borderRadius: '6px',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '2px',
                   left: '2px',
@@ -519,7 +522,7 @@ export default function App() {
                   backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '2px',
                   left: '5px',
@@ -528,7 +531,7 @@ export default function App() {
                   backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '2px',
                   left: '8px',
@@ -542,24 +545,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>Yapping</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '14px', 
-                height: '16px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '14px',
+                height: '16px',
+                backgroundColor: 'white',
                 borderRadius: '2px',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '1px',
                   left: '50%',
@@ -568,7 +571,7 @@ export default function App() {
                   height: '1px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '3px',
                   left: '50%',
@@ -577,7 +580,7 @@ export default function App() {
                   height: '1px',
                   backgroundColor: '#2a2a2a'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '5px',
                   left: '50%',
@@ -591,24 +594,24 @@ export default function App() {
             <div className="fname" style={{ fontSize: '14px' }}>텔레그램 채널</div>
           </div>
           <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
+            <div className="ficon" style={{
+              width: '28px',
+              height: '28px',
+              backgroundColor: '#2a2a2a',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 8px'
             }}>
-              <div style={{ 
-                width: '14px', 
-                height: '14px', 
-                backgroundColor: 'white', 
+              <div style={{
+                width: '14px',
+                height: '14px',
+                backgroundColor: 'white',
                 borderRadius: '50%',
                 position: 'relative'
               }}>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '2px',
                   left: '2px',
@@ -617,7 +620,7 @@ export default function App() {
                   backgroundColor: '#2a2a2a',
                   borderRadius: '50%'
                 }}></div>
-                <div style={{ 
+                <div style={{
                   position: 'absolute',
                   top: '3px',
                   left: '3px',
@@ -634,7 +637,7 @@ export default function App() {
       </section>
 
       {/* Checklist & Goal Combined */}
-      <section id="goal" className="checklist" style={{ 
+      <section id="goal" className="checklist" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -644,13 +647,13 @@ export default function App() {
         backgroundColor: 'var(--bg)'
       }}>
         <div style={{ textAlign: 'center' }}>
-          <h2 className="section-title" style={{ 
+          <h2 className="section-title" style={{
             fontSize: '1.8rem',
             fontWeight: '800',
             marginBottom: '1rem',
             color: '#ffffff'
           }}>우리의 목표</h2>
-          <p className="muted center" style={{ 
+          <p className="muted center" style={{
             fontSize: '1rem',
             lineHeight: '1.5',
             color: '#e7e7ea',
@@ -659,7 +662,7 @@ export default function App() {
         </div>
 
         <div style={{ width: '100%', maxWidth: '400px' }}>
-          <h2 className="section-title" style={{ 
+          <h2 className="section-title" style={{
             fontSize: '1.6rem',
             fontWeight: '800',
             marginBottom: '1rem',
@@ -682,14 +685,14 @@ export default function App() {
             <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
               <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
             </li>
-        </ul>
-          
+          </ul>
+
 
         </div>
       </section>
 
       {/* Members */}
-      <section id="members" className="members" style={{ 
+      <section id="members" className="members" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -707,7 +710,7 @@ export default function App() {
               <strong> TEMPi</strong>
               <small>9년차 블록체인 전문 에이전시</small>
               <br />
-              <div style={{ 
+              <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -717,13 +720,13 @@ export default function App() {
                 borderRadius: '8px',
                 marginTop: '8px'
               }}>
-                <div style={{ 
-                  width: '20px', 
-                  height: '20px', 
+                <div style={{
+                  width: '20px',
+                  height: '20px',
                   position: 'relative'
                 }}>
                   {/* 텔레그램 종이비행기 아이콘 */}
-                  <div style={{ 
+                  <div style={{
                     position: 'absolute',
                     top: '50%',
                     left: '50%',
@@ -733,7 +736,7 @@ export default function App() {
                     backgroundColor: '#0088cc',
                     clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
                   }}></div>
-                  <div style={{ 
+                  <div style={{
                     position: 'absolute',
                     top: '50%',
                     left: '50%',
@@ -749,49 +752,44 @@ export default function App() {
           </a>
           <div className="pill">
             <strong> DAO 멤버 및 채널소개</strong>
-      {/* Telegram Channels */}
-      <section className="telegram-channels">
-        <div className="channel-grid">
-          <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🏛️</div>
-            <div className="channel-name">ModuDAO : 모두다오</div>
-            <div className="channel-desc">공식 텔레그램</div>
-          </a>
-          <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🎓</div>
-            <div className="channel-name">원대감의 성균관</div>
-            <div className="channel-desc">설명 필요</div>
-          </a>
-          <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">⚓️</div>
-            <div className="channel-name">Crypto Dock</div>
+            {/* Telegram Channels */}
+            <section className="telegram-channels">
+              <div className="channel-grid">
+                <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🏛️</div>
+                  <div className="channel-name">ModuDAO : 모두다오</div>
+                  <div className="channel-desc">공식 텔레그램</div>
+                </a>
+                <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🎓</div>
+                  <div className="channel-name">원대감의 성균관</div>
+                  <div className="channel-desc">설명 필요</div>
+                </a>
+                <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">⚓️</div>
+                  <div className="channel-name">Crypto Dock</div>
                   <div className="channel-desc">온체인 분석 | 디파이 매매 등 관심있는 것 모두 합니다.</div>
-          </a>
-          <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🍩</div>
-            <div className="channel-name">김도넛의 돈복사실</div>
-            <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
-          </a>
-          <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">⛏️</div>
-            <div className="channel-name">우쥰의 코인채굴작전</div>
-            <div className="channel-desc">설명 필요</div>
-          </a>
-          <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">📰</div>
-            <div className="channel-name">사대감의 크립통</div>
-            <div className="channel-desc">육대감의 크립토 소식통</div>
-          </a>
-          <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">💬</div>
-            <div className="channel-name">DORDCI</div>
-            <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
-          </a>
-          <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-            <div className="channel-icon">🎒</div>
-            <div className="channel-name">크립토 하이스쿨</div>
-            <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
-          </a>
+                </a>
+                <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🍩</div>
+                  <div className="channel-name">김도넛의 돈복사실</div>
+                  <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
+                </a>
+                <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">⛏️</div>
+                  <div className="channel-name">우쥰의 코인채굴작전</div>
+                  <div className="channel-desc">설명 필요</div>
+                </a>
+                <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">📰</div>
+                  <div className="channel-name">사대감의 크립통</div>
+                  <div className="channel-desc">육대감의 크립토 소식통</div>
+                </a>
+                <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
+                  <div className="channel-icon">🎒</div>
+                  <div className="channel-name">크립토 하이스쿨</div>
+                  <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
+                </a>
                 <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🎒</div>
                   <div className="channel-name">코인타운</div>
@@ -809,7 +807,7 @@ export default function App() {
       </section>
 
       {/* Gallery & YouTube Video * Notice */}
-      <section id="gallery" style={{ 
+      <section id="gallery" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -821,34 +819,34 @@ export default function App() {
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 사진
           </h2>
-        <div className="gallery-slider">
-          <div className="slider-container">
-            <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
-              ‹
-            </button>
-            <div className="slider-image-container">
-              <img 
-                src={galleryImages[currentImageIndex]?.src} 
-                alt={galleryImages[currentImageIndex]?.alt || "모임 사진"} 
-                className="slider-image"
-              />
+          <div className="gallery-slider">
+            <div className="slider-container">
+              <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
+                ‹
+              </button>
+              <div className="slider-image-container">
+                <img
+                  src={galleryImages[currentImageIndex]?.src}
+                  alt={galleryImages[currentImageIndex]?.alt || "모임 사진"}
+                  className="slider-image"
+                />
+              </div>
+              <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
+                ›
+              </button>
             </div>
-            <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
-              ›
-            </button>
+            <div className="slider-dots">
+              {galleryImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentImageIndex(index)}
+                  aria-label={`사진 ${index + 1}로 이동`}
+                />
+              ))}
+            </div>
           </div>
-          <div className="slider-dots">
-            {galleryImages.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                onClick={() => setCurrentImageIndex(index)}
-                aria-label={`사진 ${index + 1}로 이동`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
         <br />
 
@@ -856,48 +854,48 @@ export default function App() {
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
             활동 영상
           </h2>
-        <div className="youtube-slider">
-          <div className="youtube-slider-container">
-            <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
-              ‹
-            </button>
+          <div className="youtube-slider">
+            <div className="youtube-slider-container">
+              <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
+                ‹
+              </button>
               <div className="youtube-container" style={{ width: '380px', maxWidth: '400px', height: '250px' }}>
-              <iframe
+                <iframe
                   width="100%"
                   height="100%"
-                src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
-                title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="youtube-embed"
-              ></iframe>
+                  src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
+                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="youtube-embed"
+                ></iframe>
+              </div>
+              <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
+                ›
+              </button>
             </div>
-            <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
-              ›
-            </button>
+            <div className="youtube-slider-dots">
+              {youtubeVideos.map((_, index) => (
+                <button
+                  key={index}
+                  className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentVideoIndex(index)}
+                  aria-label={`영상 ${index + 1}로 이동`}
+                />
+              ))}
+            </div>
           </div>
-          <div className="youtube-slider-dots">
-            {youtubeVideos.map((_, index) => (
-              <button
-                key={index}
-                className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
-                onClick={() => setCurrentVideoIndex(index)}
-                aria-label={`영상 ${index + 1}로 이동`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
         <section className="notice" style={{ height: '10vh' }}>
-        <div className="notice-card">
-          <div>
+          <div className="notice-card">
+            <div>
               <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
-            <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-            저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
+              <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
+                저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
+            </div>
           </div>
-        </div>
         </section>
       </section>
 
