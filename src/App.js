@@ -153,8 +153,6 @@ export default function App() {
 
       {/* Hero / Identity Section */}
       <section id="hero" className="hero" style={{
-        paddingTop: '2rem',
-        paddingBottom: '20rem',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -191,6 +189,32 @@ export default function App() {
             ModuDAO는 디젠들의 집단 지성으로<br /> 움직이는 탈중앙 자율 조직.<br />
             소수의 엘리트가 아닌,<br /> 모든 참여자가 곧 운영자입니다.
           </p>
+          <br />
+          <a href="https://linktr.ee/Modudao" target="_blank" rel="noopener noreferrer" style={{
+            display: 'inline-block',
+            padding: '8px 16px',
+            backgroundColor: '#7b5cff',
+            color: '#ffffff',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: '600',
+            fontSize: '14px',
+            transition: 'all 0.3s ease',
+            marginTop: '0.5rem'
+          }}>
+            활동 참여 바로가기
+          </a>
+          <br />
+          <img 
+            src="/linking/modudao_wiki_tree.jpeg" 
+            alt="ModuDAO Wiki Tree" 
+            style={{
+              maxWidth: '180px',
+              height: 'auto',
+              borderRadius: '6px',
+              marginTop: '0.5rem'
+            }}
+          />
         </div>
       </section>
 
