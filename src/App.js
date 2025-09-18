@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
-    <footer className="footer" style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 1000, background: 'var(--bg)', padding: '12px 0' }}>
+    <footer className="footer">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <small style={{ textAlign: 'center' }}>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
       </div>
@@ -133,18 +133,20 @@ export default function App() {
 
   return (
     <main id="app" className="app">
-      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '28vw', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 1rem' }}>
-        <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
-          <span className="brand-name">ModuDAO</span>
+      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0.5rem', minHeight: '56px', left: 0, right: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
+          <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
+            <span className="brand-name">ModuDAO</span>
+          </div>
+          <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
+            <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
+            <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>목표</a>
+            <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
+            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>영상&사진</a>
+          </nav>
         </div>
-        <nav style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', flexShrink: 1 }}>
-          <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>소개</a>
-          <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>활동</a>
-          <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>목표</a>
-          <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>멤버</a>
-          <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.7rem', fontWeight: '500', whiteSpace: 'nowrap', padding: '0.2rem 0.4rem' }}>영상&사진</a>
-        </nav>
       </header>
 
       {/* Hero / Identity Section */}
@@ -162,11 +164,12 @@ export default function App() {
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto',
-          padding: '2rem 1.5rem',
+          padding: '10rem 1.5rem',
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
-            fontSize: '2.8rem',
+            fontSize: '38px',
+            // fontSize: '2.4rem',
             fontWeight: '900',
             lineHeight: '1.2',
             margin: '0 0 1.5rem 0',
@@ -176,7 +179,8 @@ export default function App() {
           </h2>
           <br />
           <p className="intro-sub" style={{
-            fontSize: '1.4rem',
+            fontSize: '19px',
+            // fontSize: '1.2rem',
             fontWeight: '500',
             lineHeight: '1.5',
             margin: '0',
@@ -189,477 +193,467 @@ export default function App() {
       </section>
 
       {/* Feature grid */}
-      <section id="features" className="features-block" style={{
+      <section id="features" style={{
+        marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg1)'
+        backgroundColor: 'var(--bg1)',
+        padding: '2rem 0',
+        width: '100vw',
+        marginLeft: 'calc(-50vw + 50%)',
+        marginRight: 'calc(-50vw + 50%)'
       }}>
-        <h2 className="section-title" style={{
-          fontSize: '1.6rem',
-          fontWeight: '1500',
-          lineHeight: '1.5',
-          margin: '0',
-          color: '#e7e7ea'
-        }}>우리의 주요 활동</h2>
-        <br />
-        <p className="section-description" style={{
-          fontSize: '1rem',
-          fontWeight: '500',
-          lineHeight: '1.5',
-          margin: '0',
-          color: '#e7e7ea'
-        }}>
-          ModuDAO의 주요 활동은 다음과 같습니다. <br />
-          지금, 활발하게 성장하는 커뮤니티에 합류하세요!
-        </p>
-        <br />
-        <br />
-        <div className="grid2" style={{ gap: '16px' }}>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '16px', 
-                height: '16px', 
-                border: '2px solid white', 
-                borderRadius: '3px',
-                position: 'relative'
+        <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
+          <h2 className="section-title" style={{
+            fontSize: '24px',
+            fontWeight: '1500',
+            lineHeight: '1.3',
+            margin: '0 0 1rem 0',
+            color: '#e7e7ea'
+          }}>우리의 주요 활동</h2>
+          <p className="section-description" style={{
+            fontSize: '13px',
+            fontWeight: '500',
+            lineHeight: '1.4',
+            margin: '0 0 1.5rem 0',
+            color: '#e7e7ea'
+          }}>
+            ModuDAO의 주요 활동은 다음과 같습니다. <br />
+            지금, 활발하게 성장하는 커뮤니티에 합류하세요!
+          </p>
+          <div className="grid2" style={{ gap: '8px', maxWidth: '400px', width: '100%' }}>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '2px',
-                  height: '8px',
-                  backgroundColor: 'white'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '3px',
-                  left: '50%',
-                  transform: 'translateX(-50%) rotate(90deg)',
-                  width: '2px',
-                  height: '8px',
-                  backgroundColor: 'white'
-                }}></div>
+                <div style={{
+                  width: '16px',
+                  height: '16px',
+                  border: '2px solid white',
+                  borderRadius: '3px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '2px',
+                    height: '8px',
+                    backgroundColor: 'white'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '50%',
+                    transform: 'translateX(-50%) rotate(90deg)',
+                    width: '2px',
+                    height: '8px',
+                    backgroundColor: 'white'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>정기 모임</div>
+              <small style={{ fontSize: '10px' }}>
+                <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  일정 보기
+                </a>
+              </small>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>정기 모임</div>
-            <small style={{ fontSize: '12px' }}>
-              <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-                일정 보기
-              </a>
-            </small>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
-                borderRadius: '8px 8px 0 0',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
-                <div style={{ 
-                  position: 'absolute',
-                  bottom: '-3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '10px',
-                  height: '5px',
+                <div style={{
+                  width: '16px',
+                  height: '10px',
                   backgroundColor: 'white',
-                  borderRadius: '0 0 5px 5px'
-                }}></div>
+                  borderRadius: '8px 8px 0 0',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '-3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '10px',
+                    height: '5px',
+                    backgroundColor: 'white',
+                    borderRadius: '0 0 5px 5px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>Crypto Meetups</div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>Crypto Meetups</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '14px', 
-                height: '14px', 
-                backgroundColor: 'white', 
-                borderRadius: '50%',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '-3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '8px',
-                  height: '3px',
+                <div style={{
+                  width: '14px',
+                  height: '14px',
                   backgroundColor: 'white',
-                  borderRadius: '2px'
-                }}></div>
+                  borderRadius: '50%',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '8px',
+                    height: '3px',
+                    backgroundColor: 'white',
+                    borderRadius: '2px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>에어드랍</div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>에어드랍</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
-                borderRadius: '2px',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  right: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '4px',
-                  left: '2px',
-                  right: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '6px',
-                  left: '2px',
-                  right: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '14px' }}>블록체인 리서치</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '16px', 
-                height: '12px', 
-                backgroundColor: 'white', 
-                borderRadius: '2px',
-                position: 'relative'
-              }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '-2px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '8px',
-                  height: '2px',
+                <div style={{
+                  width: '16px',
+                  height: '10px',
                   backgroundColor: 'white',
-                  borderRadius: '1px'
-                }}></div>
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '2px',
+                    right: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '4px',
+                    left: '2px',
+                    right: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '6px',
+                    left: '2px',
+                    right: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>블록체인 리서치</div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>블록체인 교육</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '12px', 
-                height: '12px', 
-                backgroundColor: 'white', 
-                borderRadius: '50%',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
-                <div style={{ 
-                  position: 'absolute',
-                  bottom: '-2px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '4px',
-                  height: '2px',
+                <div style={{
+                  width: '16px',
+                  height: '12px',
                   backgroundColor: 'white',
-                  borderRadius: '0 0 2px 2px'
-                }}></div>
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '-2px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '8px',
+                    height: '2px',
+                    backgroundColor: 'white',
+                    borderRadius: '1px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>블록체인 교육</div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>인터뷰</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
-                borderRadius: '2px',
-                position: 'relative'
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
               }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '1px',
-                  left: '1px',
-                  width: '2px',
-                  height: '6px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '2px',
-                  left: '4px',
-                  width: '2px',
-                  height: '5px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '3px',
-                  left: '7px',
-                  width: '2px',
-                  height: '4px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '4px',
-                  left: '10px',
-                  width: '2px',
-                  height: '3px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '14px' }}>트렌드 인사이트</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '16px', 
-                height: '10px', 
-                backgroundColor: 'white', 
-                borderRadius: '6px',
-                position: 'relative'
-              }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  width: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '2px',
-                  left: '5px',
-                  width: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '2px',
-                  left: '8px',
-                  width: '2px',
-                  height: '2px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '14px' }}>Yapping</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '14px', 
-                height: '16px', 
-                backgroundColor: 'white', 
-                borderRadius: '2px',
-                position: 'relative'
-              }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '1px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '6px',
-                  height: '1px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '3px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '6px',
-                  height: '1px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '5px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '6px',
-                  height: '1px',
-                  backgroundColor: '#2a2a2a'
-                }}></div>
-              </div>
-            </div>
-            <div className="fname" style={{ fontSize: '14px' }}>텔레그램 채널</div>
-          </div>
-          <div className="feature-card" style={{ padding: '20px 16px' }}>
-            <div className="ficon" style={{ 
-              width: '28px', 
-              height: '28px', 
-              backgroundColor: '#2a2a2a', 
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              margin: '0 auto 8px'
-            }}>
-              <div style={{ 
-                width: '14px', 
-                height: '14px', 
-                backgroundColor: 'white', 
-                borderRadius: '50%',
-                position: 'relative'
-              }}>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '2px',
-                  left: '2px',
-                  width: '6px',
-                  height: '6px',
-                  backgroundColor: '#2a2a2a',
-                  borderRadius: '50%'
-                }}></div>
-                <div style={{ 
-                  position: 'absolute',
-                  top: '3px',
-                  left: '3px',
-                  width: '4px',
-                  height: '4px',
+                <div style={{
+                  width: '12px',
+                  height: '12px',
                   backgroundColor: 'white',
-                  borderRadius: '50%'
-                }}></div>
+                  borderRadius: '50%',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '-2px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '4px',
+                    height: '2px',
+                    backgroundColor: 'white',
+                    borderRadius: '0 0 2px 2px'
+                  }}></div>
+                </div>
               </div>
+              <div className="fname" style={{ fontSize: '11px' }}>인터뷰</div>
             </div>
-            <div className="fname" style={{ fontSize: '14px' }}>IPO 참여</div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '16px',
+                  height: '10px',
+                  backgroundColor: 'white',
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '1px',
+                    left: '1px',
+                    width: '2px',
+                    height: '6px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '4px',
+                    width: '2px',
+                    height: '5px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '7px',
+                    width: '2px',
+                    height: '4px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '4px',
+                    left: '10px',
+                    width: '2px',
+                    height: '3px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>트렌드 인사이트</div>
+            </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '16px',
+                  height: '10px',
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '2px',
+                    width: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '5px',
+                    width: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '8px',
+                    width: '2px',
+                    height: '2px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>Yapping</div>
+            </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '14px',
+                  height: '16px',
+                  backgroundColor: 'white',
+                  borderRadius: '2px',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '1px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '6px',
+                    height: '1px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '6px',
+                    height: '1px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '5px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '6px',
+                    height: '1px',
+                    backgroundColor: '#2a2a2a'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>텔레그램 채널</div>
+            </div>
+            <div className="feature-card" style={{ padding: '12px 8px' }}>
+              <div className="ficon" style={{
+                width: '24px',
+                height: '24px',
+                backgroundColor: '#2a2a2a',
+                borderRadius: '5px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 6px'
+              }}>
+                <div style={{
+                  width: '14px',
+                  height: '14px',
+                  backgroundColor: 'white',
+                  borderRadius: '50%',
+                  position: 'relative'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '2px',
+                    width: '6px',
+                    height: '6px',
+                    backgroundColor: '#2a2a2a',
+                    borderRadius: '50%'
+                  }}></div>
+                  <div style={{
+                    position: 'absolute',
+                    top: '3px',
+                    left: '3px',
+                    width: '4px',
+                    height: '4px',
+                    backgroundColor: 'white',
+                    borderRadius: '50%'
+                  }}></div>
+                </div>
+              </div>
+              <div className="fname" style={{ fontSize: '11px' }}>IPO 참여</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Checklist & Goal Combined */}
-      <section id="goal" className="checklist" style={{ 
+      <section id="goal" className="checklist" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '2rem 0',
-        backgroundColor: 'var(--bg2)'
+        backgroundColor: 'var(--bg)'
       }}>
-        <div style={{ textAlign: 'center' }}>
-          <h2 className="section-title" style={{ 
-            fontSize: '1.8rem',
-            fontWeight: '800',
-            marginBottom: '1rem',
-            color: '#ffffff'
-          }}>우리의 목표</h2>
-          <p className="muted center" style={{ 
-            fontSize: '1rem',
-            lineHeight: '1.5',
-            color: '#e7e7ea',
-            marginBottom: '4rem',
-          }}>제2의 머니파이프라인을<br />만들기 위한 모임입니다.</p>
-        </div>
-
         <div style={{ width: '100%', maxWidth: '400px' }}>
-          <h2 className="section-title" style={{ 
-            fontSize: '1.6rem',
+          <h2 className="section-title" style={{
+            fontSize: '28px',
+            // fontSize: '1.6rem',
             fontWeight: '800',
             marginBottom: '1rem',
             textAlign: 'center',
@@ -682,142 +676,147 @@ export default function App() {
               <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
             </li>
           </ul>
-          
-
         </div>
       </section>
 
       {/* Members */}
-      <section id="members" className="members" style={{ 
+      <section id="members" className="members" style={{
+        marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '2rem 0',
-        backgroundColor: 'var(--bg3)'
+        backgroundColor: 'var(--bg1)',
+        padding: '1rem 0',
+        width: '100vw',
+        marginLeft: 'calc(-50vw + 50%)',
+        marginRight: 'calc(-50vw + 50%)'
       }}>
-        <h2 className="section-title" style={{
-          fontSize: '1.6rem'
-        }}>함께하는 멤버</h2>
-        <div className="stack">
-          <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
-              <strong> TEMPi</strong>
-              <small>9년차 블록체인 전문 에이전시</small>
-              <br />
-              <div style={{ 
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '32px',
-                height: '32px',
-                backgroundColor: '#2a2a2a',
-                borderRadius: '8px',
-                marginTop: '8px'
-              }}>
-                <div style={{ 
-                  width: '20px', 
-                  height: '20px', 
-                  position: 'relative'
+        <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
+          <h2 className="section-title" style={{
+            fontSize: '24px',
+            fontWeight: '800',
+            marginBottom: '1rem',
+            textAlign: 'center',
+            color: '#ffffff'
+          }}>함께하는 멤버</h2>
+          <div className="stack" style={{ gap: '1rem' }}>
+            <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
+                <strong> TEMPi</strong>
+                <small>9년차 블록체인 전문 에이전시</small>
+                <br />
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '32px',
+                  height: '32px',
+                  backgroundColor: '#2a2a2a',
+                  borderRadius: '8px',
+                  marginTop: '8px'
                 }}>
-                  {/* 텔레그램 종이비행기 아이콘 */}
-                  <div style={{ 
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '16px',
-                    height: '16px',
-                    backgroundColor: '#0088cc',
-                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
-                  }}></div>
-                  <div style={{ 
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '12px',
-                    height: '12px',
-                    backgroundColor: '#ffffff',
-                    clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
-                  }}></div>
+                  <div style={{
+                    width: '20px',
+                    height: '20px',
+                    position: 'relative'
+                  }}>
+                    {/* 텔레그램 종이비행기 아이콘 */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '16px',
+                      height: '16px',
+                      backgroundColor: '#0088cc',
+                      clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                    }}></div>
+                    <div style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '12px',
+                      height: '12px',
+                      backgroundColor: '#ffffff',
+                      clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
+                    }}></div>
+                  </div>
                 </div>
               </div>
+            </a>
+            <div className="pill">
+              <strong> DAO 멤버 및 채널소개</strong>
+              {/* Telegram Channels */}
+              <section className="telegram-channels">
+                <div className="channel-grid">
+                  <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🏛️</div>
+                    <div className="channel-name">ModuDAO모두다오</div>
+                    <div className="channel-desc">공식 텔레그램</div>
+                  </a>
+                  <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎓</div>
+                    <div className="channel-name">원대감의 성균관</div>
+                    <div className="channel-desc">크립토 핸섬가이</div>
+                  </a>
+                  <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">⚓️</div>
+                    <div className="channel-name">Crypto Dock</div>
+                    <div className="channel-desc">온체인 분석 | 디파이 매매</div>
+                  </a>
+                  <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🍩</div>
+                    <div className="channel-name">김도넛의 돈복사실</div>
+                    <div className="channel-desc">같이 경제적 자유를 위해</div>
+                  </a>
+                  <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">⛏️</div>
+                    <div className="channel-name">우쥰의 코인채굴작전</div>
+                    <div className="channel-desc">돈되는 채굴 방법</div>
+                  </a>
+                  <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">📰</div>
+                    <div className="channel-name">사대감의 크립통</div>
+                    <div className="channel-desc">육대감의 크립토 소식통</div>
+                  </a>
+                  <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎒</div>
+                    <div className="channel-name">크립토 하이스쿨</div>
+                    <div className="channel-desc">크립토에 문맹 탈출</div>
+                  </a>
+                  <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎒</div>
+                    <div className="channel-name">코인타운</div>
+                    <div className="channel-desc">세상에 모든 돈되는 정보</div>
+                  </a>
+                  <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
+                    <div className="channel-icon">🎒</div>
+                    <div className="channel-name">코파카</div>
+                    <div className="channel-desc">코인 소개하는 알파카</div>
+                  </a>
+                </div>
+              </section>
             </div>
-          </a>
-          <div className="pill">
-            <strong> DAO 멤버 및 채널소개</strong>
-            {/* Telegram Channels */}
-            <section className="telegram-channels">
-              <div className="channel-grid">
-                <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🏛️</div>
-                  <div className="channel-name">ModuDAO : 모두다오</div>
-                  <div className="channel-desc">공식 텔레그램</div>
-                </a>
-                <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎓</div>
-                  <div className="channel-name">원대감의 성균관</div>
-                  <div className="channel-desc">설명 필요</div>
-                </a>
-                <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">⚓️</div>
-                  <div className="channel-name">Crypto Dock</div>
-                  <div className="channel-desc">온체인 분석 | 디파이 매매 등 관심있는 것 모두 합니다.</div>
-                </a>
-                <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🍩</div>
-                  <div className="channel-name">김도넛의 돈복사실</div>
-                  <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
-                </a>
-                <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">⛏️</div>
-                  <div className="channel-name">우쥰의 코인채굴작전</div>
-                  <div className="channel-desc">설명 필요</div>
-                </a>
-                <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">📰</div>
-                  <div className="channel-name">사대감의 크립통</div>
-                  <div className="channel-desc">육대감의 크립토 소식통</div>
-                </a>
-                <a href="https://t.me/DORDCI" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">💬</div>
-                  <div className="channel-name">DORDCI</div>
-                  <div className="channel-desc">If it's profit, it's YES Cryptocurrency</div>
-                </a>
-                <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">크립토 하이스쿨</div>
-                  <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
-                </a>
-                <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">코인타운</div>
-                  <div className="channel-desc">세상에 모든 돈되는 정보</div>
-                </a>
-                <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
-                  <div className="channel-icon">🎒</div>
-                  <div className="channel-name">코파카</div>
-                  <div className="channel-desc">설명 필요</div>
-                </a>
-              </div>
-            </section>
           </div>
         </div>
       </section>
 
       {/* Gallery & YouTube Video * Notice */}
-      <section id="gallery" style={{ 
+      <section id="gallery" style={{
+        marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg1)'
+        backgroundColor: 'var(--bg)',
+        padding: '1rem 0'
       }}>
-        <section className="gallery" style={{ height: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
+        <section className="gallery" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 사진
           </h2>
           <div className="gallery-slider">
@@ -850,9 +849,10 @@ export default function App() {
         </section>
 
         <br />
+        <br />
 
-        <section className="youtube-section" style={{ theight: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
+        <section className="youtube-section" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 영상
           </h2>
           <div className="youtube-slider">
@@ -860,7 +860,7 @@ export default function App() {
               <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
                 ‹
               </button>
-              <div className="youtube-container" style={{ width: '380px', maxWidth: '400px', height: '250px' }}>
+              <div className="youtube-container" style={{ width: '350px', maxWidth: '380px', height: '200px' }}>
                 <iframe
                   width="100%"
                   height="100%"
@@ -888,16 +888,16 @@ export default function App() {
             </div>
           </div>
         </section>
+      </section>
 
-        <section className="notice" style={{ height: '10vh' }}>
-          <div className="notice-card">
-            <div>
-              <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
-              <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-                저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
-            </div>
+      <section className="notice" style={{ height: '10vh' }}>
+        <div className="notice-card">
+          <div>
+            <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
+            <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
+              저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
           </div>
-        </section>
+        </div>
       </section>
 
       <Footer />
