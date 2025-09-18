@@ -18,3 +18,13 @@
 
 
 #템피님 QR 추가
+
+
+
+intro
+38px
+19px
+
+feature
+19px
+14px

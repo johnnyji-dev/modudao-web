@@ -3,7 +3,6 @@ import React from 'react';
 function Footer() {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
-    // <footer className="footer" style={{ position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 1000, background: 'var(--bg)', padding: '12px 0' }}></footer>
     <footer className="footer">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <small style={{ textAlign: 'center' }}>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
@@ -166,11 +165,12 @@ export default function App() {
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto',
-          padding: '2rem 1.5rem',
+          padding: '10rem 1.5rem',
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
-            fontSize: '2.8rem',
+            fontSize: '38px',
+            // fontSize: '2.4rem',
             fontWeight: '900',
             lineHeight: '1.2',
             margin: '0 0 1.5rem 0',
@@ -180,7 +180,8 @@ export default function App() {
           </h2>
           <br />
           <p className="intro-sub" style={{
-            fontSize: '1.4rem',
+            fontSize: '19px',
+            // fontSize: '1.2rem',
             fontWeight: '500',
             lineHeight: '1.5',
             margin: '0',
@@ -194,7 +195,7 @@ export default function App() {
 
       {/* Feature grid */}
       <section id="features" className="features-block" style={{
-        minHeight: '100vh',
+        minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -202,7 +203,8 @@ export default function App() {
         backgroundColor: 'var(--bg1)'
       }}>
         <h2 className="section-title" style={{
-          fontSize: '1.6rem',
+          fontSize: '19px',
+          // fontSize: '1.2rem',
           fontWeight: '1500',
           lineHeight: '1.5',
           margin: '0',
@@ -210,7 +212,8 @@ export default function App() {
         }}>우리의 주요 활동</h2>
         <br />
         <p className="section-description" style={{
-          fontSize: '1rem',
+          fontSize: '14px',
+          // fontSize: '1rem',
           fontWeight: '500',
           lineHeight: '1.5',
           margin: '0',
