@@ -748,27 +748,7 @@ export default function App() {
                     height: '20px',
                     position: 'relative'
                   }}>
-                    {/* 텔레그램 종이비행기 아이콘 */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      width: '16px',
-                      height: '16px',
-                      backgroundColor: '#0088cc',
-                      clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
-                    }}></div>
-                    <div style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      width: '12px',
-                      height: '12px',
-                      backgroundColor: '#ffffff',
-                      clipPath: 'polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%)'
-                    }}></div>
+                    <img src="/tg/tele_nobg.png" alt="ModuDAO" style={{ width: '20px', height: '20px' }} />
                   </div>
                 </div>
               </div>
@@ -779,47 +759,65 @@ export default function App() {
               <section className="telegram-channels">
                 <div className="channel-grid">
                   <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">🏛️</div>
+                    <div className="channel-icon">
+                      <img src="/tg/0_modudao.png" alt="ModuDAO" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">ModuDAO모두다오</div>
                     <div className="channel-desc">공식 텔레그램</div>
                   </a>
                   <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">🎓</div>
+                    <div className="channel-icon">
+                      <img src="/tg/1_won_officer.jpeg" alt="won_officer" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">원대감의 성균관</div>
                     <div className="channel-desc">크립토 핸섬가이</div>
                   </a>
                   <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">⚓️</div>
+                    <div className="channel-icon">
+                      <img src="/tg/2_cryptodock.jpeg" alt="cryptodock" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">Crypto Dock</div>
                     <div className="channel-desc">온체인 분석 | 디파이 매매</div>
                   </a>
                   <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">🍩</div>
+                    <div className="channel-icon">
+                      <img src="/tg/3_donut.jpeg" alt="donut" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">김도넛의 돈복사실</div>
                     <div className="channel-desc">같이 경제적 자유를 위해</div>
                   </a>
                   <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">⛏️</div>
+                    <div className="channel-icon">
+                      <img src="/tg/4_uzun.jpeg" alt="uzun" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">우쥰의 코인채굴작전</div>
                     <div className="channel-desc">돈되는 채굴 방법</div>
                   </a>
                   <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">📰</div>
+                    <div className="channel-icon">
+                      <img src="/tg/5_cryptong.jpeg" alt="crytong" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">사대감의 크립통</div>
                     <div className="channel-desc">육대감의 크립토 소식통</div>
                   </a>
                   <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">🎒</div>
+                    <div className="channel-icon">
+                      <img src="/tg/6_chas.jpeg" alt="cryptohighschool" style={{ width: '20px', height: '20px' }} />  
+                    </div>
                     <div className="channel-name">크립토 하이스쿨</div>
                     <div className="channel-desc">크립토에 문맹 탈출</div>
                   </a>
                   <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">🎒</div>
+                    <div className="channel-icon">
+                      <img src="/tg/7_cointown.jpeg" alt="cointown" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">코인타운</div>
                     <div className="channel-desc">세상에 모든 돈되는 정보</div>
                   </a>
                   <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">🎒</div>
+                    <div className="channel-icon">
+                      <img src="/tg/8_copaka.jpeg" alt="copaka" style={{ width: '20px', height: '20px' }} />
+                    </div>
                     <div className="channel-name">코파카</div>
                     <div className="channel-desc">코인 소개하는 알파카</div>
                   </a>
