@@ -803,7 +803,7 @@ export default function App() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg1)'
+        backgroundColor: 'var(--bg)'
       }}>
         <section className="gallery" style={{ height: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.6rem' }}>
