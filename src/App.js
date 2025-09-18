@@ -693,10 +693,12 @@ export default function App() {
         marginLeft: 'calc(-50vw + 50%)',
         marginRight: 'calc(-50vw + 50%)'
       }}>
-        <h2 className="section-title" style={{
-          fontSize: '1.6rem'
-        }}>함께하는 멤버</h2>
-        <div className="stack">
+        <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
+          <h2 className="section-title" style={{
+            // fontSize: '1.6rem'
+            fontSize: '28px'
+          }}>함께하는 멤버</h2>
+          <div className="stack">
           <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
               <strong> TEMPi</strong>
@@ -755,22 +757,22 @@ export default function App() {
                 <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🎓</div>
                   <div className="channel-name">원대감의 성균관</div>
-                  <div className="channel-desc">설명 필요</div>
+                  <div className="channel-desc">크립토 핸섬가이</div>
                 </a>
                 <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">⚓️</div>
                   <div className="channel-name">Crypto Dock</div>
-                  <div className="channel-desc">온체인 분석 | 디파이 매매 등 관심있는 것 모두 합니다.</div>
+                  <div className="channel-desc">온체인 분석 | 디파이 매매</div>
                 </a>
                 <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🍩</div>
                   <div className="channel-name">김도넛의 돈복사실</div>
-                  <div className="channel-desc">같이 경제적 자유를 이루러 가보죠.</div>
+                  <div className="channel-desc">같이 경제적 자유를 위해</div>
                 </a>
                 <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">⛏️</div>
                   <div className="channel-name">우쥰의 코인채굴작전</div>
-                  <div className="channel-desc">설명 필요</div>
+                  <div className="channel-desc">돈되는 채굴 방법</div>
                 </a>
                 <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">📰</div>
@@ -780,7 +782,7 @@ export default function App() {
                 <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🎒</div>
                   <div className="channel-name">크립토 하이스쿨</div>
-                  <div className="channel-desc">친구들과 함께 크립토에 대해 공부해서 경제적 졸업을 이루자!</div>
+                  <div className="channel-desc">크립토에 문맹 탈출</div>
                 </a>
                 <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🎒</div>
@@ -790,10 +792,11 @@ export default function App() {
                 <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
                   <div className="channel-icon">🎒</div>
                   <div className="channel-name">코파카</div>
-                  <div className="channel-desc">설명 필요</div>
+                  <div className="channel-desc">코인 소개하는 알파카</div>
                 </a>
               </div>
             </section>
+          </div>
           </div>
         </div>
       </section>
