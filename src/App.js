@@ -146,7 +146,7 @@ export default function App() {
             <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
             <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>대상</a>
             <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
-            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>영상&사진</a>
+            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>겔러리</a>
           </nav>
         </div>
       </header>
@@ -164,7 +164,7 @@ export default function App() {
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto',
-          padding: '2rem 1.5rem',
+          // padding: '2rem 1.5rem',
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
@@ -209,7 +209,7 @@ export default function App() {
             src="/linking/modudao_wiki_tree.jpeg" 
             alt="ModuDAO Wiki Tree" 
             style={{
-              maxWidth: '180px',
+              maxWidth: '150px',
               height: 'auto',
               borderRadius: '6px',
               marginTop: '0.5rem'
