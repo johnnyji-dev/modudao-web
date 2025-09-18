@@ -183,13 +183,12 @@ export default function App() {
             // fontSize: '1.2rem',
             fontWeight: '500',
             lineHeight: '1.5',
-            margin: '0',
+            // margin: '0',
             color: '#e7e7ea'
           }}>
             ModuDAO는 디젠들의 집단 지성으로<br /> 움직이는 탈중앙 자율 조직.<br />
             소수의 엘리트가 아닌,<br /> 모든 참여자가 곧 운영자입니다.
           </p>
-          <br />
           <a href="https://linktr.ee/Modudao" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-block',
             padding: '8px 16px',
@@ -914,7 +913,7 @@ export default function App() {
         </section>
       </section>
 
-      <section className="notice" style={{ height: '10vh' }}>
+      <section className="notice" style={{ height: '15vh' }}>
         <div className="notice-card">
           <div>
             <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
