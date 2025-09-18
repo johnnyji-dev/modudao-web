@@ -142,9 +142,9 @@ export default function App() {
             </div>
           </a>
           <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
-            <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
-            <a href="#goal" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>목표</a>
+            <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
+            <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
+            <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>대상</a>
             <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
             <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>영상&사진</a>
           </nav>
@@ -152,7 +152,7 @@ export default function App() {
       </header>
 
       {/* Hero / Identity Section */}
-      <section id="hero" className="hero" style={{
+      <section id="intro" className="hero" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -218,8 +218,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Feature grid */}
-      <section id="features" style={{
+      {/* Activities grid */}
+      <section id="activities" style={{
         marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
@@ -666,8 +666,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Checklist & Goal Combined */}
-      <section id="goal" className="checklist" style={{
+      {/* who */}
+      <section id="who" className="checklist" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
