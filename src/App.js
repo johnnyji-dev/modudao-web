@@ -164,7 +164,7 @@ export default function App() {
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto',
-          padding: '10rem 1.5rem',
+          padding: '4rem 1.5rem',
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
