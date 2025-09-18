@@ -135,10 +135,12 @@ export default function App() {
     <main id="app" className="app">
       <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0.5rem', minHeight: '56px', left: 0, right: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
-          <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
-            <span className="brand-name">ModuDAO</span>
-          </div>
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
+              <span className="brand-name">ModuDAO</span>
+            </div>
+          </a>
           <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
             <a href="#hero" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
             <a href="#features" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
