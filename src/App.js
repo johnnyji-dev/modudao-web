@@ -194,7 +194,8 @@ export default function App() {
       </section>
 
       {/* Feature grid */}
-      <section id="features" className="features-block" style={{
+      <section id="features" style={{
+        marginTop: '50px',
         minHeight: '70vh',
         display: 'flex',
         flexDirection: 'column',
@@ -203,7 +204,7 @@ export default function App() {
         backgroundColor: 'var(--bg1)'
       }}>
         <h2 className="section-title" style={{
-          fontSize: '19px',
+          fontSize: '28px',
           // fontSize: '1.2rem',
           fontWeight: '1500',
           lineHeight: '1.5',

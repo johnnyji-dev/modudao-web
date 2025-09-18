@@ -26,5 +26,5 @@ intro
 19px
 
 feature
-19px
+28px
 14px
