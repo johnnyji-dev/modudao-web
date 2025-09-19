@@ -146,7 +146,7 @@ export default function App() {
             <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
             <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>대상</a>
             <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
-            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>겔러리</a>
+            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>갤러리</a>
           </nav>
         </div>
       </header>
@@ -899,20 +899,19 @@ export default function App() {
         </div>
       </section>
 
-      {/* Gallery & YouTube Video * Notice */}
+      {/* Gallery */}
       <section id="gallery" style={{
-        marginTop: '13.5rem',
+        marginTop: '30px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg)',
-        padding: '1rem 0',
         color: 'var(--subtxt)',
-        fontSize: '28px'
+        fontSize: '28px',
       }}>
-        <section className="gallery" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="gallery" style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 사진
           </h2>
@@ -945,10 +944,7 @@ export default function App() {
           </div>
         </section>
 
-        <br />
-        <br />
-
-        <section className="youtube-section" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="youtube-section" style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 영상
           </h2>

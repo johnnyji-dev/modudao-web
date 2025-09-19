@@ -186,4 +186,16 @@ body {
   }
   .youtube-slider-btn.prev { left: 5px; }
   .youtube-slider-btn.next { right: 5px; }
+  
+  /* Gallery mobile adjustments */
+  html { scroll-padding-top: 30px; }
+  .slider-image-container { height: 200px; }
+  .youtube-container { width: 300px !important; max-width: 320px !important; height: 170px !important; }
+}
+
+/* PC adjustments */
+@media (min-width: 769px) {
+  html { scroll-padding-top: 30px; }
+  .slider-image-container { height: 250px; }
+  .youtube-container { width: 350px !important; max-width: 380px !important; height: 200px !important; }
 }
