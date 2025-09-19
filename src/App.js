@@ -173,7 +173,7 @@ export default function App() {
             fontWeight: '900',
             lineHeight: '1.2',
             margin: '0 0 1.5rem 0',
-            color: '#ffffff'
+            color: 'var(--subtxt)',
           }}>
             블록체인 디젠<br />모두가 모여 만든<br />집단 지성체
           </h2>
@@ -219,7 +219,7 @@ export default function App() {
 
       {/* Activities grid */}
       <section id="activities" style={{
-        marginTop: '50px',
+        marginTop: '30px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -233,11 +233,11 @@ export default function App() {
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            fontSize: '24px',
+            fontSize: '28px',
             fontWeight: '1500',
             lineHeight: '1.3',
             margin: '0 0 1rem 0',
-            color: '#e7e7ea'
+            color: 'var(--subtxt)',
           }}>우리의 주요 활동</h2>
           <p className="section-description" style={{
             fontSize: '13px',
@@ -682,7 +682,7 @@ export default function App() {
             fontWeight: '800',
             marginBottom: '1rem',
             textAlign: 'center',
-            color: '#ffffff'
+            color: 'var(--subtxt)',
           }}>이런 분들을 기다립니다!</h2>
           <ul className="list" style={{ marginBottom: '3rem' }}>
             <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
@@ -720,11 +720,11 @@ export default function App() {
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            fontSize: '24px',
+            fontSize: '28px',
             fontWeight: '800',
             marginBottom: '1rem',
             textAlign: 'center',
-            color: '#ffffff'
+            color: 'var(--subtxt)'
           }}>함께하는 멤버</h2>
           <div className="stack" style={{ gap: '1rem' }}>
             <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -758,64 +758,136 @@ export default function App() {
               <section className="telegram-channels">
                 <div className="channel-grid">
                   <a href="https://t.me/Modu_DAO" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/0_modudao.png" alt="ModuDAO" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">ModuDAO모두다오</div>
                     <div className="channel-desc">공식 텔레그램</div>
                   </a>
                   <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/1_won_officer.jpeg" alt="won_officer" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">원대감의 성균관</div>
                     <div className="channel-desc">크립토 핸섬가이</div>
                   </a>
                   <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/2_cryptodock.jpeg" alt="cryptodock" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">Crypto Dock</div>
                     <div className="channel-desc">온체인 분석<br />디파이 매매</div>
                   </a>
                   <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/3_donut.jpeg" alt="donut" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">김도넛의 돈복사실</div>
                     <div className="channel-desc">경제적 자유를 위해</div>
                   </a>
                   <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/4_uzun.jpeg" alt="uzun" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">우쥰의 코인채굴작전</div>
                     <div className="channel-desc">돈되는 채굴 방법</div>
                   </a>
                   <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/5_cryptong.jpeg" alt="crytong" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">사대감의 크립통</div>
                     <div className="channel-desc">육대감의 크립토 소식통</div>
                   </a>
                   <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
-                      <img src="/tg/6_chas.jpeg" alt="cryptohighschool" style={{ width: '20px', height: '20px' }} />  
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
+                      <img src="/tg/6_chas.jpeg" alt="cryptohighschool" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">크립토 하이스쿨</div>
                     <div className="channel-desc">크립토 문맹 탈출</div>
                   </a>
                   <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/7_cointown.jpeg" alt="cointown" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">코인타운</div>
                     <div className="channel-desc">세상에 모든<br />돈 되는 정보</div>
                   </a>
                   <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
-                    <div className="channel-icon">
+                    <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
                       <img src="/tg/8_copaka.jpeg" alt="copaka" style={{ width: '20px', height: '20px' }} />
+                      <img src="/tg/tele_nobg.png" alt="telegram" style={{ 
+                        position: 'absolute', 
+                        bottom: '2px', 
+                        right: '-4px', 
+                        width: '12px', 
+                        height: '12px',
+                        zIndex: 1
+                      }} />
                     </div>
                     <div className="channel-name">코파카</div>
                     <div className="channel-desc">코인 소개하는 알파카</div>
@@ -829,14 +901,16 @@ export default function App() {
 
       {/* Gallery & YouTube Video * Notice */}
       <section id="gallery" style={{
-        marginTop: '50px',
+        marginTop: '30px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg)',
-        padding: '1rem 0'
+        padding: '1rem 0',
+        color: 'var(--subtxt)',
+        fontSize: '28px'
       }}>
         <section className="gallery" style={{ height: '35vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
