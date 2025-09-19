@@ -158,6 +158,7 @@ export default function App() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        paddingTop: '20px'
       }}>
         {/* Intro */}
         <div style={{
@@ -219,14 +220,14 @@ export default function App() {
 
       {/* Activities grid */}
       <section id="activities" style={{
-        marginTop: '30px',
+        marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg1)',
-        padding: '2rem 0',
+        padding: '20px 0 1rem 0',
         width: '100vw',
         marginLeft: 'calc(-50vw + 50%)',
         marginRight: 'calc(-50vw + 50%)'
@@ -672,7 +673,7 @@ export default function App() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '2rem 0',
+        padding: '20px 0 1rem 0',
         backgroundColor: 'var(--bg)'
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
@@ -706,14 +707,14 @@ export default function App() {
 
       {/* Members */}
       <section id="members" className="members" style={{
-        marginTop: '50px',
+        marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg1)',
-        padding: '1rem 0',
+        padding: '20px 0 1rem 0',
         width: '100vw',
         marginLeft: 'calc(-50vw + 50%)',
         marginRight: 'calc(-50vw + 50%)'
@@ -901,17 +902,18 @@ export default function App() {
 
       {/* Gallery */}
       <section id="gallery" style={{
-        marginTop: '30px',
+        marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'var(--bg)',
+        padding: '20px 0 1rem 0',
         color: 'var(--subtxt)',
         fontSize: '28px',
       }}>
-        <section className="gallery" style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="gallery" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 사진
           </h2>
@@ -944,7 +946,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="youtube-section" style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="youtube-section" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             활동 영상
           </h2>
