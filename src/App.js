@@ -901,7 +901,7 @@ export default function App() {
 
       {/* Gallery & YouTube Video * Notice */}
       <section id="gallery" style={{
-        marginTop: '30px',
+        marginTop: '50px',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
