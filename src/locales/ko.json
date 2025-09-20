@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "intro": "소개",
+    "activities": "활동",
+    "target": "대상",
+    "members": "멤버",
+    "gallery": "갤러리"
+  },
+  "hero": {
+    "title": "블록체인 디젠<br />모두가 모여 만든<br />집단 지성체",
+    "subtitle": "ModuDAO는 디젠들의 집단 지성으로<br /> 움직이는 탈중앙 자율 조직.<br />소수의 엘리트가 아닌,<br /> 모든 참여자가 곧 운영자입니다.",
+    "joinButton": "참여하기"
+  },
+  "activities": {
+    "title": "우리의 주요 활동",
+    "description": "ModuDAO의 주요 활동은 다음과 같습니다. <br />지금, 활발하게 성장하는 커뮤니티에 합류하세요!",
+    "regularMeetings": "정기 모임",
+    "scheduleView": "일정 보기",
+    "cryptoMeetups": "Crypto Meetups",
+    "airdrop": "에어드랍",
+    "blockchainResearch": "블록체인 리서치",
+    "blockchainEducation": "블록체인 교육",
+    "interviews": "인터뷰",
+    "trendInsights": "트렌드 인사이트",
+    "yapping": "얍핑",
+    "telegramChannel": "텔레그램 채널",
+    "ipoParticipation": "IPO 참여"
+  },
+  "target": {
+    "title": "이런 분들을 기다립니다!",
+    "items": [
+      "블록체인을 처음 접하는 분",
+      "밋업이 궁금하신 분",
+      "새로운 재테크를 함께 공부하고 싶은 분",
+      "코인을 배우고 싶은 코린이",
+      "본인 채널 운영과 성장을 꿈꾸는 분"
+    ]
+  },
+  "members": {
+    "title": "함께하는 멤버",
+    "tempDescription": "9년차 블록체인 전문 에이전시",
+    "daoMembers": "DAO 멤버 및 채널소개",
+    "channels": {
+      "modudao": {
+        "name": "모두다오",
+        "desc": "공식 텔레그램"
+      },
+      "wonOfficer": {
+        "name": "원대감의 성균관",
+        "desc": "크립토 핸섬가이"
+      },
+      "cryptoDock": {
+        "name": "Crypto Dock",
+        "desc": "온체인 분석<br />디파이 매매"
+      },
+      "donut": {
+        "name": "김도넛의 돈복사실",
+        "desc": "경제적 자유를 위해"
+      },
+      "uzun": {
+        "name": "우쥰의 코인채굴작전",
+        "desc": "돈되는 채굴 방법"
+      },
+      "cryptong": {
+        "name": "사대감의 크립통",
+        "desc": "육대감의 크립토 소식통"
+      },
+      "cryptoHighschool": {
+        "name": "크립토 하이스쿨",
+        "desc": "크립토 문맹 탈출"
+      },
+      "coinTown": {
+        "name": "코인타운",
+        "desc": "세상에 모든<br />돈 되는 정보"
+      },
+      "copaka": {
+        "name": "코파카",
+        "desc": "코인 소개하는 알파카"
+      }
+    }
+  },
+  "gallery": {
+    "photos": "활동 사진",
+    "videos": "활동 영상",
+    "prevPhoto": "이전 사진",
+    "nextPhoto": "다음 사진",
+    "prevVideo": "이전 영상",
+    "nextVideo": "다음 영상",
+    "photoLabel": "사진",
+    "videoLabel": "영상"
+  },
+  "notice": {
+    "title": "⚠️ 유의사항",
+    "content": "종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다. 저희는 건전한 스터디와 네트워킹을 지향합니다."
+  },
+  "footer": {
+    "copyright": "© 2025-{year} ModuDAO. All rights reserved."
+  }
+}

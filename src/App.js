@@ -1,17 +1,20 @@
 import React from 'react';
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 
 function Footer() {
+  const { t } = useLanguage();
   const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
     <footer className="footer">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <small style={{ textAlign: 'center' }}>© <span>2025-{year}</span> ModuDAO. All rights reserved.</small>
+        <small style={{ textAlign: 'center' }}>{t('footer.copyright', { year })}</small>
       </div>
     </footer>
   );
 }
 
-export default function App() {
+function AppContent() {
+  const { t, language, changeLanguage } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
 
@@ -142,11 +145,37 @@ export default function App() {
             </div>
           </a>
           <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>소개</a>
-            <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>활동</a>
-            <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>대상</a>
-            <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>멤버</a>
-            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>갤러리</a>
+            <button 
+              onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
+              style={{ 
+                color: 'var(--text)', 
+                textDecoration: 'none', 
+                fontSize: '0.75rem', 
+                fontWeight: '600', 
+                whiteSpace: 'nowrap', 
+                padding: '0.25rem 0.35rem',
+                background: 'var(--button)',
+                border: '1px solid var(--border)',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.background = 'var(--primary)';
+                e.target.style.borderColor = 'var(--subtxt)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.background = 'var(--button)';
+                e.target.style.borderColor = 'var(--border)';
+              }}
+            >
+              {language === 'ko' ? 'EN' : '한국어'}
+            </button>
+            <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.intro')}</a>
+            <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.activities')}</a>
+            <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.target')}</a>
+            <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.members')}</a>
+            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.gallery')}</a>
           </nav>
         </div>
       </header>
@@ -175,8 +204,7 @@ export default function App() {
             lineHeight: '1.2',
             margin: '0 0 1.5rem 0',
             color: 'var(--subtxt)',
-          }}>
-            블록체인 디젠<br />모두가 모여 만든<br />집단 지성체
+          }} dangerouslySetInnerHTML={{ __html: t('hero.title') }}>
           </h2>
           <br />
           <p className="intro-sub" style={{
@@ -186,9 +214,7 @@ export default function App() {
             lineHeight: '1.5',
             // margin: '0',
             color: '#e7e7ea'
-          }}>
-            ModuDAO는 디젠들의 집단 지성으로<br /> 움직이는 탈중앙 자율 조직.<br />
-            소수의 엘리트가 아닌,<br /> 모든 참여자가 곧 운영자입니다.
+          }} dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }}>
           </p>
           <a href="https://linktr.ee/Modudao" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-block',
@@ -202,7 +228,7 @@ export default function App() {
             transition: 'all 0.3s ease',
             marginTop: '0.5rem'
           }}>
-            참여하기
+            {t('hero.joinButton')}
           </a>
           <br />
           <img 
@@ -239,16 +265,14 @@ export default function App() {
             lineHeight: '1.3',
             margin: '0 0 1rem 0',
             color: 'var(--subtxt)',
-          }}>우리의 주요 활동</h2>
+          }}>{t('activities.title')}</h2>
           <p className="section-description" style={{
             fontSize: '13px',
             fontWeight: '500',
             lineHeight: '1.4',
             margin: '0 0 1.5rem 0',
             color: '#e7e7ea'
-          }}>
-            ModuDAO의 주요 활동은 다음과 같습니다. <br />
-            지금, 활발하게 성장하는 커뮤니티에 합류하세요!
+          }} dangerouslySetInnerHTML={{ __html: t('activities.description') }}>
           </p>
           <div className="grid2" style={{ gap: '8px', maxWidth: '400px', width: '100%' }}>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
@@ -289,10 +313,10 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>정기 모임</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.regularMeetings')}</div>
               <small style={{ fontSize: '10px' }}>
                 <a href="https://www.somoim.co.kr/7871033c-3fb8-4704-b550-001a44f3d76f1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-                  일정 보기
+                  {t('activities.scheduleView')}
                 </a>
               </small>
             </div>
@@ -326,7 +350,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>Crypto Meetups</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.cryptoMeetups')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -358,7 +382,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>에어드랍</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.airdrop')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -404,7 +428,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>블록체인 리서치</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.blockchainResearch')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -436,7 +460,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>블록체인 교육</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.blockchainEducation')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -468,7 +492,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>인터뷰</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.interviews')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -522,7 +546,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>트렌드 인사이트</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.trendInsights')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -571,7 +595,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>Yapping</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.yapping')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -620,7 +644,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>텔레그램 채널</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.telegramChannel')}</div>
             </div>
             <div className="feature-card" style={{ padding: '12px 8px' }}>
               <div className="ficon" style={{
@@ -660,7 +684,7 @@ export default function App() {
                   }}></div>
                 </div>
               </div>
-              <div className="fname" style={{ fontSize: '11px' }}>IPO 참여</div>
+              <div className="fname" style={{ fontSize: '11px' }}>{t('activities.ipoParticipation')}</div>
             </div>
           </div>
         </div>
@@ -684,23 +708,13 @@ export default function App() {
             marginBottom: '1rem',
             textAlign: 'center',
             color: 'var(--subtxt)',
-          }}>이런 분들을 기다립니다!</h2>
+          }}>{t('target.title')}</h2>
           <ul className="list" style={{ marginBottom: '3rem' }}>
-            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
-              <span className="tick">✔</span> 블록체인을 처음 접하는 분
-            </li>
-            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
-              <span className="tick">✔</span> 밋업이 궁금하신 분
-            </li>
-            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
-              <span className="tick">✔</span> 새로운 재테크를 함께 공부하고 싶은 분
-            </li>
-            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
-              <span className="tick">✔</span> 코인을 배우고 싶은 코린이
-            </li>
-            <li style={{ padding: '10px 30px', marginBottom: '2px' }}>
-              <span className="tick">✔</span> 본인 채널 운영과 성장을 꿈꾸는 분
-            </li>
+            {t('target.items').map((item, index) => (
+              <li key={index} style={{ padding: '10px 30px', marginBottom: '2px' }}>
+                <span className="tick">✔</span> {item}
+              </li>
+            ))}
           </ul>
         </div>
       </section>
@@ -726,12 +740,12 @@ export default function App() {
             marginBottom: '1rem',
             textAlign: 'center',
             color: 'var(--subtxt)'
-          }}>함께하는 멤버</h2>
+          }}>{t('members.title')}</h2>
           <div className="stack" style={{ gap: '1rem' }}>
             <a href="https://t.me/TEMPi_KR" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="pill" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}>
                 <strong> TEMPi</strong>
-                <small>9년차 블록체인 전문 에이전시</small>
+                <small>{t('members.tempDescription')}</small>
                 <br />
                 <div style={{
                   display: 'inline-flex',
@@ -754,7 +768,7 @@ export default function App() {
               </div>
             </a>
             <div className="pill">
-              <strong> DAO 멤버 및 채널소개</strong>
+              <strong> {t('members.daoMembers')}</strong>
               {/* Telegram Channels */}
               <section className="telegram-channels">
                 <div className="channel-grid">
@@ -770,8 +784,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">ModuDAO모두다오</div>
-                    <div className="channel-desc">공식 텔레그램</div>
+                    <div className="channel-name">{t('members.channels.modudao.name')}</div>
+                    <div className="channel-desc" dangerouslySetInnerHTML={{ __html: t('members.channels.modudao.desc') }}></div>
                   </a>
                   <a href="https://t.me/dnjseorka123" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -785,8 +799,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">원대감의 성균관</div>
-                    <div className="channel-desc">크립토 핸섬가이</div>
+                    <div className="channel-name">{t('members.channels.wonOfficer.name')}</div>
+                    <div className="channel-desc">{t('members.channels.wonOfficer.desc')}</div>
                   </a>
                   <a href="https://t.me/cripto_dock" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -800,8 +814,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">Crypto Dock</div>
-                    <div className="channel-desc">온체인 분석<br />디파이 매매</div>
+                    <div className="channel-name">{t('members.channels.cryptoDock.name')}</div>
+                    <div className="channel-desc" dangerouslySetInnerHTML={{ __html: t('members.channels.cryptoDock.desc') }}></div>
                   </a>
                   <a href="https://t.me/kimdonut_mp" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -815,8 +829,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">김도넛의 돈복사실</div>
-                    <div className="channel-desc">경제적 자유를 위해</div>
+                    <div className="channel-name">{t('members.channels.donut.name')}</div>
+                    <div className="channel-desc">{t('members.channels.donut.desc')}</div>
                   </a>
                   <a href="https://t.me/woojunmining" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -830,8 +844,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">우쥰의 코인채굴작전</div>
-                    <div className="channel-desc">돈되는 채굴 방법</div>
+                    <div className="channel-name">{t('members.channels.uzun.name')}</div>
+                    <div className="channel-desc">{t('members.channels.uzun.desc')}</div>
                   </a>
                   <a href="https://t.me/Crypto_Deliverys" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -845,8 +859,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">사대감의 크립통</div>
-                    <div className="channel-desc">육대감의 크립토 소식통</div>
+                    <div className="channel-name">{t('members.channels.cryptong.name')}</div>
+                    <div className="channel-desc">{t('members.channels.cryptong.desc')}</div>
                   </a>
                   <a href="https://t.me/cryptohighschool" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -860,8 +874,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">크립토 하이스쿨</div>
-                    <div className="channel-desc">크립토 문맹 탈출</div>
+                    <div className="channel-name">{t('members.channels.cryptoHighschool.name')}</div>
+                    <div className="channel-desc">{t('members.channels.cryptoHighschool.desc')}</div>
                   </a>
                   <a href="https://t.me/coinhotplace" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -875,8 +889,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">코인타운</div>
-                    <div className="channel-desc">세상에 모든<br />돈 되는 정보</div>
+                    <div className="channel-name">{t('members.channels.coinTown.name')}</div>
+                    <div className="channel-desc" dangerouslySetInnerHTML={{ __html: t('members.channels.coinTown.desc') }}></div>
                   </a>
                   <a href="https://t.me/coinpaka" target="_blank" rel="noopener noreferrer" className="channel-card">
                     <div className="channel-icon" style={{ position: 'relative', display: 'inline-block' }}>
@@ -890,8 +904,8 @@ export default function App() {
                         zIndex: 1
                       }} />
                     </div>
-                    <div className="channel-name">코파카</div>
-                    <div className="channel-desc">코인 소개하는 알파카</div>
+                    <div className="channel-name">{t('members.channels.copaka.name')}</div>
+                    <div className="channel-desc">{t('members.channels.copaka.desc')}</div>
                   </a>
                 </div>
               </section>
@@ -915,11 +929,11 @@ export default function App() {
       }}>
         <section className="gallery" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
-            활동 사진
+            {t('gallery.photos')}
           </h2>
           <div className="gallery-slider">
             <div className="slider-container">
-              <button className="slider-btn prev" onClick={prevImage} aria-label="이전 사진">
+              <button className="slider-btn prev" onClick={prevImage} aria-label={t('gallery.prevPhoto')}>
                 ‹
               </button>
               <div className="slider-image-container">
@@ -929,7 +943,7 @@ export default function App() {
                   className="slider-image"
                 />
               </div>
-              <button className="slider-btn next" onClick={nextImage} aria-label="다음 사진">
+              <button className="slider-btn next" onClick={nextImage} aria-label={t('gallery.nextPhoto')}>
                 ›
               </button>
             </div>
@@ -939,7 +953,7 @@ export default function App() {
                   key={index}
                   className={`dot ${index === currentImageIndex ? 'active' : ''}`}
                   onClick={() => setCurrentImageIndex(index)}
-                  aria-label={`사진 ${index + 1}로 이동`}
+                  aria-label={`${t('gallery.photoLabel')} ${index + 1}로 이동`}
                 />
               ))}
             </div>
@@ -948,11 +962,11 @@ export default function App() {
 
         <section className="youtube-section" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
-            활동 영상
+            {t('gallery.videos')}
           </h2>
           <div className="youtube-slider">
             <div className="youtube-slider-container">
-              <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label="이전 영상">
+              <button className="youtube-slider-btn prev" onClick={prevVideo} aria-label={t('gallery.prevVideo')}>
                 ‹
               </button>
               <div className="youtube-container" style={{ width: '350px', maxWidth: '380px', height: '200px' }}>
@@ -967,7 +981,7 @@ export default function App() {
                   className="youtube-embed"
                 ></iframe>
               </div>
-              <button className="youtube-slider-btn next" onClick={nextVideo} aria-label="다음 영상">
+              <button className="youtube-slider-btn next" onClick={nextVideo} aria-label={t('gallery.nextVideo')}>
                 ›
               </button>
             </div>
@@ -977,7 +991,7 @@ export default function App() {
                   key={index}
                   className={`youtube-dot ${index === currentVideoIndex ? 'active' : ''}`}
                   onClick={() => setCurrentVideoIndex(index)}
-                  aria-label={`영상 ${index + 1}로 이동`}
+                  aria-label={`${t('gallery.videoLabel')} ${index + 1}로 이동`}
                 />
               ))}
             </div>
@@ -988,14 +1002,21 @@ export default function App() {
       <section className="notice" style={{ height: '15vh' }}>
         <div className="notice-card">
           <div>
-            <h3 className="notice-title"><div className="notice-icon">⚠️ 유의사항</div></h3>
-            <p className="muted">종교 권유, 다단계, 이성 목적, 과도한 술모임은 정중히 사양합니다.
-              저희는 건전한 스터디와 네트워킹을 지향합니다.</p>
+            <h3 className="notice-title"><div className="notice-icon">{t('notice.title')}</div></h3>
+            <p className="muted">{t('notice.content')}</p>
           </div>
         </div>
       </section>
 
       <Footer />
     </main>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }

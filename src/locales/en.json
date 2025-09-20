@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "intro": "About",
+    "activities": "Activities",
+    "target": "Target",
+    "members": "Members",
+    "gallery": "Gallery"
+  },
+  "hero": {
+    "title": "Blockchain DeGen<br />Co-Intelligence<br />Built by Everyone",
+    "subtitle": "Decentralized autonomous organization<br />driven by collective intelligence of Degens.<br />Not a few elites, all participants are operators.",
+    "joinButton": "Join Now"
+  },
+  "activities": {
+    "title": "Our Main Activities",
+    "description": "The main activities of ModuDAO are as follows. <br />Join our actively growing community now!",
+    "regularMeetings": "Regular Meetings",
+    "scheduleView": "View Schedule",
+    "cryptoMeetups": "Crypto Meetups",
+    "airdrop": "Airdrop",
+    "blockchainResearch": "Blockchain Research",
+    "blockchainEducation": "Blockchain Education",
+    "interviews": "Interviews",
+    "trendInsights": "Trend Insights",
+    "yapping": "Yapping",
+    "telegramChannel": "Telegram Channel",
+    "ipoParticipation": "IPO Participation"
+  },
+  "target": {
+    "title": "Waiting for people like you!",
+    "items": [
+      "Those new to blockchain",
+      "Those curious about meetups",
+      "Those who want to study new investment",
+      "Beginners who want to learn a crypto",
+      "Those who run their own Telegram channel"
+    ]
+  },
+  "members": {
+    "title": "Members Together",
+    "tempDescription": "9-year blockchain professional agency",
+    "daoMembers": "DAO Members & Channel Introduction",
+    "channels": {
+      "modudao": {
+        "name": "ModuDAO",
+        "desc": "Official Telegram"
+      },
+      "wonOfficer": {
+        "name": "Wondaegam's Sungkyunkwan",
+        "desc": "Crypto Handsome Guide"
+      },
+      "cryptoDock": {
+        "name": "Crypto Dock",
+        "desc": "On-chain Analysis<br />DeFi Trading"
+      },
+      "donut": {
+        "name": "Donut's Money Copy Shop",
+        "desc": "For Economic Freedom"
+      },
+      "uzun": {
+        "name": "Universe's Coin Mining",
+        "desc": "Profitable Mining Methods"
+      },
+      "cryptong": {
+        "name": "Sadaegam's Crypto News",
+        "desc": "Crypto News Channel"
+      },
+      "cryptoHighschool": {
+        "name": "Crypto Highschool",
+        "desc": "Crypto Literacy Escape"
+      },
+      "coinTown": {
+        "name": "Coin Town",
+        "desc": "All the Money-Making<br />Information in the World"
+      },
+      "copaka": {
+        "name": "Copaka",
+        "desc": "Alpaca Introducing Coins"
+      }
+    }
+  },
+  "gallery": {
+    "photos": "Activity Photos",
+    "videos": "Activity Videos",
+    "prevPhoto": "Previous Photo",
+    "nextPhoto": "Next Photo",
+    "prevVideo": "Previous Video",
+    "nextVideo": "Next Video",
+    "photoLabel": "Photo",
+    "videoLabel": "Video"
+  },
+  "notice": {
+    "title": "⚠️ Notice",
+    "content": "We politely decline religious solicitation, multi-level marketing, dating purposes, and excessive drinking gatherings. We aim for healthy study and networking."
+  },
+  "footer": {
+    "copyright": "© 2025-{year} ModuDAO. All rights reserved."
+  }
+}
