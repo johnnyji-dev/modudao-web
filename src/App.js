@@ -1,4 +1,4 @@
-// force push 2025-09-21
+// force push 2025-09-21 -2
 import React from 'react';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 
