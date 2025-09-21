@@ -1174,9 +1174,9 @@ function AppContent() {
           right: '20px',
           zIndex: 1000,
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           alignItems: 'flex-end',
-          gap: '10px'
+          gap: '15px'
         }}
       >
         {/* Speech Bubble */}
@@ -1200,17 +1200,17 @@ function AppContent() {
             }}
           >
             Do you need to build a korea-community or co-work?
-            {/* Speech bubble tail */}
+            {/* Speech bubble tail - pointing to the right */}
             <div
               style={{
                 position: 'absolute',
-                bottom: '-8px',
-                right: '20px',
+                bottom: '15px',
+                right: '-8px',
                 width: '0',
                 height: '0',
-                borderLeft: '8px solid transparent',
-                borderRight: '8px solid transparent',
-                borderTop: '8px solid rgba(22, 33, 62, 0.95)'
+                borderTop: '8px solid transparent',
+                borderBottom: '8px solid transparent',
+                borderLeft: '8px solid rgba(22, 33, 62, 0.95)'
               }}
             />
           </div>
@@ -1219,8 +1219,8 @@ function AppContent() {
         {/* Floating Icon */}
         <div
           style={{
-            width: '60px',
-            height: '60px',
+            width: '45px',
+            height: '45px',
             borderRadius: '50%',
             // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
             display: 'flex',
@@ -1245,8 +1245,8 @@ function AppContent() {
             src="/modu-removebg-preview.png" 
             alt="ModuDAO" 
             style={{ 
-              width: '40px', 
-              height: '40px',
+              width: '30px', 
+              height: '30px',
               filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
             }} 
           />
