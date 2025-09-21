@@ -7,10 +7,8 @@
   --card: #16213e;
   --button: #2d3748;
   --primary: #1a1a2e;
-  --primary-2: #16213e;
   --border: #2d3748;
   --accent: #00d4ff;
-  --accent-glow: rgba(0, 212, 255, 0.1);
 }
 
 * { box-sizing: border-box; }
@@ -62,12 +60,11 @@ body::before {
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand-name { font-weight: 700; letter-spacing: 0.2px; }
 
-/* Header hero-logo and site-wordmark with same size as logo and brand-name */
+/* Header hero-logo */
 .header .hero-logo { 
   width: 28px; 
   height: 28px; 
   border-radius: 8px; 
-  /* background: linear-gradient(135deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%);  */
   box-shadow: 
     0 8px 24px rgba(0, 212, 255, 0.4),
     0 0 20px rgba(255, 215, 0, 0.2),
@@ -96,29 +93,6 @@ body::before {
   }
 }
 
-/* Speech bubble fade in/out animation */
-.speech-bubble-enter {
-  opacity: 0;
-  transform: translateY(10px) scale(0.8);
-}
-
-.speech-bubble-enter-active {
-  opacity: 1;
-  transform: translateY(0px) scale(1);
-  transition: all 0.3s ease-in-out;
-}
-
-.speech-bubble-exit {
-  opacity: 1;
-  transform: translateY(0px) scale(1);
-}
-
-.speech-bubble-exit-active {
-  opacity: 0;
-  transform: translateY(-5px) scale(0.9);
-  transition: all 0.3s ease-in-out;
-}
-.header .site-wordmark { font-weight: 700; letter-spacing: 0.2px; }
 
 .hero { padding: 28px 0 8px; position: relative; }
 .intro-head { margin: 4px 0 8px; font-size: 20px; line-height: 1.5; text-align: center; }
