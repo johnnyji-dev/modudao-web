@@ -145,32 +145,6 @@ function AppContent() {
             </div>
           </a>
           <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <button 
-              onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
-              style={{ 
-                color: 'var(--text)', 
-                textDecoration: 'none', 
-                fontSize: '0.75rem', 
-                fontWeight: '600', 
-                whiteSpace: 'nowrap', 
-                padding: '0.25rem 0.35rem',
-                background: 'var(--button)',
-                border: '1px solid var(--border)',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.background = 'var(--primary)';
-                e.target.style.borderColor = 'var(--subtxt)';
-              }}
-              onMouseOut={(e) => {
-                e.target.style.background = 'var(--button)';
-                e.target.style.borderColor = 'var(--border)';
-              }}
-            >
-              {language === 'ko' ? 'EN' : '한국어'}
-            </button>
             <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.intro')}</a>
             <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.activities')}</a>
             <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.target')}</a>
@@ -179,6 +153,41 @@ function AppContent() {
           </nav>
         </div>
       </header>
+
+      {/* Language Toggle Button - Fixed Position */}
+      <button 
+        onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
+        style={{ 
+          position: 'fixed',
+          top: '70px',
+          right: '20px',
+          zIndex: 999,
+          color: 'var(--text)', 
+          textDecoration: 'none', 
+          fontSize: '0.75rem', 
+          fontWeight: '600', 
+          whiteSpace: 'nowrap', 
+          padding: '0.4rem 0.8rem',
+          background: 'var(--button)',
+          border: '1px solid var(--border)',
+          borderRadius: '6px',
+          cursor: 'pointer',
+          transition: 'all 0.2s ease',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.background = 'var(--primary)';
+          e.target.style.borderColor = 'var(--subtxt)';
+          e.target.style.transform = 'scale(1.05)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = 'var(--button)';
+          e.target.style.borderColor = 'var(--border)';
+          e.target.style.transform = 'scale(1)';
+        }}
+      >
+        {language === 'ko' ? 'EN' : '한국어'}
+      </button>
 
       {/* Hero / Identity Section */}
       <section id="intro" className="hero" style={{
