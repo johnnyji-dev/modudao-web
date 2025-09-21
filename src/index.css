@@ -57,19 +57,197 @@ body::before {
 
 .app { max-width: 440px; margin: 0 auto; padding: 16px 16px 40px; }
 .header { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
-.brand { display: flex; align-items: center; gap: 10px; }
+.header-container { max-width: 440px; }
+.brand { display: flex; align-items: center; gap: 8px; }
 .brand-name { font-weight: 700; letter-spacing: 0.2px; }
+
+/* Header Navigation Responsive */
+.header nav a {
+  transition: all 0.2s ease;
+}
+
+.header nav a:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Large screen adjustments */
+@media (min-width: 768px) {
+  .header-container {
+    max-width: 600px !important;
+  }
+  
+  .header .brand {
+    gap: 12px;
+  }
+  
+  .header .brand-name {
+    font-size: 1.1rem;
+  }
+  
+  .header nav {
+    gap: 0.8rem !important;
+  }
+  
+  .header nav a {
+    font-size: 0.9rem !important;
+    padding: 0.3rem 0.4rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    max-width: 700px !important;
+  }
+  
+  .header .brand {
+    gap: 14px;
+  }
+  
+  .header .brand-name {
+    font-size: 1.2rem;
+  }
+  
+  .header nav {
+    gap: 1rem !important;
+  }
+  
+  .header nav a {
+    font-size: 1rem !important;
+    padding: 0.35rem 0.45rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-container {
+    max-width: 800px !important;
+  }
+  
+  .header .brand {
+    gap: 16px;
+  }
+  
+  .header .brand-name {
+    font-size: 1.3rem;
+  }
+  
+  .header nav {
+    gap: 1.2rem !important;
+  }
+  
+  .header nav a {
+    font-size: 1.1rem !important;
+    padding: 0.4rem 0.5rem !important;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 480px) {
+  .header .brand {
+    gap: 6px;
+  }
+  
+  .header .brand-name {
+    font-size: 0.85rem;
+  }
+  
+  .header nav {
+    gap: 0.3rem !important;
+  }
+  
+  .header nav a {
+    font-size: 0.7rem !important;
+    padding: 0.15rem 0.2rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .header .brand-name {
+    font-size: 0.8rem;
+  }
+  
+  .header nav a {
+    font-size: 0.65rem !important;
+    padding: 0.1rem 0.15rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .brand {
+    gap: 4px;
+  }
+  
+  .header .brand-name {
+    font-size: 0.75rem;
+  }
+  
+  .header nav {
+    gap: 0.2rem !important;
+  }
+  
+  .header nav a {
+    font-size: 0.6rem !important;
+    padding: 0.1rem 0.1rem !important;
+  }
+}
 
 /* Header hero-logo */
 .header .hero-logo { 
-  width: 28px; 
-  height: 28px; 
-  border-radius: 8px; 
+  width: 24px; 
+  height: 24px; 
+  border-radius: 6px; 
   box-shadow: 
-    0 8px 24px rgba(0, 212, 255, 0.4),
-    0 0 20px rgba(255, 215, 0, 0.2),
+    0 6px 20px rgba(0, 212, 255, 0.4),
+    0 0 15px rgba(255, 215, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   animation: logoGlow 3s ease-in-out infinite alternate;
+}
+
+/* Large screen logo adjustments */
+@media (min-width: 768px) {
+  .header .hero-logo { 
+    width: 28px; 
+    height: 28px; 
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header .hero-logo { 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .hero-logo { 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 12px;
+  }
+}
+
+/* Mobile logo adjustments */
+@media (max-width: 480px) {
+  .header .hero-logo { 
+    width: 22px; 
+    height: 22px; 
+  }
+}
+
+@media (max-width: 400px) {
+  .header .hero-logo { 
+    width: 20px; 
+    height: 20px; 
+  }
+}
+
+@media (max-width: 360px) {
+  .header .hero-logo { 
+    width: 18px; 
+    height: 18px; 
+  }
 }
 
 @keyframes logoGlow {

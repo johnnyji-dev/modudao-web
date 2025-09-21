@@ -189,19 +189,80 @@ function AppContent() {
           transition: 'all 0.3s ease'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
-          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
-              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="ModuDAO 로고" style={{ width: '28px', height: '28px' }} /></div>
-              <span className="brand-name">ModuDAO</span>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'space-between',
+          gap: '1rem', 
+          maxWidth: window.innerWidth >= 1200 ? '800px' : window.innerWidth >= 1024 ? '700px' : window.innerWidth >= 768 ? '600px' : '440px', 
+          width: '100%',
+          padding: '0 0.5rem'
+        }}>
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit', flexShrink: 0 }}>
+            <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', cursor: 'pointer' }}>
+              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="ModuDAO 로고" style={{ width: '100%', height: '100%' }} /></div>
+              <span className="brand-name" style={{ fontSize: '0.9rem', fontWeight: '700' }}>ModuDAO</span>
             </div>
           </a>
-          <nav role="navigation" aria-label="메인 네비게이션" style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.intro')}</a>
-            <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.activities')}</a>
-            <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.target')}</a>
-            <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.members')}</a>
-            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.gallery')}</a>
+          <nav role="navigation" aria-label="메인 네비게이션" style={{ 
+            display: 'flex', 
+            gap: '0.4rem', 
+            alignItems: 'center', 
+            flexWrap: 'nowrap', 
+            overflowX: 'visible',
+            flex: 1,
+            justifyContent: 'flex-end'
+          }}>
+            <a href="#intro" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.intro')}</a>
+            <a href="#activities" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.activities')}</a>
+            <a href="#who" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.target')}</a>
+            <a href="#members" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.members')}</a>
+            <a href="#gallery" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.gallery')}</a>
           </nav>
         </div>
       </header>
