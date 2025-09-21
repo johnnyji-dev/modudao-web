@@ -356,7 +356,7 @@ function AppContent() {
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
-            fontSize: '38px',
+            fontSize: '32px',
             // fontSize: '2.4rem',
             fontWeight: '900',
             lineHeight: '1.2',
@@ -366,7 +366,7 @@ function AppContent() {
           </h2>
           <br />
           <p className="intro-sub" style={{
-            fontSize: '19px',
+            fontSize: '16px',
             // fontSize: '1.2rem',
             fontWeight: '500',
             lineHeight: '1.5',
@@ -418,7 +418,7 @@ function AppContent() {
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            fontSize: '28px',
+            fontSize: '24px',
             fontWeight: '1500',
             lineHeight: '1.3',
             margin: '0 0 1rem 0',
@@ -859,7 +859,7 @@ function AppContent() {
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{
-            fontSize: '28px',
+            fontSize: '24px',
             // fontSize: '1.6rem',
             fontWeight: '800',
             marginBottom: '1rem',
@@ -892,7 +892,7 @@ function AppContent() {
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            fontSize: '28px',
+            fontSize: '24px',
             fontWeight: '800',
             marginBottom: '1rem',
             textAlign: 'center',
@@ -1081,7 +1081,7 @@ function AppContent() {
         alignItems: 'center',
         padding: '20px 0 1rem 0',
         color: 'var(--subtxt)',
-        fontSize: '28px',
+        fontSize: '24px',
       }}>
         <section className="gallery" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
