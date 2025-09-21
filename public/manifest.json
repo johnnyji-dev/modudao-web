@@ -4,18 +4,18 @@
   "description": "모두가 모여 만든 집단 지성체. 블록체인 디젠들의 탈중앙 자율 조직",
   "icons": [
     {
-      "src": "modu.png",
+      "src": "modudao_whitebg.jpeg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/jpeg"
     },
     {
-      "src": "modu.png",
-      "type": "image/png",
+      "src": "modudao_whitebg.jpeg",
+      "type": "image/jpeg",
       "sizes": "192x192"
     },
     {
-      "src": "modu.png",
-      "type": "image/png",
+      "src": "modudao_whitebg.jpeg",
+      "type": "image/jpeg",
       "sizes": "512x512"
     }
   ],
@@ -29,9 +29,9 @@
   "categories": ["blockchain", "crypto", "community", "education"],
   "screenshots": [
     {
-      "src": "modudao_nobg.png",
+      "src": "modudao_whitebg.jpeg",
       "sizes": "1280x720",
-      "type": "image/png",
+      "type": "image/jpeg",
       "form_factor": "wide"
     }
   ]
