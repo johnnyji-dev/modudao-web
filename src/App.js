@@ -145,8 +145,8 @@ function AppContent() {
       setShowBubble(true);
       setTimeout(() => {
         setShowBubble(false);
-      }, 2000); // 2초 후 말풍선 사라짐
-    }, 3000); // 3초마다 반복
+      }, 5000); // 5초 후 말풍선 사라짐
+    }, 5000); // 5초마다 반복
 
     return () => clearInterval(interval);
   }, []);
@@ -1194,7 +1194,7 @@ function AppContent() {
               boxShadow: '0 8px 25px rgba(0, 212, 255, 0.3)',
               border: '1px solid rgba(0, 212, 255, 0.3)',
               backdropFilter: 'blur(10px)',
-              animation: 'bubbleAppear 0.3s ease-out',
+              animation: 'bubbleAppear 5s ease-in-out',
               position: 'relative',
               marginBottom: '5px'
             }}
@@ -1240,7 +1240,7 @@ function AppContent() {
               boxShadow: '0 8px 25px rgba(0, 212, 255, 0.4)',
               border: '2px solid rgba(255, 255, 255, 0.2)',
               animation: 'floatSway 3s ease-in-out infinite',
-              transition: 'all 0.5s ease'
+              transition: 'all 3s ease'
             }}
             onMouseOver={(e) => {
               e.target.style.transform = 'scale(1.1)';

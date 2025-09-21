@@ -101,9 +101,17 @@ body::before {
     opacity: 0; 
     transform: translateY(10px) scale(0.8); 
   }
-  100% { 
+  10% { 
     opacity: 1; 
     transform: translateY(0px) scale(1); 
+  }
+  80% { 
+    opacity: 1; 
+    transform: translateY(0px) scale(1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(-5px) scale(0.9); 
   }
 }
 .header .site-wordmark { font-weight: 700; letter-spacing: 0.2px; }
