@@ -17,6 +17,9 @@ function AppContent() {
   const { t, language, changeLanguage } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
+  const [scrollY, setScrollY] = React.useState(0);
+  const [currentSection, setCurrentSection] = React.useState('intro');
+  const [showBubble, setShowBubble] = React.useState(false);
 
   // public/photos 폴더의 이미지들
   const galleryImages = [
@@ -108,6 +111,125 @@ function AppContent() {
     return () => clearInterval(interval);
   }, [youtubeVideos.length]);
 
+  // 스크롤 이벤트 리스너
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      
+      // 각 섹션의 위치를 감지하여 현재 섹션 결정
+      const sections = ['intro', 'activities', 'who', 'members', 'gallery'];
+      const sectionElements = sections.map(id => document.getElementById(id));
+      
+      let current = 'intro';
+      for (let i = 0; i < sectionElements.length; i++) {
+        const element = sectionElements[i];
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // 섹션이 화면 상단에서 100px 이내에 있으면 해당 섹션으로 인식
+          if (rect.top <= 100 && rect.bottom > 100) {
+            current = sections[i];
+            break;
+          }
+        }
+      }
+      setCurrentSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 말풍선 애니메이션 효과
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setShowBubble(true);
+      setTimeout(() => {
+        setShowBubble(false);
+      }, 2000); // 2초 후 말풍선 사라짐
+    }, 3000); // 3초마다 반복
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // 헤더 배경색을 현재 섹션에 따라 결정하는 함수
+  const getHeaderBackground = () => {
+    const baseOpacity = Math.min(scrollY / 200, 0.95);
+    
+    switch (currentSection) {
+      case 'intro':
+        // intro 섹션: 기본 배경 (어두운 톤)
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'activities':
+        // activities 섹션: bg1 색상 (약간 밝은 톤)
+        return scrollY > 50 
+          ? `rgba(26, 26, 46, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'who':
+        // who 섹션: 기본 배경 (어두운 톤)
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'members':
+        // members 섹션: bg1 색상 (약간 밝은 톤)
+        return scrollY > 50 
+          ? `rgba(26, 26, 46, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'gallery':
+        // gallery 섹션: 기본 배경 (어두운 톤)
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+      
+      default:
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+    }
+  };
+
+  // 언어 전환 버튼 배경색을 현재 섹션에 따라 결정하는 함수
+  const getButtonBackground = () => {
+    const baseOpacity = Math.min(scrollY / 200, 0.9);
+    
+    switch (currentSection) {
+      case 'intro':
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+      
+      case 'activities':
+        return scrollY > 50 
+          ? `rgba(22, 33, 62, ${baseOpacity})` 
+          : 'rgba(22, 33, 62, 0.7)';
+      
+      case 'who':
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+      
+      case 'members':
+        return scrollY > 50 
+          ? `rgba(22, 33, 62, ${baseOpacity})` 
+          : 'rgba(22, 33, 62, 0.7)';
+      
+      case 'gallery':
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+      
+      default:
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+    }
+  };
+
   // 수동 네비게이션 함수
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
@@ -136,7 +258,31 @@ function AppContent() {
 
   return (
     <main id="app" className="app">
-      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0.5rem', minHeight: '56px', left: 0, right: 0 }}>
+      <header 
+        className="header" 
+        style={{ 
+          position: 'fixed', 
+          // backgroundColor: getHeaderBackground(),
+          backdropFilter: scrollY > 50 ? 'blur(20px)' : 'none',
+          borderBottom: scrollY > 50 
+            ? '1px solid rgba(0, 212, 255, 0.2)' 
+            : 'none',
+          boxShadow: scrollY > 50 
+            ? '0 4px 20px rgba(0, 0, 0, 0.3)' 
+            : 'none',
+          top: 0, 
+          zIndex: 1000, 
+          width: '100vw', 
+          display: 'flex', 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          padding: '0 0.5rem', 
+          minHeight: '56px', 
+          left: 0, 
+          right: 0,
+          transition: 'all 0.3s ease'
+        }}
+      >
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
           <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
@@ -145,32 +291,6 @@ function AppContent() {
             </div>
           </a>
           <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <button 
-              onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
-              style={{ 
-                color: 'var(--text)', 
-                textDecoration: 'none', 
-                fontSize: '0.75rem', 
-                fontWeight: '600', 
-                whiteSpace: 'nowrap', 
-                padding: '0.25rem 0.35rem',
-                background: 'var(--button)',
-                border: '1px solid var(--border)',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.background = 'var(--primary)';
-                e.target.style.borderColor = 'var(--subtxt)';
-              }}
-              onMouseOut={(e) => {
-                e.target.style.background = 'var(--button)';
-                e.target.style.borderColor = 'var(--border)';
-              }}
-            >
-              {language === 'ko' ? 'EN' : '한국어'}
-            </button>
             <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.intro')}</a>
             <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.activities')}</a>
             <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.target')}</a>
@@ -179,6 +299,44 @@ function AppContent() {
           </nav>
         </div>
       </header>
+
+      {/* Language Toggle Button - Fixed Position */}
+      <button 
+        onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
+        style={{ 
+          position: 'fixed',
+          top: '70px',
+          right: '20px',
+          zIndex: 999,
+          color: 'var(--text)', 
+          textDecoration: 'none', 
+          fontSize: '0.75rem', 
+          fontWeight: '600', 
+          whiteSpace: 'nowrap', 
+          padding: '0.4rem 0.8rem',
+          background: getButtonBackground(),
+          backdropFilter: scrollY > 50 ? 'blur(10px)' : 'blur(5px)',
+          border: `1px solid ${scrollY > 50 ? 'rgba(0, 212, 255, 0.3)' : 'var(--border)'}`,
+          borderRadius: '6px',
+          cursor: 'pointer',
+          transition: 'all 0.3s ease',
+          boxShadow: scrollY > 50 
+            ? '0 4px 15px rgba(0, 212, 255, 0.2)' 
+            : '0 2px 8px rgba(0,0,0,0.3)'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.background = 'var(--primary)';
+          e.target.style.borderColor = 'var(--subtxt)';
+          e.target.style.transform = 'scale(1.05)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = 'var(--button)';
+          e.target.style.borderColor = 'var(--border)';
+          e.target.style.transform = 'scale(1)';
+        }}
+      >
+        {language === 'ko' ? 'EN' : '한국어'}
+      </button>
 
       {/* Hero / Identity Section */}
       <section id="intro" className="hero" style={{
@@ -698,7 +856,6 @@ function AppContent() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '20px 0 1rem 0',
-        backgroundColor: 'var(--bg)'
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{
@@ -922,7 +1079,6 @@ function AppContent() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg)',
         padding: '20px 0 1rem 0',
         color: 'var(--subtxt)',
         fontSize: '28px',
@@ -1009,6 +1165,93 @@ function AppContent() {
       </section>
 
       <Footer />
+
+      {/* Floating Icon with Speech Bubble */}
+      <div 
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 1000,
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'flex-end',
+          gap: '15px'
+        }}
+      >
+        {/* Speech Bubble */}
+        {showBubble && (
+          <div
+            style={{
+              background: 'linear-gradient(145deg, rgba(22, 33, 62, 0.95) 0%, rgba(26, 26, 46, 0.9) 100%)',
+              color: 'var(--text)',
+              padding: '12px 16px',
+              borderRadius: '20px',
+              fontSize: '14px',
+              fontWeight: '500',
+              maxWidth: '250px',
+              textAlign: 'center',
+              boxShadow: '0 8px 25px rgba(0, 212, 255, 0.3)',
+              border: '1px solid rgba(0, 212, 255, 0.3)',
+              backdropFilter: 'blur(10px)',
+              animation: 'bubbleAppear 0.3s ease-out',
+              position: 'relative',
+              marginBottom: '5px'
+            }}
+          >
+            Do you need to build a korea-community or co-work?
+            {/* Speech bubble tail - pointing to the right */}
+            <div
+              style={{
+                position: 'absolute',
+                bottom: '15px',
+                right: '-8px',
+                width: '0',
+                height: '0',
+                borderTop: '8px solid transparent',
+                borderBottom: '8px solid transparent',
+                borderLeft: '8px solid rgba(22, 33, 62, 0.95)'
+              }}
+            />
+          </div>
+        )}
+
+        {/* Floating Icon */}
+        <div
+          style={{
+            width: '45px',
+            height: '45px',
+            borderRadius: '50%',
+            // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 8px 25px rgba(0, 212, 255, 0.4)',
+            border: '2px solid rgba(255, 255, 255, 0.2)',
+            animation: 'floatSway 3s ease-in-out infinite',
+            transition: 'all 0.5s ease'
+          }}
+          onMouseOver={(e) => {
+            e.target.style.transform = 'scale(1.1)';
+            e.target.style.boxShadow = '0 12px 30px rgba(0, 212, 255, 0.6)';
+          }}
+          onMouseOut={(e) => {
+            e.target.style.transform = 'scale(1)';
+            e.target.style.boxShadow = '0 8px 25px rgba(0, 212, 255, 0.4)';
+          }}
+        >
+          <img 
+            src="/modu-removebg-preview.png" 
+            alt="ModuDAO" 
+            style={{ 
+              width: '30px', 
+              height: '30px',
+              filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
+            }} 
+          />
+        </div>
+      </div>
     </main>
   );
 }
