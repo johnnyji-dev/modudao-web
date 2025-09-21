@@ -1243,11 +1243,13 @@ function AppContent() {
           }}
         >
           <img 
-            src="/modu-removebg-preview.png" 
+            // src="/modu-removebg-preview.png" 
+            src="/modudao_whitebg.jpeg" 
             alt="ModuDAO" 
             style={{ 
               width: '30px', 
               height: '30px',
+              borderRadius: '50%',
               filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
             }} 
           />
