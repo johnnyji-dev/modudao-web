@@ -20,34 +20,15 @@ function AppContent() {
   const [scrollY, setScrollY] = React.useState(0);
   const [showBubble, setShowBubble] = React.useState(false);
 
+  const totalImages = 24;
+  let galleryImages = [];
   // public/photos 폴더의 이미지들
-  const galleryImages = [
-    {
-      id: 1,
-      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 001.jpeg",
-      alt: "ModuDAO 블록체인 밋업 모임 사진"
-    },
-    {
-      id: 2,
-      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 002.jpeg",
-      alt: "ModuDAO 크립토 커뮤니티 활동 사진"
-    },
-    {
-      id: 3,
-      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 003.jpeg",
-      alt: "ModuDAO 디젠 모임 네트워킹 사진"
-    },
-    {
-      id: 4,
-      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 004.jpeg",
-      alt: "ModuDAO 블록체인 교육 세션 사진"
-    },
-    {
-      id: 5,
-      src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-24 005.jpeg",
-      alt: "ModuDAO DAO 활동 및 토론 사진"
-    }
-  ];
+  for (let i = 1; i <= totalImages; i++) {
+    galleryImages.push({
+      id: i,
+      src: `/photos/event${i}.jpeg`,
+    });
+  }
 
   // 유튜브 영상들
   const youtubeVideos = [
