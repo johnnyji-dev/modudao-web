@@ -707,7 +707,6 @@ function AppContent() {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '20px 0 1rem 0',
-        backgroundColor: 'var(--bg)'
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{
@@ -931,7 +930,6 @@ function AppContent() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'var(--bg)',
         padding: '20px 0 1rem 0',
         color: 'var(--subtxt)',
         fontSize: '28px',

@@ -396,7 +396,13 @@ body::before {
     0 0 8px rgba(255, 215, 0, 0.2);
 }
 
-.footer { margin-top: 18px; padding-top: 12px; color: var(--muted); text-align: center; font-size: 12px; background-color: var(--bg); }
+.footer { 
+  margin-top: 18px; 
+  padding-top: 12px; 
+  color: var(--muted); 
+  text-align: center; 
+  font-size: 12px; 
+}
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
