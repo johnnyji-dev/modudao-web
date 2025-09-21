@@ -79,6 +79,33 @@ body::before {
   0% { box-shadow: 0 8px 24px rgba(0, 212, 255, 0.4), 0 0 20px rgba(255, 215, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3); }
   100% { box-shadow: 0 8px 24px rgba(0, 212, 255, 0.6), 0 0 30px rgba(255, 215, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
 }
+
+/* Floating Icon Animations */
+@keyframes floatSway {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-5px) rotate(2deg); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(0deg); 
+  }
+  75% { 
+    transform: translateY(-5px) rotate(-2deg); 
+  }
+}
+
+@keyframes bubbleAppear {
+  0% { 
+    opacity: 0; 
+    transform: translateY(10px) scale(0.8); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0px) scale(1); 
+  }
+}
 .header .site-wordmark { font-weight: 700; letter-spacing: 0.2px; }
 
 .hero { padding: 28px 0 8px; position: relative; }

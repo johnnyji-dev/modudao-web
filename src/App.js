@@ -19,6 +19,7 @@ function AppContent() {
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
   const [scrollY, setScrollY] = React.useState(0);
   const [currentSection, setCurrentSection] = React.useState('intro');
+  const [showBubble, setShowBubble] = React.useState(false);
 
   // public/photos 폴더의 이미지들
   const galleryImages = [
@@ -136,6 +137,18 @@ function AppContent() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 말풍선 애니메이션 효과
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setShowBubble(true);
+      setTimeout(() => {
+        setShowBubble(false);
+      }, 2000); // 2초 후 말풍선 사라짐
+    }, 3000); // 3초마다 반복
+
+    return () => clearInterval(interval);
   }, []);
 
   // 헤더 배경색을 현재 섹션에 따라 결정하는 함수
@@ -1152,6 +1165,93 @@ function AppContent() {
       </section>
 
       <Footer />
+
+      {/* Floating Icon with Speech Bubble */}
+      <div 
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 1000,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
+          gap: '10px'
+        }}
+      >
+        {/* Speech Bubble */}
+        {showBubble && (
+          <div
+            style={{
+              background: 'linear-gradient(145deg, rgba(22, 33, 62, 0.95) 0%, rgba(26, 26, 46, 0.9) 100%)',
+              color: 'var(--text)',
+              padding: '12px 16px',
+              borderRadius: '20px',
+              fontSize: '14px',
+              fontWeight: '500',
+              maxWidth: '250px',
+              textAlign: 'center',
+              boxShadow: '0 8px 25px rgba(0, 212, 255, 0.3)',
+              border: '1px solid rgba(0, 212, 255, 0.3)',
+              backdropFilter: 'blur(10px)',
+              animation: 'bubbleAppear 0.3s ease-out',
+              position: 'relative',
+              marginBottom: '5px'
+            }}
+          >
+            Do you need to build a korea-community or co-work?
+            {/* Speech bubble tail */}
+            <div
+              style={{
+                position: 'absolute',
+                bottom: '-8px',
+                right: '20px',
+                width: '0',
+                height: '0',
+                borderLeft: '8px solid transparent',
+                borderRight: '8px solid transparent',
+                borderTop: '8px solid rgba(22, 33, 62, 0.95)'
+              }}
+            />
+          </div>
+        )}
+
+        {/* Floating Icon */}
+        <div
+          style={{
+            width: '60px',
+            height: '60px',
+            borderRadius: '50%',
+            // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 8px 25px rgba(0, 212, 255, 0.4)',
+            border: '2px solid rgba(255, 255, 255, 0.2)',
+            animation: 'floatSway 3s ease-in-out infinite',
+            transition: 'all 0.5s ease'
+          }}
+          onMouseOver={(e) => {
+            e.target.style.transform = 'scale(1.1)';
+            e.target.style.boxShadow = '0 12px 30px rgba(0, 212, 255, 0.6)';
+          }}
+          onMouseOut={(e) => {
+            e.target.style.transform = 'scale(1)';
+            e.target.style.boxShadow = '0 8px 25px rgba(0, 212, 255, 0.4)';
+          }}
+        >
+          <img 
+            src="/modu-removebg-preview.png" 
+            alt="ModuDAO" 
+            style={{ 
+              width: '40px', 
+              height: '40px',
+              filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
+            }} 
+          />
+        </div>
+      </div>
     </main>
   );
 }
