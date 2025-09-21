@@ -17,6 +17,7 @@ function AppContent() {
   const { t, language, changeLanguage } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
+  const [scrollY, setScrollY] = React.useState(0);
 
   // public/photos 폴더의 이미지들
   const galleryImages = [
@@ -108,6 +109,16 @@ function AppContent() {
     return () => clearInterval(interval);
   }, [youtubeVideos.length]);
 
+  // 스크롤 이벤트 리스너
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // 수동 네비게이션 함수
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
@@ -136,7 +147,33 @@ function AppContent() {
 
   return (
     <main id="app" className="app">
-      <header className="header" style={{ position: 'fixed', backgroundColor: 'var(--bg)', top: 0, zIndex: 1000, width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0 0.5rem', minHeight: '56px', left: 0, right: 0 }}>
+      <header 
+        className="header" 
+        style={{ 
+          position: 'fixed', 
+          backgroundColor: scrollY > 50 
+            ? `rgba(10, 10, 15, ${Math.min(scrollY / 200, 0.95)})` 
+            : 'transparent',
+          backdropFilter: scrollY > 50 ? 'blur(20px)' : 'none',
+          borderBottom: scrollY > 50 
+            ? '1px solid rgba(0, 212, 255, 0.2)' 
+            : 'none',
+          boxShadow: scrollY > 50 
+            ? '0 4px 20px rgba(0, 0, 0, 0.3)' 
+            : 'none',
+          top: 0, 
+          zIndex: 1000, 
+          width: '100vw', 
+          display: 'flex', 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          padding: '0 0.5rem', 
+          minHeight: '56px', 
+          left: 0, 
+          right: 0,
+          transition: 'all 0.3s ease'
+        }}
+      >
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
           <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
@@ -168,12 +205,17 @@ function AppContent() {
           fontWeight: '600', 
           whiteSpace: 'nowrap', 
           padding: '0.4rem 0.8rem',
-          background: 'var(--button)',
-          border: '1px solid var(--border)',
+          background: scrollY > 50 
+            ? `rgba(45, 55, 72, ${Math.min(scrollY / 200, 0.9)})` 
+            : 'rgba(45, 55, 72, 0.7)',
+          backdropFilter: scrollY > 50 ? 'blur(10px)' : 'blur(5px)',
+          border: `1px solid ${scrollY > 50 ? 'rgba(0, 212, 255, 0.3)' : 'var(--border)'}`,
           borderRadius: '6px',
           cursor: 'pointer',
-          transition: 'all 0.2s ease',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+          transition: 'all 0.3s ease',
+          boxShadow: scrollY > 50 
+            ? '0 4px 15px rgba(0, 212, 255, 0.2)' 
+            : '0 2px 8px rgba(0,0,0,0.3)'
         }}
         onMouseOver={(e) => {
           e.target.style.background = 'var(--primary)';
