@@ -25,27 +25,27 @@ function AppContent() {
     {
       id: 1,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 001.jpeg",
-      alt: "모임 사진 1"
+      alt: "ModuDAO 블록체인 밋업 모임 사진"
     },
     {
       id: 2,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 002.jpeg",
-      alt: "모임 사진 2"
+      alt: "ModuDAO 크립토 커뮤니티 활동 사진"
     },
     {
       id: 3,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 003.jpeg",
-      alt: "모임 사진 3"
+      alt: "ModuDAO 디젠 모임 네트워킹 사진"
     },
     {
       id: 4,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 004.jpeg",
-      alt: "모임 사진 4"
+      alt: "ModuDAO 블록체인 교육 세션 사진"
     },
     {
       id: 5,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-24 005.jpeg",
-      alt: "모임 사진 5"
+      alt: "ModuDAO DAO 활동 및 토론 사진"
     }
   ];
 
@@ -54,27 +54,27 @@ function AppContent() {
     {
       id: 1,
       embedId: "slhWBXh3dys?si=64mNhsk3xRvkYJOD",
-      title: "ModuDAO 활동 영상 1"
+      title: "ModuDAO 블록체인 밋업 및 네트워킹 영상"
     },
     {
       id: 2,
       embedId: "5pxYQYHhWC4?si=MjKqQou4ZHs0zisr",
-      title: "ModuDAO 활동 영상 2"
+      title: "ModuDAO 크립토 커뮤니티 활동 영상"
     },
     {
       id: 3,
       embedId: "G3I6l_6OHXY?si=eoGG4uT5D6zYSfb0",
-      title: "ModuDAO 활동 영상 3"
+      title: "ModuDAO 디젠 모임 및 토론 영상"
     },
     {
       id: 4,
       embedId: "G3I6l_6OHXY?si=ysuBVvoNY1n-araI",
-      title: "ModuDAO 활동 영상 4"
+      title: "ModuDAO DAO 교육 및 워크샵 영상"
     },
     {
       id: 5,
       embedId: "2LDndYqdoCs?si=YFdEZZctUsxYmUZn",
-      title: "ModuDAO 활동 영상 5"
+      title: "ModuDAO 에어드랍 및 이벤트 영상"
     },
     {
       id: 6,
@@ -160,9 +160,10 @@ function AppContent() {
   };
 
   return (
-    <main id="app" className="app">
+    <main id="app" className="app" role="main">
       <header 
         className="header" 
+        role="banner"
         style={{ 
           position: 'fixed', 
           backgroundColor: scrollY > 50 
@@ -191,11 +192,11 @@ function AppContent() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
           <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
-              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
+              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="ModuDAO 로고" style={{ width: '28px', height: '28px' }} /></div>
               <span className="brand-name">ModuDAO</span>
             </div>
           </a>
-          <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+          <nav role="navigation" aria-label="메인 네비게이션" style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
             <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.intro')}</a>
             <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.activities')}</a>
             <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.target')}</a>
@@ -208,6 +209,7 @@ function AppContent() {
       {/* Language Toggle Button - Fixed Position */}
       <button 
         onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
+        aria-label={language === 'ko' ? 'Switch to English' : '한국어로 전환'}
         style={{ 
           position: 'fixed',
           top: '70px',
@@ -246,7 +248,7 @@ function AppContent() {
       </button>
 
       {/* Hero / Identity Section */}
-      <section id="intro" className="hero" style={{
+      <section id="intro" className="hero" role="region" aria-label="소개" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -310,7 +312,7 @@ function AppContent() {
       </section>
 
       {/* Activities grid */}
-      <section id="activities" style={{
+      <section id="activities" role="region" aria-label="활동" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -756,7 +758,7 @@ function AppContent() {
       </section>
 
       {/* who */}
-      <section id="who" className="checklist" style={{
+      <section id="who" className="checklist" role="region" aria-label="대상" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -784,7 +786,7 @@ function AppContent() {
       </section>
 
       {/* Members */}
-      <section id="members" className="members" style={{
+      <section id="members" className="members" role="region" aria-label="멤버" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -979,7 +981,7 @@ function AppContent() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" style={{
+      <section id="gallery" role="region" aria-label="갤러리" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -1037,7 +1039,7 @@ function AppContent() {
                   width="100%"
                   height="100%"
                   src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
-                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
+                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 블록체인 커뮤니티 활동 영상"}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -1159,7 +1161,7 @@ function AppContent() {
           >
             <img 
               src="/modudao_whitebg.jpeg" 
-              alt="ModuDAO TEMPi" 
+              alt="ModuDAO TEMPi 텔레그램 채널" 
               style={{ 
                 width: '30px', 
                 height: '30px',
