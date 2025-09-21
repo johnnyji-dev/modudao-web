@@ -1217,40 +1217,53 @@ function AppContent() {
         )}
 
         {/* Floating Icon */}
-        <div
+        <a 
+          href="https://t.me/TEMPi_KR" 
+          target="_blank" 
+          rel="noopener noreferrer"
           style={{
-            width: '45px',
-            height: '45px',
-            borderRadius: '50%',
-            // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            boxShadow: '0 8px 25px rgba(0, 212, 255, 0.4)',
-            border: '2px solid rgba(255, 255, 255, 0.2)',
-            animation: 'floatSway 3s ease-in-out infinite',
-            transition: 'all 0.5s ease'
-          }}
-          onMouseOver={(e) => {
-            e.target.style.transform = 'scale(1.1)';
-            e.target.style.boxShadow = '0 12px 30px rgba(0, 212, 255, 0.6)';
-          }}
-          onMouseOut={(e) => {
-            e.target.style.transform = 'scale(1)';
-            e.target.style.boxShadow = '0 8px 25px rgba(0, 212, 255, 0.4)';
+            textDecoration: 'none',
+            color: 'inherit'
           }}
         >
-          <img 
-            src="/modu-removebg-preview.png" 
-            alt="ModuDAO" 
-            style={{ 
-              width: '30px', 
-              height: '30px',
-              filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
-            }} 
-          />
-        </div>
+          <div
+            style={{
+              width: '45px',
+              height: '45px',
+              borderRadius: '50%',
+              // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
+              background: 'transparent',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 8px 25px rgba(0, 212, 255, 0.4)',
+              border: '2px solid rgba(255, 255, 255, 0.2)',
+              animation: 'floatSway 3s ease-in-out infinite',
+              transition: 'all 0.5s ease'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.transform = 'scale(1.1)';
+              e.target.style.boxShadow = '0 12px 30px rgba(0, 212, 255, 0.6)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.transform = 'scale(1)';
+              e.target.style.boxShadow = '0 8px 25px rgba(0, 212, 255, 0.4)';
+            }}
+          >
+            <img 
+              // src="/modu-removebg-preview.png" 
+              src="/modudao_whitebg.jpeg" 
+              alt="ModuDAO TEMPi" 
+              style={{ 
+                width: '30px', 
+                height: '30px',
+                borderRadius: '50%',
+                filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
+              }} 
+            />
+          </div>
+        </a>
       </div>
     </main>
   );

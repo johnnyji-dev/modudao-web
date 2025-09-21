@@ -46,27 +46,27 @@
         "desc": "공식 텔레그램"
       },
       "wonOfficer": {
-        "name": "원대감의 성균관",
+        "name": "원대감의성균관",
         "desc": "크립토 핸섬가이"
       },
       "cryptoDock": {
-        "name": "Crypto Dock",
+        "name": "CryptoDock",
         "desc": "온체인 분석<br />디파이 매매"
       },
       "donut": {
-        "name": "김도넛의 돈복사실",
+        "name": "김도넛의돈복사실",
         "desc": "경제적 자유를 위해"
       },
       "uzun": {
-        "name": "우쥰의 코인채굴작전",
+        "name": "우쥰의코인채굴작전",
         "desc": "돈되는 채굴 방법"
       },
       "cryptong": {
-        "name": "사대감의 크립통",
+        "name": "사대감의크립통",
         "desc": "육대감의 크립토 소식통"
       },
       "cryptoHighschool": {
-        "name": "크립토 하이스쿨",
+        "name": "크립토하이스쿨",
         "desc": "크립토 문맹 탈출"
       },
       "coinTown": {
