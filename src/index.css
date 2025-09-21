@@ -86,13 +86,13 @@ body::before {
     transform: translateY(0px) rotate(0deg); 
   }
   25% { 
-    transform: translateY(-5px) rotate(2deg); 
+    transform: translateY(-5px) rotate(15deg); 
   }
   50% { 
     transform: translateY(-10px) rotate(0deg); 
   }
   75% { 
-    transform: translateY(-5px) rotate(-2deg); 
+    transform: translateY(-5px) rotate(-15deg); 
   }
 }
 
