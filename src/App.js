@@ -255,7 +255,7 @@ function AppContent() {
         aria-label={language === 'ko' ? 'Switch to English' : '한국어로 전환'}
         style={{ 
           position: 'fixed',
-          top: '50px',
+          top: '60px',
           right: '20px',
           zIndex: 999,
           color: 'var(--text)', 
