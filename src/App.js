@@ -1223,6 +1223,7 @@ function AppContent() {
             height: '45px',
             borderRadius: '50%',
             // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
+            background: 'transparent',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
