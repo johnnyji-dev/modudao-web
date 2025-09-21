@@ -18,7 +18,6 @@ function AppContent() {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
   const [scrollY, setScrollY] = React.useState(0);
-  const [currentSection, setCurrentSection] = React.useState('intro');
   const [showBubble, setShowBubble] = React.useState(false);
 
   // public/photos 폴더의 이미지들
@@ -26,27 +25,27 @@ function AppContent() {
     {
       id: 1,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 001.jpeg",
-      alt: "모임 사진 1"
+      alt: "ModuDAO 블록체인 밋업 모임 사진"
     },
     {
       id: 2,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 002.jpeg",
-      alt: "모임 사진 2"
+      alt: "ModuDAO 크립토 커뮤니티 활동 사진"
     },
     {
       id: 3,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 003.jpeg",
-      alt: "모임 사진 3"
+      alt: "ModuDAO 디젠 모임 네트워킹 사진"
     },
     {
       id: 4,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-23 004.jpeg",
-      alt: "모임 사진 4"
+      alt: "ModuDAO 블록체인 교육 세션 사진"
     },
     {
       id: 5,
       src: "/photos/KakaoTalk_Photo_2025-09-14-23-29-24 005.jpeg",
-      alt: "모임 사진 5"
+      alt: "ModuDAO DAO 활동 및 토론 사진"
     }
   ];
 
@@ -55,27 +54,27 @@ function AppContent() {
     {
       id: 1,
       embedId: "slhWBXh3dys?si=64mNhsk3xRvkYJOD",
-      title: "ModuDAO 활동 영상 1"
+      title: "ModuDAO 블록체인 밋업 및 네트워킹 영상"
     },
     {
       id: 2,
       embedId: "5pxYQYHhWC4?si=MjKqQou4ZHs0zisr",
-      title: "ModuDAO 활동 영상 2"
+      title: "ModuDAO 크립토 커뮤니티 활동 영상"
     },
     {
       id: 3,
       embedId: "G3I6l_6OHXY?si=eoGG4uT5D6zYSfb0",
-      title: "ModuDAO 활동 영상 3"
+      title: "ModuDAO 디젠 모임 및 토론 영상"
     },
     {
       id: 4,
       embedId: "G3I6l_6OHXY?si=ysuBVvoNY1n-araI",
-      title: "ModuDAO 활동 영상 4"
+      title: "ModuDAO DAO 교육 및 워크샵 영상"
     },
     {
       id: 5,
       embedId: "2LDndYqdoCs?si=YFdEZZctUsxYmUZn",
-      title: "ModuDAO 활동 영상 5"
+      title: "ModuDAO 에어드랍 및 이벤트 영상"
     },
     {
       id: 6,
@@ -115,24 +114,6 @@ function AppContent() {
   React.useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      
-      // 각 섹션의 위치를 감지하여 현재 섹션 결정
-      const sections = ['intro', 'activities', 'who', 'members', 'gallery'];
-      const sectionElements = sections.map(id => document.getElementById(id));
-      
-      let current = 'intro';
-      for (let i = 0; i < sectionElements.length; i++) {
-        const element = sectionElements[i];
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // 섹션이 화면 상단에서 100px 이내에 있으면 해당 섹션으로 인식
-          if (rect.top <= 100 && rect.bottom > 100) {
-            current = sections[i];
-            break;
-          }
-        }
-      }
-      setCurrentSection(current);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -151,84 +132,6 @@ function AppContent() {
     return () => clearInterval(interval);
   }, []);
 
-  // 헤더 배경색을 현재 섹션에 따라 결정하는 함수
-  const getHeaderBackground = () => {
-    const baseOpacity = Math.min(scrollY / 200, 0.95);
-    
-    switch (currentSection) {
-      case 'intro':
-        // intro 섹션: 기본 배경 (어두운 톤)
-        return scrollY > 50 
-          ? `rgba(10, 10, 15, ${baseOpacity})` 
-          : 'transparent';
-      
-      case 'activities':
-        // activities 섹션: bg1 색상 (약간 밝은 톤)
-        return scrollY > 50 
-          ? `rgba(26, 26, 46, ${baseOpacity})` 
-          : 'transparent';
-      
-      case 'who':
-        // who 섹션: 기본 배경 (어두운 톤)
-        return scrollY > 50 
-          ? `rgba(10, 10, 15, ${baseOpacity})` 
-          : 'transparent';
-      
-      case 'members':
-        // members 섹션: bg1 색상 (약간 밝은 톤)
-        return scrollY > 50 
-          ? `rgba(26, 26, 46, ${baseOpacity})` 
-          : 'transparent';
-      
-      case 'gallery':
-        // gallery 섹션: 기본 배경 (어두운 톤)
-        return scrollY > 50 
-          ? `rgba(10, 10, 15, ${baseOpacity})` 
-          : 'transparent';
-      
-      default:
-        return scrollY > 50 
-          ? `rgba(10, 10, 15, ${baseOpacity})` 
-          : 'transparent';
-    }
-  };
-
-  // 언어 전환 버튼 배경색을 현재 섹션에 따라 결정하는 함수
-  const getButtonBackground = () => {
-    const baseOpacity = Math.min(scrollY / 200, 0.9);
-    
-    switch (currentSection) {
-      case 'intro':
-        return scrollY > 50 
-          ? `rgba(45, 55, 72, ${baseOpacity})` 
-          : 'rgba(45, 55, 72, 0.7)';
-      
-      case 'activities':
-        return scrollY > 50 
-          ? `rgba(22, 33, 62, ${baseOpacity})` 
-          : 'rgba(22, 33, 62, 0.7)';
-      
-      case 'who':
-        return scrollY > 50 
-          ? `rgba(45, 55, 72, ${baseOpacity})` 
-          : 'rgba(45, 55, 72, 0.7)';
-      
-      case 'members':
-        return scrollY > 50 
-          ? `rgba(22, 33, 62, ${baseOpacity})` 
-          : 'rgba(22, 33, 62, 0.7)';
-      
-      case 'gallery':
-        return scrollY > 50 
-          ? `rgba(45, 55, 72, ${baseOpacity})` 
-          : 'rgba(45, 55, 72, 0.7)';
-      
-      default:
-        return scrollY > 50 
-          ? `rgba(45, 55, 72, ${baseOpacity})` 
-          : 'rgba(45, 55, 72, 0.7)';
-    }
-  };
 
   // 수동 네비게이션 함수
   const nextImage = () => {
@@ -257,12 +160,15 @@ function AppContent() {
   };
 
   return (
-    <main id="app" className="app">
+    <main id="app" className="app" role="main">
       <header 
         className="header" 
+        role="banner"
         style={{ 
           position: 'fixed', 
-          // backgroundColor: getHeaderBackground(),
+          backgroundColor: scrollY > 50 
+            ? `rgba(10, 10, 15, ${Math.min(scrollY / 200, 0.95)})` 
+            : 'transparent',
           backdropFilter: scrollY > 50 ? 'blur(20px)' : 'none',
           borderBottom: scrollY > 50 
             ? '1px solid rgba(0, 212, 255, 0.2)' 
@@ -283,19 +189,80 @@ function AppContent() {
           transition: 'all 0.3s ease'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', maxWidth: '440px', width: '100%' }}>
-          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
-              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="Modu logo" style={{ width: '28px', height: '28px' }} /></div>
-              <span className="brand-name">ModuDAO</span>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'space-between',
+          gap: '1rem', 
+          maxWidth: window.innerWidth >= 1200 ? '800px' : window.innerWidth >= 1024 ? '700px' : window.innerWidth >= 768 ? '600px' : '440px', 
+          width: '100%',
+          padding: '0 0.5rem'
+        }}>
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit', flexShrink: 0 }}>
+            <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', cursor: 'pointer' }}>
+              <div className="hero-logo"><img src="/modu-removebg-preview.png" alt="ModuDAO 로고" style={{ width: '100%', height: '100%' }} /></div>
+              <span className="brand-name" style={{ fontSize: '0.9rem', fontWeight: '700' }}>ModuDAO</span>
             </div>
           </a>
-          <nav style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'nowrap', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <a href="#intro" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.intro')}</a>
-            <a href="#activities" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.activities')}</a>
-            <a href="#who" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.target')}</a>
-            <a href="#members" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.members')}</a>
-            <a href="#gallery" style={{ color: 'var(--text)', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', whiteSpace: 'nowrap', padding: '0.25rem 0.35rem' }}>{t('nav.gallery')}</a>
+          <nav role="navigation" aria-label="메인 네비게이션" style={{ 
+            display: 'flex', 
+            gap: '0.4rem', 
+            alignItems: 'center', 
+            flexWrap: 'nowrap', 
+            overflowX: 'visible',
+            flex: 1,
+            justifyContent: 'flex-end'
+          }}>
+            <a href="#intro" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.intro')}</a>
+            <a href="#activities" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.activities')}</a>
+            <a href="#who" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.target')}</a>
+            <a href="#members" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.members')}</a>
+            <a href="#gallery" style={{ 
+              color: 'var(--text)', 
+              textDecoration: 'none', 
+              fontSize: '0.75rem', 
+              fontWeight: '600', 
+              whiteSpace: 'nowrap', 
+              padding: '0.2rem 0.25rem',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease'
+            }}>{t('nav.gallery')}</a>
           </nav>
         </div>
       </header>
@@ -303,6 +270,7 @@ function AppContent() {
       {/* Language Toggle Button - Fixed Position */}
       <button 
         onClick={() => changeLanguage(language === 'ko' ? 'en' : 'ko')}
+        aria-label={language === 'ko' ? 'Switch to English' : '한국어로 전환'}
         style={{ 
           position: 'fixed',
           top: '70px',
@@ -314,7 +282,9 @@ function AppContent() {
           fontWeight: '600', 
           whiteSpace: 'nowrap', 
           padding: '0.4rem 0.8rem',
-          background: getButtonBackground(),
+          background: scrollY > 50 
+            ? `rgba(45, 55, 72, ${Math.min(scrollY / 200, 0.9)})` 
+            : 'rgba(45, 55, 72, 0.7)',
           backdropFilter: scrollY > 50 ? 'blur(10px)' : 'blur(5px)',
           border: `1px solid ${scrollY > 50 ? 'rgba(0, 212, 255, 0.3)' : 'var(--border)'}`,
           borderRadius: '6px',
@@ -339,7 +309,7 @@ function AppContent() {
       </button>
 
       {/* Hero / Identity Section */}
-      <section id="intro" className="hero" style={{
+      <section id="intro" className="hero" aria-label="소개" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -356,7 +326,7 @@ function AppContent() {
           textAlign: 'center'
         }}>
           <h2 className="intro-head" style={{
-            fontSize: '38px',
+            fontSize: '32px',
             // fontSize: '2.4rem',
             fontWeight: '900',
             lineHeight: '1.2',
@@ -366,7 +336,7 @@ function AppContent() {
           </h2>
           <br />
           <p className="intro-sub" style={{
-            fontSize: '19px',
+            fontSize: '16px',
             // fontSize: '1.2rem',
             fontWeight: '500',
             lineHeight: '1.5',
@@ -403,7 +373,7 @@ function AppContent() {
       </section>
 
       {/* Activities grid */}
-      <section id="activities" style={{
+      <section id="activities" aria-label="활동" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -418,7 +388,7 @@ function AppContent() {
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            fontSize: '28px',
+            fontSize: '24px',
             fontWeight: '1500',
             lineHeight: '1.3',
             margin: '0 0 1rem 0',
@@ -849,7 +819,7 @@ function AppContent() {
       </section>
 
       {/* who */}
-      <section id="who" className="checklist" style={{
+      <section id="who" className="checklist" aria-label="대상" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -859,7 +829,7 @@ function AppContent() {
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <h2 className="section-title" style={{
-            fontSize: '28px',
+            fontSize: '24px',
             // fontSize: '1.6rem',
             fontWeight: '800',
             marginBottom: '1rem',
@@ -877,7 +847,7 @@ function AppContent() {
       </section>
 
       {/* Members */}
-      <section id="members" className="members" style={{
+      <section id="members" className="members" aria-label="멤버" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -892,7 +862,7 @@ function AppContent() {
       }}>
         <div style={{ maxWidth: '440px', width: '100%', padding: '0 16px' }}>
           <h2 className="section-title" style={{
-            fontSize: '28px',
+            fontSize: '24px',
             fontWeight: '800',
             marginBottom: '1rem',
             textAlign: 'center',
@@ -1072,7 +1042,7 @@ function AppContent() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" style={{
+      <section id="gallery" aria-label="갤러리" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -1081,7 +1051,7 @@ function AppContent() {
         alignItems: 'center',
         padding: '20px 0 1rem 0',
         color: 'var(--subtxt)',
-        fontSize: '28px',
+        fontSize: '24px',
       }}>
         <section className="gallery" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
@@ -1130,7 +1100,7 @@ function AppContent() {
                   width="100%"
                   height="100%"
                   src={`https://www.youtube.com/embed/${youtubeVideos[currentVideoIndex]?.embedId}`}
-                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 활동 영상"}
+                  title={youtubeVideos[currentVideoIndex]?.title || "ModuDAO 블록체인 커뮤니티 활동 영상"}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -1231,7 +1201,6 @@ function AppContent() {
               width: '45px',
               height: '45px',
               borderRadius: '50%',
-              // background: 'linear-gradient(145deg, var(--accent) 0%, var(--subtxt) 50%, var(--primary) 100%)',
               background: 'transparent',
               display: 'flex',
               alignItems: 'center',
@@ -1252,9 +1221,8 @@ function AppContent() {
             }}
           >
             <img 
-              // src="/modu-removebg-preview.png" 
               src="/modudao_whitebg.jpeg" 
-              alt="ModuDAO TEMPi" 
+              alt="ModuDAO TEMPi 텔레그램 채널" 
               style={{ 
                 width: '30px', 
                 height: '30px',
