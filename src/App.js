@@ -248,7 +248,7 @@ function AppContent() {
       </button>
 
       {/* Hero / Identity Section */}
-      <section id="intro" className="hero" role="region" aria-label="소개" style={{
+      <section id="intro" className="hero" aria-label="소개" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -312,7 +312,7 @@ function AppContent() {
       </section>
 
       {/* Activities grid */}
-      <section id="activities" role="region" aria-label="활동" style={{
+      <section id="activities" aria-label="활동" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -758,7 +758,7 @@ function AppContent() {
       </section>
 
       {/* who */}
-      <section id="who" className="checklist" role="region" aria-label="대상" style={{
+      <section id="who" className="checklist" aria-label="대상" style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -786,7 +786,7 @@ function AppContent() {
       </section>
 
       {/* Members */}
-      <section id="members" className="members" role="region" aria-label="멤버" style={{
+      <section id="members" className="members" aria-label="멤버" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
@@ -981,7 +981,7 @@ function AppContent() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" role="region" aria-label="갤러리" style={{
+      <section id="gallery" aria-label="갤러리" style={{
         marginTop: '0px',
         minHeight: '100vh',
         display: 'flex',
