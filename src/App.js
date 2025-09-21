@@ -145,8 +145,8 @@ function AppContent() {
       setShowBubble(true);
       setTimeout(() => {
         setShowBubble(false);
-      }, 5000); // 5초 후 말풍선 사라짐
-    }, 5000); // 5초마다 반복
+      }, 4000); // 4초 후 말풍선 사라짐
+    }, 6000); // 6초마다 반복 (2초 간격)
 
     return () => clearInterval(interval);
   }, []);
@@ -1194,7 +1194,7 @@ function AppContent() {
               boxShadow: '0 8px 25px rgba(0, 212, 255, 0.3)',
               border: '1px solid rgba(0, 212, 255, 0.3)',
               backdropFilter: 'blur(10px)',
-              animation: 'bubbleAppear 5s ease-in-out',
+              transition: 'all 0.3s ease-in-out',
               position: 'relative',
               marginBottom: '5px'
             }}

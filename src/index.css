@@ -96,23 +96,27 @@ body::before {
   }
 }
 
-@keyframes bubbleAppear {
-  0% { 
-    opacity: 0; 
-    transform: translateY(10px) scale(0.8); 
-  }
-  10% { 
-    opacity: 1; 
-    transform: translateY(0px) scale(1); 
-  }
-  80% { 
-    opacity: 1; 
-    transform: translateY(0px) scale(1); 
-  }
-  100% { 
-    opacity: 0; 
-    transform: translateY(-5px) scale(0.9); 
-  }
+/* Speech bubble fade in/out animation */
+.speech-bubble-enter {
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+}
+
+.speech-bubble-enter-active {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.speech-bubble-exit {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+}
+
+.speech-bubble-exit-active {
+  opacity: 0;
+  transform: translateY(-5px) scale(0.9);
+  transition: all 0.3s ease-in-out;
 }
 .header .site-wordmark { font-weight: 700; letter-spacing: 0.2px; }
 
