@@ -255,7 +255,7 @@ function AppContent() {
         aria-label={language === 'ko' ? 'Switch to English' : '한국어로 전환'}
         style={{ 
           position: 'fixed',
-          top: '70px',
+          top: '50px',
           right: '20px',
           zIndex: 999,
           color: 'var(--text)', 
@@ -1035,7 +1035,7 @@ function AppContent() {
         color: 'var(--subtxt)',
         fontSize: '24px',
       }}>
-        <section className="gallery" style={{ minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="gallery" style={{ minHeight: '300px', maxWidth: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 className="section-title" style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
             {t('gallery.photos')}
           </h2>
