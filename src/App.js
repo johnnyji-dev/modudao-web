@@ -18,6 +18,7 @@ function AppContent() {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
   const [scrollY, setScrollY] = React.useState(0);
+  const [currentSection, setCurrentSection] = React.useState('intro');
 
   // public/photos 폴더의 이미지들
   const galleryImages = [
@@ -113,11 +114,108 @@ function AppContent() {
   React.useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      
+      // 각 섹션의 위치를 감지하여 현재 섹션 결정
+      const sections = ['intro', 'activities', 'who', 'members', 'gallery'];
+      const sectionElements = sections.map(id => document.getElementById(id));
+      
+      let current = 'intro';
+      for (let i = 0; i < sectionElements.length; i++) {
+        const element = sectionElements[i];
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // 섹션이 화면 상단에서 100px 이내에 있으면 해당 섹션으로 인식
+          if (rect.top <= 100 && rect.bottom > 100) {
+            current = sections[i];
+            break;
+          }
+        }
+      }
+      setCurrentSection(current);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // 헤더 배경색을 현재 섹션에 따라 결정하는 함수
+  const getHeaderBackground = () => {
+    const baseOpacity = Math.min(scrollY / 200, 0.95);
+    
+    switch (currentSection) {
+      case 'intro':
+        // intro 섹션: 기본 배경 (어두운 톤)
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'activities':
+        // activities 섹션: bg1 색상 (약간 밝은 톤)
+        return scrollY > 50 
+          ? `rgba(26, 26, 46, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'who':
+        // who 섹션: 기본 배경 (어두운 톤)
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'members':
+        // members 섹션: bg1 색상 (약간 밝은 톤)
+        return scrollY > 50 
+          ? `rgba(26, 26, 46, ${baseOpacity})` 
+          : 'transparent';
+      
+      case 'gallery':
+        // gallery 섹션: 기본 배경 (어두운 톤)
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+      
+      default:
+        return scrollY > 50 
+          ? `rgba(10, 10, 15, ${baseOpacity})` 
+          : 'transparent';
+    }
+  };
+
+  // 언어 전환 버튼 배경색을 현재 섹션에 따라 결정하는 함수
+  const getButtonBackground = () => {
+    const baseOpacity = Math.min(scrollY / 200, 0.9);
+    
+    switch (currentSection) {
+      case 'intro':
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+      
+      case 'activities':
+        return scrollY > 50 
+          ? `rgba(22, 33, 62, ${baseOpacity})` 
+          : 'rgba(22, 33, 62, 0.7)';
+      
+      case 'who':
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+      
+      case 'members':
+        return scrollY > 50 
+          ? `rgba(22, 33, 62, ${baseOpacity})` 
+          : 'rgba(22, 33, 62, 0.7)';
+      
+      case 'gallery':
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+      
+      default:
+        return scrollY > 50 
+          ? `rgba(45, 55, 72, ${baseOpacity})` 
+          : 'rgba(45, 55, 72, 0.7)';
+    }
+  };
 
   // 수동 네비게이션 함수
   const nextImage = () => {
@@ -151,9 +249,7 @@ function AppContent() {
         className="header" 
         style={{ 
           position: 'fixed', 
-          backgroundColor: scrollY > 50 
-            ? `rgba(10, 10, 15, ${Math.min(scrollY / 200, 0.95)})` 
-            : 'transparent',
+          // backgroundColor: getHeaderBackground(),
           backdropFilter: scrollY > 50 ? 'blur(20px)' : 'none',
           borderBottom: scrollY > 50 
             ? '1px solid rgba(0, 212, 255, 0.2)' 
@@ -205,9 +301,7 @@ function AppContent() {
           fontWeight: '600', 
           whiteSpace: 'nowrap', 
           padding: '0.4rem 0.8rem',
-          background: scrollY > 50 
-            ? `rgba(45, 55, 72, ${Math.min(scrollY / 200, 0.9)})` 
-            : 'rgba(45, 55, 72, 0.7)',
+          background: getButtonBackground(),
           backdropFilter: scrollY > 50 ? 'blur(10px)' : 'blur(5px)',
           border: `1px solid ${scrollY > 50 ? 'rgba(0, 212, 255, 0.3)' : 'var(--border)'}`,
           borderRadius: '6px',
